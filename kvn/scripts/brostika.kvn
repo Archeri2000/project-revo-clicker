@@ -1,0 +1,640 @@
+declare brostika as stage
+declare charles,sophie,chelsea as character
+
+scene brostika_scene brostika_outside
+
+
+frame
+    mod  brostikaM play );
+     brostika bringCharacter charles
+     brostika bringCharacter sophie
+     brostika bringCharacter chelsea
+
+     sophie,charles preMove x=20
+     chelsea preMove x=40
+
+     brostika display bkgdAlpha=1, t=500
+       brostika displayText msg=--Village of Brostika-- t=400 center=true size=2.5vw color=white s=false
+
+frame
+     sophie,charles,chelsea setTextColor white
+        sophie,charles appear t=500
+            chelsea changeName ???
+            chelsea preSpeak
+                chelsea speak Welcome to Brostika, travellers!
+
+frame
+    chelsea speak Come, give our locally-produced Brostikine wine a try!
+        chelsea appear
+            chelsea move x=-40 t=250
+            charles move x=-20 t=250
+                sophie wait 100
+                    sophie move x=-20 t=300
+frame
+     charles preSpeak
+        charles speak And who might you be?
+            charles wait 400
+         charles contSpeak Isn’t it a bit unusual to be drinking wine in the middle of the day?
+
+frame
+     brostika changeOverlay o=0.55 yanse=black t=0
+         sophie bringAboveOverlay
+         charles bringAboveOverlay
+             sophie setItalic
+             sophie setFontSize 1.2vw
+             sophie preSpeak
+                sophie speak Don’t be so mean! She’s offering it out of goodwill!
+
+frame
+    charles preSpeak
+        charles move x=10 t=300
+           charles wait 100
+             charles flipHorizontally
+               charles setItalic
+               charles setFontSize 1.2vw
+               charles speak And how can you be so sure of that?
+                    charles wait 400
+                        charles contSpeak What if the wine is poisoned?
+
+frame
+    sophie preSpeak
+        sophie changeBold
+        sophie setFontSize 1.8vw
+        sophie speak AHEM
+
+frame
+       sophie setFontSize 1.5vw
+       sophie setNormalText
+       sophie speak text=I am Princess Sophie of the Kingdom of Novala. s=false
+            sophie wait 200
+                sophie speak And ~
+
+frame
+       sophie contSpeak I can read the Carofle of any -
+         charles interupt
+               charles speak Shh! You’re not supposed to say that!
+
+frame
+    sophie preSpeak
+        sophie speak She's a nice person!
+             sophie wait 400
+               sophie contSpeak I can see it~!
+
+frame
+     sophie speak Oh!
+       sophie wait 700
+           sophie speak Her name is Chelsea by the way!
+
+frame
+     brostika changeOverlay o=0 yanse=black t=0
+       sophie bringBelowOverlay
+       charles bringBelowOverlay
+           chelsea changeName Chelsea
+           chelsea preSpeak
+                chelsea speak Ah, where are my manners? I'm Chelsea!
+
+frame
+     charles preSpeak
+       charles speak text=... t=1000 s=false
+
+frame
+     charles speak Alright...
+       charles wait 400
+         charles flipHorizontally
+         charles move x=-10 t=150
+frame
+     charles setNormalText
+     charles setFontSize 1.5vw
+     brostika displayText text=You took a sip of this expensive-looking wine and found the flavour to be extremely rich! t=500 center=false size=1.5vw italic=true s=false
+
+frame
+     sophie preSpeak
+         sophie speak I want to try it!
+
+frame
+       sophie contSpeak Can I have a sip too?
+
+frame
+         charles flipHorizontally t=150
+         charles move x=10 t=150
+         charles preSpeak
+           charles speak I would suggest otherwise.
+
+frame
+       charles speak Imagine what your father would say!
+frame
+       charles speak You’re much too young to be drinking such things!
+
+frame
+     sophie preSpeak
+           sophie speak Sorry...
+
+frame
+     sophie scale 1 / 1.05, 1 / 1.05, 200, function() {
+       chelsea bringToFront );
+       sophie changeSprite "def", function() {
+         sophie notifyWaiter chelsea);
+      });
+       chelsea changeSprite "def", function() {
+         chelsea waitFor sophie, function() {
+           charles flipHorizontally null, 400);
+           charles move -10, 0, 150);
+           chelsea scale 1.05, 1.05, 200, function() {
+             chelsea speak "Don’t worry young miss, in a few years, you’ll be able to, ");
+          });
+        });
+      });
+    });
+  })
+
+
+frame
+     chelsea contSpeaking "and~ ", function() {
+       chelsea wait 300, function() {
+         chelsea contSpeaking "we always appreciate return visitors!");
+      }, false);
+    }, 450);
+
+  })
+frame
+     sophie changeSprite "def", function() {
+       chelsea speak "We always welcome travellers with wine and bread!");
+    });
+  })
+
+
+frame
+     chelsea scale 1 / 1.05, 1 / 1.05, 200, function() {
+       sophie bringToFront );
+       chelsea changeSprite "def", function() {
+         chelsea notifyWaiter sophie);
+      });
+       sophie changeSprite "def", function() {
+         sophie waitFor chelsea, function() {
+           sophie scale 1.05, 1.05, 200, function() {
+             sophie speak "Oh!", function() {
+               sophie wait 500, function() {
+                 sophie changeSprite "def", function() {
+                   sophie speak "You wouldn’t happen to have any prasines, would you?");
+                });
+              }, false);
+            });
+          });
+        });
+      });
+    });
+  })
+
+
+frame
+     sophie scale 1 / 1.05, 1 / 1.05, 200, function() {
+       charles bringToFront );
+       charles scale 1.05, 1.05, 200, function() {
+         charles speak "Prasines again, Sophie?");
+         sophie changeSprite "def");
+      });
+
+    });
+  })
+
+
+frame
+     charles scale 1 / 1.05, 1 / 1.05, 200, function() {
+       chelsea bringToFront );
+       sophie changeSprite "def", function() {
+         sophie notifyWaiter chelsea);
+      });
+       chelsea changeSprite "def", function() {
+         chelsea waitFor sophie, function() {
+           chelsea scale 1.05, 1.05, 200, function() {
+             chelsea speak "No, prasines are much too sweet to go along with wine.", function() {
+               chelsea wait 300, function() {
+                 chelsea contSpeaking " They would dull your tastebuds.");
+              }, false);
+            });
+          });
+        });
+      });
+    });
+  })
+
+
+
+frame
+     chelsea scale 1 / 1.05, 1 / 1.05, 200, function() {
+       sophie bringToFront );
+       chelsea changeSprite "def", function() {
+         chelsea notifyWaiter sophie);
+      });
+       sophie changeSprite "def", function() {
+         sophie waitFor chelsea, function() {
+           sophie scale 1.05, 1.05, 200, function() {
+             sophie speak "Aww...");
+             sophie move 0, 2, 700);
+          });
+        });
+      });
+    });
+  })
+
+
+frame
+     sophie preMove 0, -2);
+     sophie scale 1 / 1.05, 1 / 1.05, 200, function() {
+       charles bringToFront );
+       charles scale 1.05, 1.05, 200, function() {
+         charles speak "Yes, that would be a waste of such great wine!");
+      });
+
+    });
+  })
+
+
+frame
+     sophie changeSprite "def");
+     charles contSpeaking "The liquor has so much depth and texture!");
+  })
+
+
+frame
+     sophie changeSprite "def");
+     charles speak "Wait, this taste…", function() {
+       charles wait 500, function() {
+         charles contSpeaking "Is this Crème de Cassis?");
+      }, false);
+    });
+  })
+
+
+frame
+     charles scale 1 / 1.05, 1 / 1.05, 200, function() {
+       chelsea bringToFront );
+       chelsea changeSprite "def", function() {
+         chelsea scale 1.05, 1.05, 200, function() {
+           chelsea speak "Indeed, this is Crème de Cassis, made from the freshest blackcurrants!", function() {
+             chelsea wait 250, function() {
+               chelsea contSpeaking "I’m glad you enjoyed it!");
+            }, false);
+          });
+           sophie changeSprite "def");
+        });
+      });
+    });
+  })
+
+
+frame
+     brostika changeOverlay 0.55, "black", 0, function() {
+       sophie bringAboveOverlay );
+       chelsea scale 1 / 1.05, 1 / 1.05, 200, function() {
+         sophie bringToFront );
+         sophie changeSprite "def", function() {
+           sophie scale 1.05, 1.05, 200, function() {
+             sophie setItalic );
+             sophie setFontSize "1.2vw");
+             sophie speak "All those blackcurrants and not a single prasine?!", function() {
+               sophie contSpeaking "What kind of town doesn’t have prasines?");
+            }, null, false);
+          });
+        });
+      });
+    });
+  })
+
+
+frame
+     brostika changeOverlay def, "black", 0, function() {
+       sophie bringBelowOverlay );
+       sophie setNormalText );
+       sophie setFontSize "1.5vw");
+       charles bringToFront );
+       sophie scale 1 / 1.05, 1 / 1.05, 200, function() {
+         chelsea bringToFront );
+         chelsea scale 1.05, 1.05, 200, function() {
+           chelsea speak "We Brostikans really take pride in our wines, so it is always a joy to find travellers capable of appreciating good wine.");
+        });
+      });
+    });
+  })
+
+
+frame
+     sophie changeSprite "def");
+     brostika backgroundSepia 0.1, 400);
+     brostika changeOverlay 0.05, "#FD5E53", 400, function() {
+       chelsea speak "Here in Brostika, wine is very deeply ingrained into our culture and dining habits");
+    });
+  })
+
+
+frame
+     chelsea scale 1 / 1.05, 1 / 1.05, 200, function() {
+       charles bringToFront );
+       charles scale 1.05, 1.05, 200, function() {
+         charles speak "Ah, of course!");
+      });
+
+    });
+  })
+
+
+frame
+     chelsea changeSprite "def");
+     charles speak "I recall reading that wine actually originated from Brostika, where villagers first collected alcohol produced from berries.");
+  })
+
+
+frame
+     charles scale 1 / 1.05, 1 / 1.05, 200, function() {
+       chelsea bringToFront );
+       chelsea changeSprite "def", function() {
+         chelsea scale 1.05, 1.05, 200, function() {
+           chelsea speak "I see you’re rather well informed!");
+        });
+      });
+    });
+  })
+
+
+frame
+     brostika backgroundSepia 0.2, 400);
+     brostika changeOverlay 0.1, "#FD5E53", 400, function() {
+       sophie bringAboveOverlay );
+       charles bringAboveOverlay );
+       chelsea bringAboveOverlay );
+       chelsea speak "Yes, wine originated from this humble village. It’s been a major part of our culture ever since!");
+    });
+  })
+
+
+frame
+     chelsea speak "In fact, Brostika is home to some of the world’s best vineyards, including the Brostikine Winery!");
+  })
+
+
+frame
+     chelsea speak "Unfortunately, despite having nearly a century of history, Brostikine wine isn’t really famous throughout the kingdom...");
+  })
+
+
+frame
+     chelsea speak "The density of our neighbouring forests and the presence of bandits makes it very hard to export our precious wine.");
+  })
+
+
+frame
+     chelsea scale 1 / 1.05, 1 / 1.05, 200, function() {
+       sophie bringToFront );
+       chelsea changeSprite "def", function() {
+         chelsea notifyWaiter sophie);
+      });
+       sophie changeSprite "def", function() {
+         sophie waitFor chelsea, function() {
+           sophie scale 1.05, 1.05, 200, function() {
+             sophie speak "That’s terrible...", function() {
+               sophie wait 300, function() {
+                 sophie contSpeaking "Can’t the law enforcement do anything about it?");
+              }, false);
+            });
+          });
+        });
+      });
+    });
+  })
+
+
+frame
+     sophie scale 1 / 1.05, 1 / 1.05, 200, function() {
+       chelsea bringToFront );
+       sophie changeSprite "def", function() {
+         sophie notifyWaiter chelsea);
+      });
+       chelsea changeSprite "def", function() {
+         chelsea waitFor sophie, function() {
+           chelsea scale 1.05, 1.05, 200, function() {
+             chelsea speak "If only the law enforcement here was that capable…");
+          });
+        });
+      });
+    });
+  })
+
+
+frame
+     brostika backgroundSepia 0.3, 400);
+     brostika changeOverlay 0.15, "#FD5E53", 400, function() {
+       chelsea speak "Nonetheless, we try to support our vineyards and sell as much of our wine as possible to armed merchants that pass through our village.");
+    });
+  })
+
+
+frame
+     chelsea speak "They sell quite well in large towns like Erithven, but most of the merchants rebrand our wine.");
+  })
+
+
+frame
+     chelsea scale 1 / 1.05, 1 / 1.05, 200, function() {
+       sophie bringToFront );
+       chelsea changeSprite "def", function() {
+         chelsea notifyWaiter sophie);
+      });
+       sophie changeSprite "def", function() {
+         sophie waitFor chelsea, function() {
+           sophie scale 1.05, 1.05, 200, function() {
+             sophie speak "That’s unfair!", function() {
+               sophie wait 300, function() {
+                 sophie contSpeaking "Brostika deserves to be recognised for its wine!");
+              }, false);
+            });
+          });
+        });
+      });
+    });
+  })
+
+
+frame
+     sophie scale 1 / 1.05, 1 / 1.05, 200, function() {
+       charles bringToFront );
+       sophie changeSprite "def");
+       charles scale 1.05, 1.05, 200, function() {
+         charles speak "Indeed, I can imagine many tourists flocking to these parts if they learnt that the wine was produced here.");
+      });
+
+    });
+  })
+
+
+frame
+     charles scale 1 / 1.05, 1 / 1.05, 200, function() {
+       chelsea bringToFront );
+       chelsea scale 1.05, 1.05, 200, function() {
+         chelsea speak "As of now, the wine we sell to the merchants is more than enough to keep our wineries afloat.", function() {
+           chelsea wait 250, function() {
+             chelsea contSpeaking "Besides, we do enjoy the peace we get in Brostika.");
+          }, false);
+        });
+      });
+
+    });
+  })
+
+
+frame
+     brostika backgroundSepia 0.4, 400);
+     brostika changeOverlay 0.2, "#FD5E53", 400, function() {
+       chelsea scale 1 / 1.05, 1 / 1.05, 200, function() {
+         charles bringToFront );
+         charles scale 1.05, 1.05, 200, function() {
+           charles speak "By the way, do you know how to get to Brostika from here?", function() {
+             charles wait 300, function() {
+               charles contSpeaking "According to the map we should have reached Brostika by now...");
+            }, false);
+          });
+        });
+      });
+    });
+  })
+frame
+     sophie speak "Yupp, we've been walking for quite a while");
+  })
+frame
+     chelsea speak "You're almost there! It's just up ahead!");
+  })
+frame
+     charles speak "That's great!", function() {
+       charles wait 250, function() {
+         charles contSpeaking "Also, I've heard that there's path from Brostika that leads to Erithven. Would you know anything about it?")
+      }, false);
+    })
+  })
+frame
+     charles scale 1 / 1.05, 1 / 1.05, 200, function() {
+       chelsea bringToFront );
+       chelsea scale 1.05, 1.05, 200, function() {
+         chelsea speak "Once you reach Brostika, make a turn at the first alley you see!", function() {
+           chelsea contSpeaking "The path that leads to Erithven will be clear from there.");
+        });
+      });
+
+    });
+  })
+frame
+     chelsea scale 1 / 1.05, 1 / 1.05, 200, function() {
+       charles bringToFront );
+       charles scale 1.05, 1.05, 200, function() {
+         charles speak "Alright, thank you for your help.", function() {
+           sophie wait 250, function() {
+             charles contSpeaking "We should make our way before the sun sets.")
+          }, false);
+        });
+      });
+
+    });
+  })
+frame
+     brostika backgroundSepia 0.5, 400);
+     brostika changeOverlay 0.25, "#FD5E53", 400, function() {
+       sophie changeSprite "def");
+       chelsea changeSprite "def", function() {
+         chelsea speak "You're welcome!", function() {
+           chelsea wait 150, function() {
+             chelsea contSpeaking "It's my pleasure to assist travellers like you!");
+          }, false);
+        });
+      });
+    });
+  })
+
+
+frame
+     chelsea speak "I’ve got to get going and prepare dinner for the kids!", function() {
+       chelsea wait 200, function() {
+         chelsea contSpeaking "Take care!", function() {
+           chelsea wait 400, function() {
+             chelsea flipHorizontally function() {
+                 chelsea move 40, 0, 400, null, null, false);
+            }, 200);
+          }, false);
+        });
+      }, false);
+    });
+  })
+
+
+frame
+     brostika displayText "...", 500, null, null, false, "1.5vw", null, false, false, false);
+  })
+
+
+frame
+     brostika removeCharacter chelsea);
+     charles bringToFront );
+     charles move 30, 0, 400, function() {
+       charles flipHorizontally null, 200);
+       charles wait 100, function() {
+         charles scale 1.05, 1.05, 200, function() {
+           charles speak "Well, I suppose you were right, I was too suspicious.", function() {
+             charles wait 200, function() {
+               charles contSpeaking " It was nice meeting Chelsea.");
+            }, false);
+          });
+        });
+      });
+    });
+  })
+
+
+frame
+     charles scale 1 / 1.05, 1 / 1.05, 200, function() {
+       sophie bringToFront );
+       sophie changeSprite "def", function() {
+         sophie scale 1.05, 1.05, 200, function() {
+           sophie speak "See? You should rely on me when it comes to judging people!");
+        });
+      });
+    });
+  })
+
+
+frame
+     sophie speak "And poisoned wine?!", function() {
+       sophie wait 200, function() {
+         sophie contSpeaking "Where did you get that idea from?");
+      }, false);
+    });
+  })
+
+
+frame
+     sophie scale 1 / 1.05, 1 / 1.05, 200, function() {
+       charles bringToFront );
+       charles scale 1.05, 1.05, 200, function() {
+         charles speak "Well, it isn’t totally out of the question now, is it?", function() {
+           charles wait 200, function() {
+             charles contSpeaking "Plenty of people are out to get you.");
+          }, false);
+        });
+      });
+
+    });
+  })
+
+
+frame
+     sophie changeSprite "def");
+     charles speak "I suppose we should get going.", function(){
+       charles wait 200,function(){
+         charles contSpeaking " We don’t have much time left to buy supplies before it gets dark.");
+      },false);
+    });
+     sophie bringBelowOverlay );
+     charles bringBelowOverlay );
+     brostika changeOverlay 1, "black", 200);
+  })
+  ,
+  new Frame(function(){
+     brostika closeTextBox );
+  })
+]);

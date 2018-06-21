@@ -1,0 +1,274 @@
+
+declare charles,sophie,tristan,healingMagicCG as character
+declare brostika as stage
+
+scene tristanscene borstika_tristan
+frame //frame 0
+    brostika bringCharacter charles
+    brostika bringCharacter sophie
+    brostika bringCharacter tristan
+    brostika bringCharacter healingMagicCG
+
+    brostika display bgA=0 bdA=1 t=0
+        brostika changeBackground bg=alley o=1 t=800
+frame
+    sophie,charles,tristan setTextColor  white
+    tristan changeName  ???
+    tristan setFontSize  1.7vw
+    tristan changeBold
+    tristan preMove -30
+    sophie changeSprite  default   //changes the sprite of sophie
+        sophie,charles,tristan appear 500
+
+frame
+    tristan preSpeak
+        tristan speak  T...thank you for your help!
+
+
+frame
+    tristan speak I'm Tristan.
+
+frame
+    tristan changeName Tristan
+    sophie preSpeak
+        sophie speak  Hi Tristan, I am Sophie. They are Charles and #playName
+
+frame
+      charles preSpeak
+        charles speak What was going on just now?
+            charles wait 200
+                charles contSpeaking Why were there slimes in town?
+frame
+    tristan preSpeak
+        tristan speak  The M Revolutionists set the slimes on me.
+
+frame
+    sophie preSpeak
+        sophie speak M Revolutionists?
+
+frame
+    tristan preSpeak
+        tristan speak Haven't you heard about them?
+
+frame
+    tristan contSpeaking They are a self-organized armed group who had wrested control over the Brostikine Winery after tying Mr Broski up, the boss of the winery.
+
+frame
+    tristan speak They are planning to write off the whole village as an accident due to the whole village drinking poisoned wine.
+
+frame
+    tristan speak With that, they can finally mine the manacytes under our land.
+
+frame
+    sophie preSpeak
+        sophie speak That's scary...
+
+frame
+    tristan preSpeak
+        tristan speak After learning about it, I sneaked away from the winery and tried to report it to the law enforcement in Brositka
+
+frame
+    tristan speak However, they did not believe my words.
+
+frame
+    tristan contSpeaking They thought I was just another competitor trying to drag the famous winery down.
+
+frame
+    tristan speak They said they won't let me in unless I have some proof.
+
+
+frame
+    tristan speak So, I decided to go to loot some wine from the winery
+
+frame
+    tristan speak but right when I was about to leave, I got caught by one of the guards keeping the winery workers in check.
+
+frame
+    tristan speak Realising that I was the one who escaped the other day, he locked me up in a place guard by malicious slimes. They then fed me the poison to test its effectiveness
+
+frame
+    tristan speak Determined to protect my town, I fought broke a path out the slimes, leaving them to chase me all the way here.
+
+frame
+    tristan speak I don't think I much time left, the poison seems to be taking its eefect. I got to report to the town's law enforcement fast.
+
+frame
+    sophie preSpeak
+        sophie speak Did you manage to get the sample?
+            sophie wait 200
+                sophie contSpeaking You can get Charles here to try help you decode for a antidote!
+                    sophie wait 200
+                        sophie contSpeaking Charles is a great doct-!
+                            sophie bringAboveOverlay
+                                charles bringAboveOverlay
+                                    brostika changeOverlay o=0.55 colour=#000 t=0
+frame
+    charles setFontSize  1.2vw
+    charles changeItalic true
+    charles flipHorizontally t=200
+    charles move x=10 t=200
+        charles preSpeak
+            charles speak Sophie, I don't really think we have time for this.
+                charles wait 200
+                  charles contSpeaking We shouldn't meddle in affairs of others
+frame
+    sophie setFontSize 1.2vw
+    sophie changeItalic true
+    sophie preSpeak
+        sophie speak But but but, the entire village is at stake!
+            sophie wait 200,
+                sophie contSpeaking  How can we just let it happen?!
+
+frame
+    charles preSpeak
+        charles speak Your parent's life is at stake too!
+            charles wait 200
+                charles contSpeaking  We have to find them as fast as possible!
+                    charles wait 200
+                        charles contSpeaking Imagine them being worried and scared!
+frame
+    sophie preSpeak
+        sophie speak  But my parents would definitely not left the village alone!
+             sophie wait 200
+                sophie contSpeaking It's the right thing to do, we should help Tristan!
+frame
+    charles preSpeak
+        charles speak ...
+          charles wait 200
+            charles contSpeaking Fine...
+                charles setFontSize
+                sophie setFontSize
+                charles setNormalText
+                sophie setNormalText
+                brostika changeOverlay o=0 t=0
+                    charles flipHorizontally t=200
+                    charles move x=-10 t=200
+frame
+    sophie preSpeak
+        sophie speak Tristan, you can pass Charles the bottle of poisoned wine!
+            sophie wait 200,
+                sophie contSpeaking He will try to decode the poison as soon as possible
+
+frame
+    sophie endSpeak
+      tristan move x=-10 t=400
+        tristan wait 150
+            tristan move x=10 t=400
+                sophie bringBelowOverlay
+                charles bringBelowOverlay
+frame
+    brostika closeTextBox
+      healingMagicCG bringAboveOverlay
+        healingMagicCG bringToFront
+            brostika changeOverlay o=1  colour=#000 t=300
+                healingMagicCG appear 1000
+                    healingMagicCG wait 500
+
+frame
+    charles speak So its not ausperium? Hmm...
+
+frame
+    charles contSpeaking Looks like the poison is more complicated than I thought
+
+frame
+    charles speak msg=... t=500 s=false
+
+frame
+    charles speak Hmm... looks like its not Gorgium either
+
+frame
+    charles speak This might take longer than expected.
+
+frame
+    healingMagicCG disappear 1000
+        tristan speak Cough... cough...
+        brostika changeOverlay o=0  colour=#000 t=300 g=linear s=false
+            brostika removeCharacter healingMagicCG
+            tristan rotateAntiClockwise angle=5 t=200
+            tristan move y=20 t=200 g=easeIn s=false
+                tristan wait 200
+                    tristan move y=10 t=500, g=stepped s=false
+                    tristan rotateAntiClockwise angle=75 t=500 swing=easeIn s=false
+frame
+    sophie setFontSize 2.0vw
+    sophie changeBold
+    sophie preSpeak
+        sophie speak Tristan!
+            sophie wait 200
+                sophie contSpeaking Tristan!
+                    sophie wait 200
+                        sophie contSpeaking Tristan!
+
+frame
+    sophie speak Charles!
+frame
+    sophie setFontSize  1.7vw
+    sophie setNormalText
+    sophie preSpeak
+        charles speak Let me take a look at him!
+
+
+
+
+
+frame
+    charles speak text=... s=false
+        charles wait 200
+
+
+frame
+    charles speak  text=... s=false
+
+frame
+    charles speak He's...
+      charles wait 200
+        charles contSpeaking dead.
+
+
+
+
+frame
+    sophie preSpeak
+        sophie speak  text=... s=false
+
+frame
+     charles preSpeak
+        charles speak Are you alright, Princess?
+            charles wait 500
+                charles contSpeaking I'm really sorry...
+
+frame
+    sophie preSpeak
+        sophie speak I'm okay.
+          sophie wait 500
+            sophie contSpeaking Tristan will be fine.
+                sophie wait 200
+                    sophie contSpeaking  Brostikans always believe that they will turn into fishes and swim in the sky, always to watch over their loved ones.
+
+frame
+    sophie speak Charles, what's the progress on the decoding of the poison?
+
+frame
+    charles preSpeak
+        charles speak  I'm afraid that there's nothing more that I can do about this.
+          charles wait 200
+            charles contSpeaking The poison seems to have a complex curse embedded which might take up to weeks to decode.
+
+frame
+    charles speak  Curses are like knots on a string which require untying.
+        charles wait 200
+            charles contSpeaking In this case, because a knot has been tied several times over at the same point in various ways, the complexity of the knot demands a lot more examination and experimentation.
+
+frame
+    sophie preSpeak
+        sophie speak In that case, we should locate the winery and stop the M Revolutionists from spreading the wine.
+            sophie wait 200
+                sophie contSpeaking But first, let's head to the constables to get their assistance on this matter.
+
+frame
+    charles preSpeak
+        charles speak  It will be good for us to hand Tristan over to the police as well.
+              charles wait 200
+                charles contSpeaking #playName , take this bottle of poisoned wine and keep it with you.
+                    charles wait 200
+                        charles speak  We might just need it in the future.

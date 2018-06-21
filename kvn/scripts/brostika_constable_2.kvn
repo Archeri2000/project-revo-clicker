@@ -1,4 +1,4 @@
-declare charles,sophie,yusie,broski as character
+declare charles,sophie,yusie,broski,slime,slime2 as character
 declare brostika as stage
 
 scene brostika_constable2 brostika_constable2
@@ -30,7 +30,7 @@ frame 2
         broski speak Yusie, thank you for dispatching this group of helpful people to free me.
             yusie changeName Yusie
         broski wait 200
-            broski contspeaking If not for them, I would still be tied up in the old shed next to my winery.
+            broski cont If not for them, I would still be tied up in the old shed next to my winery.
 
 frame 3
     yusie preSpeak
@@ -153,4 +153,164 @@ frame 20
                                                     charles appear
                                                         charles wait
                                                             charles endOfCycle
-    
+    mod brostika.textbox.speed 1/2.5
+    broski speak That was the best record we ever had in the history of our winery!
+        broski speak I can still remember how my father used to question if I could actually outdo him.
+            broski wait 200
+                broski speak I was so proud of what we have achieved last year.
+                    broski wait 200
+                        broski speak It was not easy, honestly.
+                            broski wait 200
+                                broski speak While my lineage had the ability to significantly speed up the speed of fermentation of the wine, it was not quite enough to distinguish our wine from others.
+                                    broski wait 200
+                                        broski speak Because this is not only about the quality of the product.
+                                            broski wait 200
+                                                broski speak It is also about the marketing.
+                                                    broski wait 200
+                                                        broski speak You must have known by now that our wine has been rebranded by many other manufacturers outside of Brostika as their own product.
+                                                            broski wait 200
+                                                                broski speak This used to impede our sales tremendously since a long time back.
+                                                                    broski wait 200
+                                                                        broski speak However, I was able to employ certain tactics to safeguard our brand.
+                                                                            broski wait 200
+                                                                                broski speak Though there is still plenty of room for improvement, I must say I have done an incredible job when it comes to increaisng sales.
+                                                                                    broski wait 200
+                                                                                        broski speak But this increase in sales have also gotten unwanted attention.
+                                                                                            broski wait 200
+                                                                                                broski speak The M Revolutionists, wanting to take advantage of the newly increased popularity of our product, began to infiltrate our winery with its men before wresting the winery from my hands.
+                                                                                                    broski wait 200
+                                                                                                        broski speak My beloved baby, the winery, was stolen from me right under my nose.
+                                                                                                            broski wait 200
+                                                                                                                broski speak Their conspiracy is really frightening but the method which they have chosen to take is even worse.
+                                                                                                                    broski wait 200
+                                                                                                                        broski speak It is undoubtedly clever but definitely immoral -
+                                                                                                                            broski wait 200
+frame
+    mod brostika.textbox.speed=1
+    sophie stopCycle 100
+    charles stopCycle 200
+        charles setFontSize 1.2vw
+        charles changeItalic
+        brostika changeOverlay o=0.55 color=#000 t=0
+            charles bringAboveOverlay
+                sophie bringAboveOverlay
+                    charles move x=10 t=200
+                    charles flipHorizontally
+                        charles preSpeak
+                            charles speak Sophie...
+frame
+    charles speak Sophie...
+frame
+    charles speak Sophie!
+        sophie wait 100
+            sophie move x=5 t=100
+                sophie move x=-5 t=100
+                    sophie changeSprite default
+frame
+    charles speak We should find a way to leave soon.
+        charles wait 200
+            charles contSpeaking We shouldn't waste any more time here
+frame
+    sophie setFontSize 1.2vw
+    sophie changeBold true
+    sophie preSpeak
+        sophie speak Where is Yusie?
+            sophie wait 200
+                sophie cont Are they back yet?
+frame
+    charles preSpeak
+        charles say No...
+frame
+    sophie preSpeak
+        sophie speak Doesn't that mean that they've been gone for a raelly long time?
+            sophie wait
+                sophie cont I'm starting to get really worried for them...
+frame
+    charles preSpeak
+        charles speak I'm sure that the guards will manage fine on their own
+            charles wait 200
+                charles cont We should focus on getting to Malidret as soon as possible
+frame
+    sophie preSpeak
+        sophie speak But you promised to help me...
+            sophie wait 200
+                sophie cont We need to make sure that Brostika is safe before we leave!
+frame
+    charles preSpeak
+        charles speak msg=... t=600 s=false
+frame
+   charles speak Alright,
+        charles wait
+            charles cont alright
+frame
+    charles move y=0 t=200
+        brostika changeOverlay 0
+            sophie preSpeak
+                sophie speak Mr Broski
+                    sophie wait 200
+                        sophie cont Don't you think Yusie and the rest has been gone for too long?
+frame
+    broski preSpeak
+        broski speak Huh?
+            broski wait
+                broski cont Yusie?
+frame
+    broski speak Now that you mention it
+frame
+    broski cont They have been goen for far too long
+frame
+    broski speak They should have returned by now
+        broski wait 200
+            broski cont Perhaps something happened to them?
+frame
+    broski speak I'm sure hope not, I need my winery to be safe
+frame
+    broski speak Let us go take a look!
+frame
+    brostika closeTextBox
+        sophie,charles,broski disappear
+            charles move x=-70
+            sophie move x=-50
+        brostika fadeOut t=800
+            brostika setAnchorX
+            brostika scale x=1.5 y=1 t=0
+                brostika changeBackground background=winery a=1 t=800
+frame
+    yusie,slime,slime2 setDefGraph easeOut
+    brostika bringCharacter slime
+        brostika bringCharacter slime2
+            yusie move x=-20
+                slime,slime2 move 20
+                slime,slime2,yusie appear
+                    yusie,slime,slime2 move x=-50
+                    brostika pan x=-50 t=805
+                    slime,slime2,yusie setDefGraph easeOut
+                    slime cycle
+                        slime wait 250
+                            slime move x=-8 t=200
+                                slime move x=8 t=200
+                                    yusie scale x=1.05 y=1.05 t=100
+                                        yusie scale t=100
+                                            slime endOfCycle
+                    slime2 cycle
+                        slime2 wait 300
+                            slime2 move x=-5 t=200
+                                slime2 move x=5 t=200
+                                    slime2 endOfCycle
+    broski wait 2000
+        sophie move x=-30
+        charles setHorizontalFlip
+        charles move x=-30
+            sophie appear
+                sophie scale
+        slime2,slime stopCycle 300
+            yusie move x=50 t=400 g=swing
+            slime move x=70 t=400
+            slime2 move x=70 t=800
+            sophie wait 100
+                charles move t=850 g=swing
+                sophie wait 100
+                    sophie move t=750
+frame
+    sophie preSpeak
+        sophie speak Hurry! Let's go help her!

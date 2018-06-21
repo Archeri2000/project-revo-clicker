@@ -10,10 +10,11 @@ var hideOverflow = true;
 var scripts =
 [//"brostika.js"
 "brostika_alley.js"
-//"brostika_tristan.js",
-//,"brostika_constable.js"
-//,"brostika_winery.js"
-//,"brostika_constable_22.js"
+,"brostika_tristan.js"
+,"brostika_constable.js"
+,"brostika_winery.js"
+,"brostika_winery_2.js"
+,"brostika_constable_2.js"
 ,"brostika_end.js"
 ,"erithven_welcome.js"
 ,"erithven_house.js"

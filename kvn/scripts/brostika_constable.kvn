@@ -1,0 +1,70 @@
+declare charles,sophie,yusie as character
+declare brostika as stage
+
+scene brostikaConstable brostika_constable
+frame 1
+    brostika bringCharacter sophie
+    brostika bringCharacter charles
+    brostika bringCharacter yusie
+    sophie setTextColor white
+    charles setTextColor white
+    yusie setTextColor white
+    charles,sophie preMove x=-50
+    brostika display backgroundAlpha=0 t=0
+        brostika changeBackground opacity=1 background=police t=800
+frame 2
+    yusie changeName Guard
+    yusie setFontSize 1.7vw
+    yusie appear t=500
+        charles,sophie appear
+            sophie,charles move t=1000 g=easeOut
+frame 3
+    charles preSpeak
+        charles speak Hello girl guard, we're here to report the wine poisoning in the Brostikine winery.
+frame 4
+    yusie preSpeak
+        yusie speak Excuse you, we are collectively addressed as 'guards',
+            yusie wait t=200
+                yusie cont not 'girl guard' or 'guy guard'.
+frame 5
+    yusie speak Besides,
+        yusie wait t=200
+            yusie cont are you not one of those competitors trying to put down our towns winery?
+frame 5
+    yusie speak We've seen too of your kind before, if you're here to try your luck, the door's right there.
+        sophie preSpeak
+            sophie speak Sorry, but I assure you that we're do not harbour any malicious intent.
+frame 6
+    charles preSpeak
+        charles speak We are really serious about this.
+            charles wait t=200
+                charles cont As you can see, this dead man whom we have we us is the man who reported to you previously.
+frame 7
+    charles speak Tristan sneaked back into the winery to get a sample of the poison wine.
+        charles wait t=200
+            charles cont Unfortunately, he was caught and was forced to be the test subject of the poison.
+frame 8
+    sophie preSpeak
+        sophie speak Tristan risked his life to get this sample of poisoned wine, we need your help to save Brostika!
+frame 9
+    yusie preSpeak
+        yusie speak It seems like I might have misunderstood him...
+            yusie wait t=200
+                yusie cont But the lengths at which competitors are willing to go to these days have increased quite drastically
+frame 10
+    yusie speak I find it quite hard to believe the entire story about the conspiracy and everything.
+        yusie wait t=200
+                yusie cont Unless, Mr Broski himself steps forward to request for assistance, I would not partake in your shady operations
+frame 11
+    charles,sophie bringAboveOverlay
+    brostika changeOverlay yanse=black a=0.55 t=0
+        sophie preSpeak
+            sophie speak Charles, I think we have no choice but to scout around the winery to find Mr Broski
+            charles wait t=100
+                charles flipHorizontally t=200
+                charles move x=15 t=200
+frame 12
+    charles preSpeak
+        charles speak Before we go ahead with that, let's pass Tristan's body to the guard.
+            charles wait t=200
+                charles cont #playName , we will need your help to scout for the location of the winery.
