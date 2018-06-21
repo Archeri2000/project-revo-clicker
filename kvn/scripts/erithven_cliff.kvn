@@ -1,0 +1,38 @@
+declare sophie,yusie,charles,sophieslippedCG as character
+declare erithven as stage
+
+scene erithvenCliff erithven_cliff
+
+frame 0
+    erithven bringCharacter sophie
+    erithven bringCharacter charles
+    erithven bringCharacter yusie
+    erithven bringCharacter sophieslippedCG
+    yusie,sophie,charles setTextColor white
+    erithven display backgroundAlpha=1 t=1
+            sophie,charles appear t=1000
+frame 1
+    sophie preSpeak
+        sophie speak text=Charles...
+            sophie wait t=200
+                sophie cont text=Are you okay?
+frame 2
+    sophie speak text=You've been looking quite unhappy lately...
+frame 3
+    charles preSpeak
+        charles speak text=It's nothing...
+            charles wait t=200
+                charles cont text=Don't worry about me.
+frame 4
+    sophie preSpeak
+        sophie speak text=I know you don't like talking to people like Halley and Yusie...
+            sophie wait t=200
+                sophie speak text=But trust me!
+                    sophie wait t=200
+                        sophie cont text=They are good people!
+frame 5
+    sophie speak text=You know that I ca-
+        charles interupt
+            charles speak text=I know you can read the carofles of others as long as you establish eye contact with them
+                charles wait t=200
+                    charles cont text=But it's not about this...

@@ -1,0 +1,94 @@
+declare sophie,yusie,charles as character
+declare erithven as stage
+
+scene erithvenWelcome erithven_welcome
+
+frame 0
+    erithven bringCharacter sophie
+    erithven bringCharacter charles
+    erithven bringCharacter yusie
+    sophie setTextColor white
+    charles setTextColor white
+    yusie setTextColor white
+    erithven display backgroundAlpha=1 t=1000
+frame 1
+    sophie preMove x=-50
+    charles preMove x=-50
+    yusie preMove x=-100
+
+    yusie flipHorizontally
+
+    sophie appear
+    yusie appear
+    charles appear
+
+        sophie move t=850
+        charles move t= 650
+        yusie move x= 80 t= 750
+
+frame 2
+    yusie move x=20 t= 800
+
+        yusie flipHorizontally
+            yusie preSpeak
+                yusie speak text = Holy Prazines! So this is Erithven!
+frame 3
+    yusie speak text = Look at the huge boats, the fluffy white clouds
+        yusie cont t=1000 text= and the BOOOOUNNNDDDLEESSSS OCEAN!
+frame 4
+    charles preSpeak
+        charles setFontSize 1.2vw
+        charles speak text = Ughh somehow I have the feeling that she's just finding an excuse to visit Erith-
+            charles setFontSize 1.7vw
+frame 5
+        yusie preSpeak
+            yusie speak text= Hey! I'm on official duty right now!
+frame 6
+    yusie speak text = W-Who says I'm on a holiday!!
+
+frame 7
+    yusie speak text = I-I'm just admiring the secnery while at work!
+
+frame 8
+    sophie preSpeak
+        sophie speak text = But oh myy, the this place is really beautif-
+frame 9
+    yusie preSpeak
+        yusie speak text = I KNOW, RIGHT?
+frame 10
+    yusie speak text = At this rate, I think I am really going to fall in love with this place!
+frame 11
+    charles preSpeak
+        charles speak text = Alright, alright, whatever you say, manta ray....
+
+frame 12
+    yusie preSpeak
+        yusie speak text = Uuuuuuu
+frame 13
+        yusie speak text = Well whatever! Let's move on!
+            yusie endSpeak
+
+frame 14
+    erithven closeTextBox
+    sophie flipHorizontally
+    charles flipHorizontally
+    sophie move x=-50 t=850
+    charles move x=-80 t=650
+    yusie move x = -20 t=2000
+        yusie flipHorizontally
+        yusie move x = 10 t=1000
+        charles flipHorizontally
+frame 15
+    yusie setFontSize 1.2vw
+    yusie preSpeak
+        yusie speak text = But before that, just one more look at the vast ocea-
+        charles move x= 90 t=1500 g= swing
+            charles preSpeak
+                charles speak text = Come on! Hurry!
+frame 16
+    yusie preSpeak
+        charles flipHorizontally
+        charles move x = -80 t=2000 g= linear
+        yusie move x= -90 t=2000 g= stepped
+        yusie setFontSize 2vw
+        yusie speak text = Noooooooooo~

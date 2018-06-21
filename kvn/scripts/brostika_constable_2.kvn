@@ -1,0 +1,117 @@
+declare charles,sophie,yusie,broski as character
+declare brostika as stage
+
+scene brostika_constable2 brostika_constable2
+
+frame
+    brostika bringCharacter charles
+    brostika bringCharacter sophie
+    brostika bringCharacter yusie
+    brostika bringCharacter broski
+    charles,sophie preMove x=-50
+    broski preMove x=-100
+    broski setHorizontalFlip true
+    brostika display backgroundOpacity=0 bkdpOpacity=1 t=0
+        brostika changeBackground background=police alpha=1 time=800
+
+frame
+    sophie,charles,yusie,broski setTextColor white
+    yusie changeName Guard
+    yusie setFontSize 1.7vw
+    sophie changeSprite default
+        yusie appear 500
+            sophie appear 0
+                sophie move t=1000 graph=easeOut
+            charles appear 0
+                charles wait 200
+                charles move t=1000 g=easeOut
+frame
+    broski preSpeak
+        broski speak Yusie, thank you for dispatching this group of helpful people to free me.
+            yusie changeName Yusie
+        broski wait 200
+            broski contspeaking If not for them, I would still be tied up in the old shed next to my winery.
+
+frame
+    yusie preSpeak
+        yusie speak Actually...
+            yusie wait 400
+                yusie contSpeak I didn't trust them when they reported the incident to me.
+                    yusie wait 200
+                        yusie contSpeak I merely told them to get you to inform me about the situation of your winery in person.
+
+frame
+    yusie speak I am so sorry, -
+        yusie wait 300
+            yusie speak What are your names again?
+
+frame
+    sophie preSpeak
+        sophie speak I am Sophie and they are Charles and
+            sophie wait 200
+                sophie contSpeaking And don't worry about what happened earlier
+                    sophie wait 200
+                        sophie contSpeak You were merely doing your job.
+
+frame
+    broski preSpeak
+        broski speak Yusie, now that we've confirmed the matter, you should take your men to arrest the Revolutionists.
+
+frame
+    yusie preSpeak
+        yusie speak Of Course!
+            yusie wait 200
+                yusie contSpeak I will round up my men now.
+
+frame
+    sophie preSpeak
+        sophie speak Yusie, let us assist you in fighting the Revolutionists!
+
+frame
+    yusie preSpeak
+        yusie speak Assist me?
+            yusie wait 200
+                yusie contSpeak I doubt that any of you will be of much help.
+
+frame
+    charles preSpeak
+        charles speak Let's hope you don't mix up the good and bad guys again...
+
+frame
+    yusie preSpeak
+        yusie speak Excuse me?!
+
+frame
+    charles preSpeak
+        charles speak ...
+
+frame
+    yusie preSpeak
+        yusie speak Just wait here while I show you how it's done.
+
+frame
+    yusie endSpeak
+        yusie flipHorizontally t=200
+            yusie move x=50 t=500
+
+frame
+    broski move x=20 t=500
+        broski flipHorizontally t=200
+            broski preSpeak
+                broski speak Thank you for saving me once again!
+
+frame
+    charles preSpeak
+        charles speak No problem, if you would excuse us now, we have to-
+            charles wait 200
+                broski preSpeak
+                    broski speak I believe I haven't introduced myself yet.
+
+frame
+    broski speak I'm Mr Broski, the 16th generation head of hte Brostikine winery family.
+
+frame
+    broski speak Our family has a long history, making wine for Brostika for many centuries.
+
+frame
+    broski speak Last year, we sold, erm...

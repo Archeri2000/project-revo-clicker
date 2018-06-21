@@ -1,0 +1,244 @@
+declare sophie,yusie,charles,broski,yusieHelpedCG as character
+declare brostika as stage
+
+scene brostikaEnd brostika_end
+
+frame
+    brostika bringCharacter sophie
+    brostika bringCharacter charles
+    brostika bringCharacter yusie
+    brostika bringCharacter broski
+    brostika bringCharacter yusieHelpedCG
+    sophie setTextColor white
+    charles setTextColor white
+    yusie setTextColor white
+    broski setTextColor white
+    brostika display backgroundAlpha=0 t=100
+        yusieHelpedCG bringAboveOverlay
+        yusieHelpedCG bringToFront
+        yusieHelpedCG appear t=1000 g=easeOut
+            brostika changeOverlay color=black o=1
+
+frame
+    yusie say msg=T-thank you... t=1000
+    brostika changeBackground background=winery t=2 o=1
+        yusie appear
+        sophie appear
+        charles appear
+frame
+    brostika closeTextBox
+        yusie wait t=500
+            yusieHelpedCG disappear t=1000
+                brostika changeOverlay o=0 t=1000
+frame
+    yusie preSpeak
+        yusie speak text=I guess you are quite good at combat
+frame
+    yusie speak text=But it's n
+        yusie wait t=300
+            yusie cont text=-n
+                yusie wait t=300
+                    yusie cont msg=-not like I needed your help anyways.
+frame
+    yusie cont text=I could have done it by myself
+frame
+    yusie speak msg=I just needed a little more time
+frame
+    brostika changeOverlay o=0.55
+        charles bringAboveOverlay
+        charles preSpeak
+            charles setItalic
+            charles setFontSize 1.2vw
+            charles speak msg=Yeah... sure
+                charles wait t=200
+                    charles endSpeak
+                    brostika changeOverlay o=0
+frame
+    brostika setOpacity 0
+    charles bringBelowOverlay
+        yusie bringToFront
+            brostika animate t=500
+            sophie disappear t=500
+            charles disappear t=500
+            yusie disappear t=500
+                yusie move x=-25
+                yusie flipHorizontally t=0
+                brostika changeBackground opacity=1 background=police t=500
+                    brostika wait t=500
+                        sophie appear t=500
+                        charles appear t=500
+
+                            yusie appear t=500
+            brostika closeTextBox
+frame
+    broski move x=5
+    broski appear t=1000
+    charles setNormalText
+    charles setFontSize 1.7vw
+    broski preSpeak
+        broski speak text=You've returned, my friends!
+            broski wait t=300
+                broski contSpeak text =Thank you for recovering my beloved winery for me!
+frame
+    broski speak text=It’s a pity that I’ve lost Tristan because of this incident!
+            broski wait t=200
+                broski contSpeak text =Tristan was a very capable staff, and he will be sorely missed.
+
+frame
+    broski speak text=But it’s okay, as long as I’m still around, Brostikine will remain as the best-
+        sophie preSpeak
+            sophie speak text=Erm it's okay, Mr Broski!
+                sophie wait t=200
+                    sophie contSpeak text=We have heard enough of your stories and understand your passion...
+
+frame
+    charles preSpeak
+        charles speak text=That's right
+            charles wait t=200
+                charles contSpeak text=It's getting a little late
+
+frame
+    charles speak text=We should start heading to Erithven soon!
+
+//Achievement Unlocked: Brostika's Sohpies_Room
+
+frame
+    yusie preSpeak
+        yusie speak text=Oh
+            yusie wait t=300
+                yusie move x=10
+                yusie flipHorizontally t=200
+                yusie contSpeak text=, you're heading to Erithven?
+
+frame
+    sophie preSpeak
+        sophie speak text=Yup!
+            sophie wait t=200
+                sophie contSpeak text=We'll be making out way through Erithven before heading to Boriolsis
+
+frame
+    yusie preSpeak
+        yusie speak text=In that case, could you assist our Guard team to deliver this stabilizer to a lady in Erithven?
+            yusie wait t=200
+
+frame
+    yusie speak text=It's a medication of sorts which helps to prevent a condition from worsening before the actual treatment begins
+
+frame
+    charles preSpeak
+        charles speak text=Who made this stabilizer?
+            charles wait t=200
+                charles contSpeak text=And who is it for?
+                    charles wait t=200
+                        charles speak text=I don't want to go around running errands for causes which are unknown to me
+
+frame
+    yusie preSpeak
+        yusie speak text=Excuse you?
+            yusie wait t=200
+                yusie speak text=What is there to doubt about the Guards?
+
+frame
+    yusie speak text=I am the Second-in-Command of the Brostikan Guards!
+        yusie wait t=200
+
+frame
+    yusie speak text=What is there to doubt about my words?
+
+frame
+    sophie preSpeak
+        sophie speak text=Err...
+            sophie wait t=400
+                sophie contSpeak text=I'm sure Charles is not questioning you...
+                    sophie wait t=200
+                        sophie contSpeak text=He just likes to understand what's going on...
+
+frame
+    yusie preSpeak
+        yusie speak text=Hmphh!
+            yusie wait t=400
+
+frame
+    charles preSpeak
+        charles speak text=Sophie, since Yusie seems unwilling to divulge any of this information with us
+            charles wait t=200
+                charles contSpeak text=, we should make our way-
+                    yusie setFontSize 2vw
+                    yusie changeBold true
+                    yusie preSpeak
+                        yusie speak text=HEYYY!
+                            yusie setFontSize 1.7vw
+                            yusie setNormalText
+                            yusie wait t=200
+                                yusie contSpeak text=Hold up a little, alright?
+
+frame
+    yusie speak text=The stabilizer is made by a sage who specializes in morphicology
+        yusie wait t=200
+            yusie contSpeak text=It is meant for a kid in Erithven who has developed an extremely rare illness...
+
+frame
+    yusie speak text=Apparently, the disease is so deadly that it could potentially wipe out the entire village if it broke free from the kid.
+        yusie wait t=200
+            yusie speak text=This news was not shared with the rest of Erithven in order to prevent the spread of mass hysteria
+
+frame
+    yusie speak text=The sage in Brostika was called upon to concoct an elixir to cure the kid.
+        yusie wait t=200
+            yusie contSpeak text=However, he is still wrapping up on the concoction of the elixir.
+                yusie wait t=200
+
+frame
+    yusie speak text=That's why we need you to deliver the stablizer to get a bit more time for him. He should be done really soon.
+
+frame
+    sophie preSpeak
+        sophie speak text=Suree!
+            sophie wait t=200
+                sophie contSpeak text=I'm sure we can help yo-
+                    charles preSpeak
+                        charles speak text=But how're supposed to know which house the lady lives in?
+                            charles wait t=200
+                                charles contSpeak text=It's our first time going to Erithven after all
+
+frame
+    yusie preSpeak
+        yusie speak text=... s=false time=1000
+frame
+    yusie speak text=Hmm...
+        yusie wait t=300
+
+frame
+    yusie speak text=I-I haven't really figured that out...
+frame
+    yusie contSpeak text=... s=false time=1000
+
+frame
+    charles preSpeak
+        charles speak text=Well, you could just tell us the color of the roof or the relative position of the house...
+frame
+    yusie preSpeak
+        yusie speak text=Actually...
+
+frame
+    yusie preSpeak
+        yusie speak text=Never mind!
+            yusie wait t=200
+                yusie contSpeak text=I don't think I can trust you...
+                    yusie wait t=200
+                        yusie speak text=I will just follow the three of you to Erithven
+
+frame
+    yusie speak text=#playName , you shall hold onto this stabilizer while I lead all of you to Erithven
+
+frame
+    yusie endSpeak
+        charles bringAboveOverlay
+        sophie bringAboveOverlay
+        brostika changeOverlay t=0 o=0.55 color=black
+            charles preSpeak
+                charles speak text=She's really one of a kind, isn't she?
+
+frame
+    sophie preSpeak
+        sophie speak text=On the bright side, we won't get lost!
