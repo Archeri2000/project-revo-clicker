@@ -1,4 +1,4 @@
-let brostikaConstable =  new Scene("brostika_constable",
+let brostikaWinery =  new Scene("brostika_winery",
 [new Frame(function(){
 	brostika.bringCharacter(sophie);
 	brostika.bringCharacter(charles);

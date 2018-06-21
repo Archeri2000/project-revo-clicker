@@ -1,7 +1,7 @@
 declare charles,sophie,yusie,slime,slime2,broski as character
 declare brostika as stage
 
-scene wineryscene = brostika_winery
+scene wineryscene2 brostika_winery2
 
 
 frame
@@ -13,7 +13,7 @@ frame
     charles preMove -80
     sophie preMove -50
 
-    brostika display 0, 1, 0,
+    brostika display bgO=0 bdA=1 t=0
       brostika setAnchorX 0
       brostika setAnchorY 0
       brostika setWidth 150

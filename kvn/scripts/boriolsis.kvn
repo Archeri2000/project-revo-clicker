@@ -1,1 +1,10 @@
-decalre 
+declare yusie,charles,sophie,cheif,june as character
+declare boriolsis as stage
+
+
+scene boriolsisWelcome boriolsis_welcome
+
+frame
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter cheif

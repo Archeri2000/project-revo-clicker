@@ -213,7 +213,7 @@ var minion2 = new Character("minion2", "Minion", "v_boriolsis/ruskoff/arrogant.p
   .setDefaultAnimateInterpolation(swing)
   .complete();
 //Boriolsis Town Scene
-var alchemist = new Character("alchemist", "June", "alchemist.png", 68, 95.2, 15, 25, 50, 50)
+var june = new Character("alchemist", "June", "alchemist.png", 68, 95.2, 15, 25, 50, 50)
   .addSprite("confident", "v_boriolsis/alchemist/confident.png")
   .addSprite("cry", "v_boriolsis/alchemist/cry.png")
   .addSprite("smile", "v_boriolsis/alchemist/smile.png")

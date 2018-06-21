@@ -229,7 +229,7 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-	brostika.textbox.speed 1/2.5;
+	brostika.textbox.speed = 1/2.5;
 		broski.speak('That was the best record we ever had in the history of our winery!',function() {
 			broski.speak('I can still remember how my father used to question if I could actually outdo him.',function() {
 				broski.wait(200,function() {

@@ -1,4 +1,4 @@
-declare sophie,yusie,charles,sophieslippedCG as character
+declare sophie,yusie,charles,sophieslippedCG,comet as character
 declare erithven as stage
 
 scene cliff erithven_cliff

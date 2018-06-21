@@ -116,7 +116,7 @@ frame
     sophie changeItalic true
     sophie preSpeak
         sophie speak But but but, the entire village is at stake!
-            sophie wait 200,
+            sophie wait 200
                 sophie contSpeaking  How can we just let it happen?!
 
 frame
@@ -146,7 +146,7 @@ frame
 frame
     sophie preSpeak
         sophie speak Tristan, you can pass Charles the bottle of poisoned wine!
-            sophie wait 200,
+            sophie wait 200
                 sophie contSpeaking He will try to decode the poison as soon as possible
 
 frame
@@ -187,7 +187,7 @@ frame
             tristan rotateAntiClockwise angle=5 t=200
             tristan move y=20 t=200 g=easeIn s=false
                 tristan wait 200
-                    tristan move y=10 t=500, g=stepped s=false
+                    tristan move y=10 t=500 g=stepped s=false
                     tristan rotateAntiClockwise angle=75 t=500 swing=easeIn s=false
 frame
     sophie setFontSize 2.0vw

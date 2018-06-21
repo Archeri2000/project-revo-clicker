@@ -141,7 +141,7 @@ let tristanscene =  new Scene("borstika_tristan",
 	sophie.changeItalic(true);
 	sophie.preSpeak(function() {
 		sophie.speak('But but but, the entire village is at stake!',function() {
-			sophie.wait(200,,function() {
+			sophie.wait(200,function() {
 				sophie.contSpeaking('How can we just let it happen?!');
 			});
 		});
@@ -190,7 +190,7 @@ let tristanscene =  new Scene("borstika_tristan",
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Tristan, you can pass Charles the bottle of poisoned wine!',function() {
-			sophie.wait(200,,function() {
+			sophie.wait(200,function() {
 				sophie.contSpeaking('He will try to decode the poison as soon as possible');
 			});
 		});
@@ -244,7 +244,7 @@ let tristanscene =  new Scene("borstika_tristan",
 			tristan.rotateAntiClockwise(5,200);
 			tristan.move(null,20,200,function() {
 				tristan.wait(200,function() {
-					tristan.move(null,10,500,,null,stepped,false);
+					tristan.move(null,10,500,null,stepped,false);
 					tristan.rotateAntiClockwise(75,500,null,null,false);
 				});
 			},easeIn,false);
