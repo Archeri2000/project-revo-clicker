@@ -13,48 +13,87 @@ let brostikaEnd =  new Scene("brostika_end",
 		yusieHelpedCG.bringAboveOverlay();
 		yusieHelpedCG.bringToFront();
 		yusieHelpedCG.appear(1000,function() {
-			brostika.changeOverlay(1,'black');
+			brostika.changeOverlay(1,'black',null,function() {
+				brostika.changeBackground('winery',1,2,function() {
+					yusie.preMove(6,20);
+					yusie.preRotate(degree=-10);
+					yusie.appear();
+					sophie.appear();
+					charles.appear();
+				});
+			});
 		},easeOut);
 	});
 })
 ,new Frame(function(){
-	yusie.speak('T-thank you...',null,1000);
-	brostika.changeBackground('winery',1,2,function() {
-		yusie.appear();
-		sophie.appear();
-		charles.appear();
+	yusieHelpedCG.disappear(1000,function() {
+		brostika.changeOverlay(0,null,1000);
 	});
 })
 ,new Frame(function(){
-	brostika.closeTextBox(function() {
-		yusie.wait(500,function() {
-			yusieHelpedCG.disappear(1000,function() {
-				brostika.changeOverlay(0,null,1000);
-			});
+	yusie.move(-3,2,300,function() {
+		yusie.wait(100,function() {
+			yusie.rotateClockwise(null,200);
+			yusie.move(-3,-22,400,null,swing);
 		});
 	});
 })
 ,new Frame(function(){
 	yusie.preSpeak(function() {
-		yusie.speak('I guess you are quite good at combat');
-	});
-})
-,new Frame(function(){
-	yusie.speak('But it\'s n',function() {
-		yusie.wait(300,function() {
-			yusie.contSpeaking('-n',function() {
-				yusie.wait(300,function() {
-					yusie.contSpeaking('-not like I needed your help anyways.');
+		yusie.speak('We could have taken them even without your help...',function() {
+			yusie.wait(400,function() {
+				yusie.contSpeaking('but,',function() {
+					yusie.wait(400,function() {
+						yusie.contSpeaking('thanks...');
+					});
 				});
 			});
 		});
 	});
 })
 ,new Frame(function(){
-	yusie.contSpeaking('I could have done it by myself');
+	yusie.speak('Why didn\'t you all say you could fight earlier?');
 })
 ,new Frame(function(){
-	yusie.speak('I just needed a little more time');
+	charles.preSpeak(function() {
+		charles.speak('Well,',function() {
+			charles.wait(300,function() {
+				charles.contSpeaking('if you decided to actually listen instead of rushing off...');
+			});
+		});
+	});
+})
+,new Frame(function(){
+	yusie.preSpeak(function() {
+		yusie.speak('Hey!',function() {
+			yusie.wait(300,function() {
+				yusie.contSpeaking('My weapon was just dull from a lack of use recently!');
+			});
+		});
+	});
+})
+,new Frame(function(){
+	yusie.speak('I could have taken them no problem otherwise!');
+})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('It\'s a shame your weapon\'s not as sharp as your tongue...');
+	});
+})
+,new Frame(function(){
+	yusie.preSpeak(function() {
+		yusie.speak('Excuse me?!');
+	});
+})
+,new Frame(function(){
+	yusie.speak('A-',function() {
+		yusie.wait(100,function() {
+			yusie.contSpeaking('Anyway, we should go back.');
+		});
+	});
+})
+,new Frame(function(){
+	yusie.speak('I\'ll need you all to make a statement.');
 })
 ,new Frame(function(){
 	brostika.changeOverlay(0.55,null,null,function() {
@@ -62,7 +101,7 @@ let brostikaEnd =  new Scene("brostika_end",
 		charles.preSpeak(function() {
 			charles.setItalic();
 			charles.setFontSize('1.2vw');
-			charles.speak('Yeah... sure',function() {
+			charles.speak('Not Mr Broski again...',function() {
 				charles.wait(200,function() {
 					charles.endSpeak();
 					brostika.changeOverlay(0);
@@ -75,51 +114,93 @@ let brostikaEnd =  new Scene("brostika_end",
 	brostika.setOpacity(0);
 	charles.bringBelowOverlay(function() {
 		yusie.bringToFront(function() {
+			brostika.closeTextBox();
 			brostika.animate(500);
 			sophie.disappear(500);
 			charles.disappear(500);
 			yusie.disappear(500,function() {
 				yusie.move(-25);
+				charles.move(-70);
+				yusie.move(-70);
+				sophie.move(-70);
 				yusie.flipHorizontally(null,0);
 				brostika.changeBackground('police',1,500,function() {
 					brostika.wait(500,function() {
-						sophie.appear(500);
-						charles.appear(500,function() {
-							yusie.appear(500);
-						});
+						sophie.appear();
+						charles.appear();
+						yusie.appear();
+						broski.move(10);
+						broski.flipHorizontally();
+						broski.appear(500);
+						broski.speak('...and you must know that we age our wines in the very best oak barrels,',function() {
+							sophie.move(70,null,1200,null,swing,false);
+							charles.wait(50,function() {
+								charles.move(70,null,1200,null,swing,false);
+							});
+							yusie.wait(100,function() {
+								yusie.move(70,null,1200,null,swing,false);
+							});
+							broski.wait(300,function() {
+								broski.speak('carefully crafted in Malidret and imported-',function() {
+									brostika.wait(400,function() {
+										brostika.displayText('Sir, Captain Yusie has returned!',400,function() {
+											charles.setNormalText();
+											charles.setFontSize('1.7vw');
+											broski.wait(400,function() {
+												broski.flipHorizontally(function() {
+													broski.wait(700,function() {
+														broski.speak('Ah!',null,null,false);
+													});
+												},null,null,false);
+											});
+										},'Town Guard',false,null,'white',null,null,false);
+									});
+								},null,false);
+							});
+						},null,false);
 					});
 				});
 			});
-			brostika.closeTextBox();
 		});
 	});
 })
 ,new Frame(function(){
-	broski.move(5);
-	broski.appear(1000);
-	charles.setNormalText();
-	charles.setFontSize('1.7vw');
 	broski.preSpeak(function() {
 		broski.speak('You\'ve returned, my friends!',function() {
 			broski.wait(300,function() {
-				broski.contSpeaking('Thank you for recovering my beloved winery for me!');
+				broski.contSpeaking('Thank you for recovering my beloved winery!');
 			});
 		});
 	});
 })
 ,new Frame(function(){
-	broski.speak('It’s a pity that I’ve lost Tristan because of this incident!',function() {
-		broski.wait(200,function() {
-			broski.contSpeaking('Tristan was a very capable staff, and he will be sorely missed.');
+	broski.speak('It’s such a shame that I’ve lost Tristan because of this incident!',function() {
+		broski.wait(400,function() {
+			broski.contSpeaking('Such a capable lad,',function() {
+				broski.wait(300,function() {
+					broski.contSpeaking('he will be sorely missed.');
+				});
+			});
 		});
 	});
 })
 ,new Frame(function(){
-	broski.speak('But it’s okay, as long as I’m still around, Brostikine will remain as the best-',function() {
-		sophie.preSpeak(function() {
-			sophie.speak('Erm it\'s okay, Mr Broski!',function() {
-				sophie.wait(200,function() {
-					sophie.contSpeaking('We have heard enough of your stories and understand your passion...');
+	broski.speak('BUT!');
+})
+,new Frame(function(){
+	broski.speak('It’s okay,',function() {
+		broski.wait(300,function() {
+			broski.contSpeaking('as long as I’m still around,',function() {
+				broski.wait(400,function() {
+					broski.contSpeaking('Brostikine will continue to produce the best-',function() {
+						sophie.interupt(function() {
+							sophie.speak('Erm it\'s okay, Mr Broski!',function() {
+								sophie.wait(200,function() {
+									sophie.contSpeaking('I think we all understand how you feel...');
+								});
+							});
+						});
+					});
 				});
 			});
 		});
@@ -127,22 +208,79 @@ let brostikaEnd =  new Scene("brostika_end",
 })
 ,new Frame(function(){
 	charles.preSpeak(function() {
-		charles.speak('That\'s right',function() {
+		charles.speak('That\'s right.',function() {
 			charles.wait(200,function() {
-				charles.contSpeaking('It\'s getting a little late');
+				charles.contSpeaking('It\'s getting a little late.');
 			});
 		});
 	});
 })
 ,new Frame(function(){
-	charles.speak('We should start heading to Erithven soon!');
+	yusie.preSpeak(function() {
+		yusie.speak('Y-',function() {
+			yusie.wait(300,function() {
+				yusie.contSpeaking('yes, as much as I love your stories, I still have to take a statement from these folks.');
+			});
+		});
+	});
+})
+,new Frame(function(){
+	yusie.speak('So, if you could excuse us,',function() {
+		yusie.move(20,null,500);
+		broski.wait(100,function() {
+			broski.move(20,null,500,function() {
+				yusie.contSpeaking('Mr Broski...',function() {
+					yusie.move(20,null,500,function() {
+						broski.wait(100,function() {
+							broski.move(20,null,500,function() {
+								broski.speak('Alright, goodbye!',function() {
+									broski.wait(300,function() {
+										broski.contSpeaking('Hope to see you fine folks again soon!');
+									});
+								});
+							});
+						});
+					});
+				});
+			});
+		});
+	});
+})
+,new Frame(function(){
+	brostika.displayText('',null,function() {
+		yusie.flipHorizontally();
+		yusie.wait(300,function() {
+			yusie.move(-20,null,500,function() {
+				yusie.speak('Phew, I thought he\'d never leave.',null,null,false);
+			},null,false);
+		});
+	},'none');
+})
+,new Frame(function(){
+	yusie.speak('So,',function() {
+		yusie.wait(300,function() {
+			yusie.contSpeaking('why were you in Brostika to begin with?');
+		});
+	});
+})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('I don\'t see why we have to reveal any more-',function() {
+			sophie.wait(300,function() {
+				sophie.interupt(function() {
+					sophie.speak('Come on, Charles, we can trust Yusie.');
+				});
+			});
+		});
+	});
+})
+,new Frame(function(){
+	sophie.speak('We were just passing through here to Erithven!');
 })
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Oh',function() {
 			yusie.wait(300,function() {
-				yusie.move(10);
-				yusie.flipHorizontally(null,200);
 				yusie.contSpeaking(', you\'re heading to Erithven?');
 			});
 		});
@@ -152,28 +290,37 @@ let brostikaEnd =  new Scene("brostika_end",
 	sophie.preSpeak(function() {
 		sophie.speak('Yup!',function() {
 			sophie.wait(200,function() {
-				sophie.contSpeaking('We\'ll be making out way through Erithven before heading to Boriolsis');
+				sophie.contSpeaking('We\'ll be making out way through Erithven before heading to Boriolsis.');
 			});
 		});
 	});
 })
 ,new Frame(function(){
 	yusie.preSpeak(function() {
-		yusie.speak('In that case, could you assist our Guard team to deliver this stabilizer to a lady in Erithven?',function() {
+		yusie.speak('In that case, could you do me a favour and deliver something?',function() {
 			yusie.wait(200);
 		});
 	});
 })
 ,new Frame(function(){
-	yusie.speak('It\'s a medication of sorts which helps to prevent a condition from worsening before the actual treatment begins');
+	yusie.speak('I need to deliver some medication to a family in Erithven');
 })
 ,new Frame(function(){
 	charles.preSpeak(function() {
-		charles.speak('Who made this stabilizer?',function() {
-			charles.wait(200,function() {
+		charles.speak('Wow,',function() {
+			charles.wait(400,function() {
+				charles.contSpeaking('I didn\'t expect the town guards to be THAT shorthanded');
+			});
+		});
+	});
+})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('Who made this medicine anyway?',function() {
+			charles.wait(300,function() {
 				charles.contSpeaking('And who is it for?',function() {
-					charles.wait(200,function() {
-						charles.speak('I don\'t want to go around running errands for causes which are unknown to me');
+					charles.wait(700,function() {
+						charles.speak('We\'re not running a courier service.');
 					});
 				});
 			});
@@ -182,24 +329,19 @@ let brostikaEnd =  new Scene("brostika_end",
 })
 ,new Frame(function(){
 	yusie.preSpeak(function() {
-		yusie.speak('Excuse you?',function() {
-			yusie.wait(200,function() {
-				yusie.speak('What is there to doubt about the Guards?');
-			});
+		yusie.speak('I\'ll have you know our staffing is perfectly sufficient!');
+	});
+})
+,new Frame(function(){
+	yusie.speak('Why do you even ask so many questions?',function() {
+		yusie.wait(300,function() {
+			yusie.contSpeaking('Do you still doubt me?');
 		});
 	});
 })
 ,new Frame(function(){
-	yusie.speak('I am the Second-in-Command of the Brostikan Guards!',function() {
-		yusie.wait(200);
-	});
-})
-,new Frame(function(){
-	yusie.speak('What is there to doubt about my words?');
-})
-,new Frame(function(){
 	sophie.preSpeak(function() {
-		sophie.speak('Err...',function() {
+		sophie.speak('Err Yusie...',function() {
 			sophie.wait(400,function() {
 				sophie.contSpeaking('I\'m sure Charles is not questioning you...',function() {
 					sophie.wait(200,function() {
@@ -213,7 +355,13 @@ let brostikaEnd =  new Scene("brostika_end",
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Hmphh!',function() {
-			yusie.wait(400);
+			yusie.wait(400,function() {
+				yusie.speak('It seems to me that you folks don\'t even have the confidence to do a simple delivery,',function() {
+					yusie.wait(400,function() {
+						yusie.contSpeaking('or are you going to prove me wrong?');
+					});
+				});
+			});
 		});
 	});
 })
@@ -221,14 +369,14 @@ let brostikaEnd =  new Scene("brostika_end",
 	charles.preSpeak(function() {
 		charles.speak('Sophie, since Yusie seems unwilling to divulge any of this information with us',function() {
 			charles.wait(200,function() {
-				charles.contSpeaking(', we should make our way-',function() {
+				charles.contSpeaking(', I suppose we should make our way-',function() {
 					yusie.setFontSize('2vw');
 					yusie.changeBold(true);
 					yusie.preSpeak(function() {
 						yusie.speak('HEYYY!',function() {
 							yusie.setFontSize('1.7vw');
 							yusie.setNormalText();
-							yusie.wait(200,function() {
+							yusie.wait(300,function() {
 								yusie.contSpeaking('Hold up a little, alright?');
 							});
 						});
@@ -239,51 +387,63 @@ let brostikaEnd =  new Scene("brostika_end",
 	});
 })
 ,new Frame(function(){
-	yusie.speak('The stabilizer is made by a sage who specializes in morphicology',function() {
-		yusie.wait(200,function() {
-			yusie.contSpeaking('It is meant for a kid in Erithven who has developed an extremely rare illness...');
+	yusie.speak('I didn\'t think you all would really walk out...');
+})
+,new Frame(function(){
+	yusie.speak('The medicine was made by Brostika\'s sage.');
+})
+,new Frame(function(){
+	yusie.contSpeaking('A kid in Erithven recently developed an extremely rare and deadly illness...');
+})
+,new Frame(function(){
+	yusie.speak('Right now, it is still in a dormant state, but if it spreads, all of Erithven could be in danger',function() {
+		yusie.wait(400,function() {
+			yusie.speak('Thus far, only a few people know of it so as to prevent mass hysteria.');
 		});
 	});
 })
 ,new Frame(function(){
-	yusie.speak('Apparently, the disease is so deadly that it could potentially wipe out the entire village if it broke free from the kid.',function() {
-		yusie.wait(200,function() {
-			yusie.speak('This news was not shared with the rest of Erithven in order to prevent the spread of mass hysteria');
-		});
-	});
+	yusie.speak('Our sage is working hard at a cure, but he is still searching for a few critical ingredients.');
 })
 ,new Frame(function(){
-	yusie.speak('The sage in Brostika was called upon to concoct an elixir to cure the kid.',function() {
-		yusie.wait(200,function() {
-			yusie.contSpeaking('However, he is still wrapping up on the concoction of the elixir.',function() {
-				yusie.wait(200);
-			});
-		});
-	});
+	yusie.speak('That\'s why we need to deliver a stablizer to buy a bit more time.');
 })
 ,new Frame(function(){
-	yusie.speak('That\'s why we need you to deliver the stablizer to get a bit more time for him. He should be done really soon.');
+	yusie.speak('Having the town guards make this delivery would draw too much attention, so...');
+})
+,new Frame(function(){
+	yusie.speak('I would really appreciate it if you could help me out.',function() {
+		yusie.wait(300,function() {
+			yusie.contSpeaking('Regardless, please keep this a secret from the townspeople...');
+		});
+	});
 })
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Suree!',function() {
 			sophie.wait(200,function() {
-				sophie.contSpeaking('I\'m sure we can help yo-',function() {
-					charles.preSpeak(function() {
-						charles.speak('But how\'re supposed to know which house the lady lives in?',function() {
-							charles.wait(200,function() {
-								charles.contSpeaking('It\'s our first time going to Erithven after all');
-							});
-						});
-					});
-				});
+				sophie.contSpeaking('I\'m sure we can help you!');
 			});
 		});
 	});
 })
 ,new Frame(function(){
 	yusie.preSpeak(function() {
-		yusie.speak('...',null,1000,false);
+		yusie.speak('Great! I\'ll need you to deliver it to his mother\'s house!');
+	});
+})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('But how\'re supposed to know which house the lady lives in?',function() {
+			charles.wait(200,function() {
+				charles.contSpeaking('It\'s our first time going to Erithven after all');
+			});
+		});
+	});
+})
+,new Frame(function(){
+	yusie.preSpeak(function() {
+		yusie.speak('Oh yeah...',null,null,false);
 	});
 })
 ,new Frame(function(){
@@ -295,11 +455,44 @@ let brostikaEnd =  new Scene("brostika_end",
 	yusie.speak('I-I haven\'t really figured that out...');
 })
 ,new Frame(function(){
-	yusie.contSpeaking('...',null,1000,false);
+	yusie.speak('...',null,500,false);
+})
+,new Frame(function(){
+	yusie.speak('Well, you could walk past the tall house, and-',function() {
+		yusie.wait(300,function() {
+			yusie.contSpeaking('Um...');
+		});
+	});
+})
+,new Frame(function(){
+	yusie.speak('I think...',function() {
+		yusie.wait(300,function() {
+			yusie.contSpeaking('you then make a right until you reach a street');
+		});
+	});
+})
+,new Frame(function(){
+	yusie.speak('Then you can make a turn and walk up the other street before making a-',function() {
+		yusie.wait(300,function() {
+			yusie.contSpeaking('umm,-',function() {
+				yusie.wait(300,function() {
+					yusie.contSpeaking('right turn and then walk straight down...',function() {
+						yusie.wait(300,function() {
+							yusie.contSpeaking('I think.');
+						});
+					});
+				});
+			});
+		});
+	});
 })
 ,new Frame(function(){
 	charles.preSpeak(function() {
-		charles.speak('Well, you could just tell us the color of the roof or the relative position of the house...');
+		charles.speak('Well, you could just tell us the color of the roof or the relative position of the house...',function() {
+			charles.wait(300,function() {
+				charles.contSpeaking('Street names would also help...');
+			});
+		});
 	});
 })
 ,new Frame(function(){
@@ -308,20 +501,52 @@ let brostikaEnd =  new Scene("brostika_end",
 	});
 })
 ,new Frame(function(){
-	yusie.preSpeak(function() {
-		yusie.speak('Never mind!',function() {
-			yusie.wait(200,function() {
-				yusie.contSpeaking('I don\'t think I can trust you...',function() {
-					yusie.wait(200,function() {
-						yusie.speak('I will just follow the three of you to Erithven');
-					});
+	yusie.speak('Never mind!',function() {
+		yusie.wait(200,function() {
+			yusie.contSpeaking('You all seem terrible at directions',function() {
+				yusie.wait(500,function() {
+					yusie.speak('I\'ll just bring the three of you to Erithven, so you don\'t get lost');
 				});
 			});
 		});
 	});
 })
 ,new Frame(function(){
-	yusie.speak('' + playName + ' , you shall hold onto this stabilizer while I lead all of you to Erithven');
+	brostika.changeOverlay(0.55,null,null,function() {
+		charles.bringAboveOverlay();
+		charles.preSpeak(function() {
+			charles.setItalic();
+			charles.setFontSize('1.2vw');
+			charles.speak('Yeah, sure...',function() {
+				charles.wait(200,function() {
+					charles.endSpeak();
+					brostika.changeOverlay(0);
+				});
+			});
+		});
+	});
+})
+,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('Great! Let\'s all go together!');
+	});
+})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('Whatever happened to town guards attracting too much attention?');
+	});
+})
+,new Frame(function(){
+	yusie.preSpeak(function() {
+		yusie.speak('I-',function() {
+			yusie.wait(300,function() {
+				yusie.speak('I\'ll wear something else! No one will notice!');
+			});
+		});
+	});
+})
+,new Frame(function(){
+	yusie.speak('' + playName + ' , can you hold onto this stabilizer? I\'ll lead all of you to Erithven!');
 })
 ,new Frame(function(){
 	yusie.endSpeak(function() {
@@ -336,7 +561,7 @@ let brostikaEnd =  new Scene("brostika_end",
 })
 ,new Frame(function(){
 	sophie.preSpeak(function() {
-		sophie.speak('On the bright side, we won\'t get lost!');
+		sophie.speak('On the bright side, I\'m sure things will be more lively!');
 	});
 })
 ]);

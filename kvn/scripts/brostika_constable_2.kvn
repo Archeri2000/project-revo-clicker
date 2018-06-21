@@ -3,7 +3,7 @@ declare brostika as stage
 
 scene brostika_constable2 brostika_constable2
 
-frame
+frame 0
     brostika bringCharacter charles
     brostika bringCharacter sophie
     brostika bringCharacter yusie
@@ -14,7 +14,7 @@ frame
     brostika display backgroundOpacity=0 bkdpOpacity=1 t=0
         brostika changeBackground background=police alpha=1 time=800
 
-frame
+frame 1
     sophie,charles,yusie,broski setTextColor white
     yusie changeName Guard
     yusie setFontSize 1.7vw
@@ -25,14 +25,14 @@ frame
             charles appear 0
                 charles wait 200
                 charles move t=1000 g=easeOut
-frame
+frame 2
     broski preSpeak
         broski speak Yusie, thank you for dispatching this group of helpful people to free me.
             yusie changeName Yusie
         broski wait 200
             broski contspeaking If not for them, I would still be tied up in the old shed next to my winery.
 
-frame
+frame 3
     yusie preSpeak
         yusie speak Actually...
             yusie wait 400
@@ -40,12 +40,12 @@ frame
                     yusie wait 200
                         yusie contSpeak I merely told them to get you to inform me about the situation of your winery in person.
 
-frame
+frame 4
     yusie speak I am so sorry, -
         yusie wait 300
             yusie speak What are your names again?
 
-frame
+frame 5
     sophie preSpeak
         sophie speak I am Sophie and they are Charles and
             sophie wait 200
@@ -53,65 +53,104 @@ frame
                     sophie wait 200
                         sophie contSpeak You were merely doing your job.
 
-frame
+frame 6
     broski preSpeak
         broski speak Yusie, now that we've confirmed the matter, you should take your men to arrest the Revolutionists.
 
-frame
+frame 7
     yusie preSpeak
         yusie speak Of Course!
             yusie wait 200
                 yusie contSpeak I will round up my men now.
 
-frame
+frame 8
     sophie preSpeak
         sophie speak Yusie, let us assist you in fighting the Revolutionists!
 
-frame
+frame 9
     yusie preSpeak
         yusie speak Assist me?
             yusie wait 200
                 yusie contSpeak I doubt that any of you will be of much help.
 
-frame
+frame 10
     charles preSpeak
         charles speak Let's hope you don't mix up the good and bad guys again...
 
-frame
+frame 11
     yusie preSpeak
         yusie speak Excuse me?!
 
-frame
+frame 12
     charles preSpeak
         charles speak ...
 
-frame
+frame 13
     yusie preSpeak
         yusie speak Just wait here while I show you how it's done.
 
-frame
+frame 14
     yusie endSpeak
         yusie flipHorizontally t=200
             yusie move x=50 t=500
 
-frame
+frame 15
     broski move x=20 t=500
         broski flipHorizontally t=200
             broski preSpeak
                 broski speak Thank you for saving me once again!
 
-frame
+frame 16
     charles preSpeak
         charles speak No problem, if you would excuse us now, we have to-
             charles wait 200
                 broski preSpeak
                     broski speak I believe I haven't introduced myself yet.
 
-frame
+frame 17
     broski speak I'm Mr Broski, the 16th generation head of hte Brostikine winery family.
 
-frame
+frame 18
     broski speak Our family has a long history, making wine for Brostika for many centuries.
 
-frame
+frame 19
     broski speak Last year, we sold, erm...
+        broski wait 200
+            charles preSpeak
+                charles wait 200
+                    broski preSpeak
+                        broski speak Ah yes, seventy thousand barrels! We sold seventy thousand barrles of wine last year!
+frame 20
+    sophie cycle
+        sophie disappear 150
+            sophie changeSprite default
+                sophie wait
+                    sophie appear 150
+                        sophie wait 600
+                            sophie disappear 150
+                                sophie rotateClockwise angle=5 t=600
+                                    sophie appear t=150
+                                        sophie wait 600
+                                            sophie disappear 150
+                                                sophie rotateAntiClockwise angle=10 t=600
+                                                    sophie appear 150
+                                                        sophie wait 600
+                                                            sophie endOfCycle
+    charles cycle
+        charles disappear
+            charles changeSprite default
+                charles wait 600
+                    charles appear 150
+                        charles wait 600
+                            charles disappear 150
+                                charles flipHorizontally
+                                charles move 10
+                                    charles appear 150
+                                        charles wait 600
+                                            charles disappear 150
+                                                charles flipHorizontally
+                                                charles changeSprite default
+                                                    charles appear
+                                                        charles wait
+                                                            charles endOfCycle
+    

@@ -192,18 +192,16 @@ let policescene2 = new Scene("brostika_constable_2", [
     })
   })
 
-  , new Frame(function() { //frame 17
-  })
 
-  , new Frame(function() { //frame 18
+  , new Frame(function() { //frame 17
     broski.speak("I'm Mr Broski, the 16th generation head of the Brostikine Winery family.")
   })
 
-  , new Frame(function() { //frame 19
+  , new Frame(function() { //frame 18
     broski.speak("Our family has a long history, making wine for Brostika for many centuries.")
   })
 
-  , new Frame(function() { //frame 20
+  , new Frame(function() { //frame 19
     broski.speak("Last year, we sold, erm... ", function() {
       broski.wait(200, function() {
         broski.scale(null, null, 200, function() {
@@ -221,7 +219,7 @@ let policescene2 = new Scene("brostika_constable_2", [
         })
       }, false);
     })
-  }), new Frame(function() { //frame 21
+}), new Frame(function() { //frame 20
     sophie.cycle(function() {
       sophie.disappear(150, function() {
         sophie.changeSprite("def", function() {

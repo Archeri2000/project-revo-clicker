@@ -25,7 +25,7 @@ function publicStaticVoidMain(id) {
   if (id === 0) {
     //the first scene to be played here
     //playScene(scene,frame);
-    playScene("brostika_alley", 3);
+    playScene("brostika_end");
   }
 
 }

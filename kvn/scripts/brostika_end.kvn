@@ -9,47 +9,77 @@ frame
     brostika bringCharacter yusie
     brostika bringCharacter broski
     brostika bringCharacter yusieHelpedCG
-    sophie setTextColor white
-    charles setTextColor white
-    yusie setTextColor white
-    broski setTextColor white
+    sophie,charles,yusie,broski setTextColor white
     brostika display backgroundAlpha=0 t=100
         yusieHelpedCG bringAboveOverlay
         yusieHelpedCG bringToFront
         yusieHelpedCG appear t=1000 g=easeOut
             brostika changeOverlay color=black o=1
+                brostika changeBackground background=winery t=2 o=1
+                    yusie preMove x=6 y=20
+                    yusie preRotate degree=-10
+                    yusie appear
+                    sophie appear
+                    charles appear
+frame
+    yusieHelpedCG disappear t=1000
+        brostika changeOverlay o=0 t=1000
 
 frame
-    yusie say msg=T-thank you... t=1000
-    brostika changeBackground background=winery t=2 o=1
-        yusie appear
-        sophie appear
-        charles appear
-frame
-    brostika closeTextBox
-        yusie wait t=500
-            yusieHelpedCG disappear t=1000
-                brostika changeOverlay o=0 t=1000
+    yusie move x=-3 y=2 t=300
+        yusie wait 100
+            yusie rotateClockwise t=200
+            yusie move x=-3 y=-22 t=400 g=swing
+
 frame
     yusie preSpeak
-        yusie speak text=I guess you are quite good at combat
+        yusie speak We could have taken them even without your help...
+            yusie wait 400
+                yusie contSpeak but,
+                    yusie wait 400
+                        yusie contSpeak thanks...
+
 frame
-    yusie speak text=But it's n
-        yusie wait t=300
-            yusie cont text=-n
-                yusie wait t=300
-                    yusie cont msg=-not like I needed your help anyways.
+    yusie speak Why didn't you all say you could fight earlier?
+
 frame
-    yusie cont text=I could have done it by myself
+    charles preSpeak
+        charles speak Well,
+            charles wait 300
+                charles contSpeak if you decided to actually listen instead of rushing off...
+
 frame
-    yusie speak msg=I just needed a little more time
+    yusie preSpeak
+        yusie speak Hey!
+            yusie wait 300
+                yusie contSpeak My weapon was just dull from a lack of use recently!
+
+frame
+    yusie speak I could have taken them no problem otherwise!
+
+frame
+    charles preSpeak
+        charles speak It's a shame your weapon's not as sharp as your tongue...
+
+frame
+    yusie preSpeak
+        yusie speak Excuse me?!
+
+frame
+    yusie speak A-
+        yusie wait 100
+            yusie contSpeak Anyway, we should go back.
+
+frame
+    yusie speak I'll need you all to make a statement.
+
 frame
     brostika changeOverlay o=0.55
         charles bringAboveOverlay
         charles preSpeak
             charles setItalic
             charles setFontSize 1.2vw
-            charles speak msg=Yeah... sure
+            charles speak msg=Not Mr Broski again...
                 charles wait t=200
                     charles endSpeak
                     brostika changeOverlay o=0
@@ -57,97 +87,159 @@ frame
     brostika setOpacity 0
     charles bringBelowOverlay
         yusie bringToFront
+            brostika closeTextBox
             brostika animate t=500
             sophie disappear t=500
             charles disappear t=500
             yusie disappear t=500
                 yusie move x=-25
+                charles,yusie,sophie move x=-70
                 yusie flipHorizontally t=0
                 brostika changeBackground opacity=1 background=police t=500
                     brostika wait t=500
-                        sophie appear t=500
-                        charles appear t=500
+                        sophie,charles,yusie appear
+                        broski move x=10
+                        broski flipHorizontally
+                        broski appear t=500
+                        broski speak msg=...and you must know that we age our wines in the very best oak barrels, s=false
+                            sophie move x=70 t=1200 g=swing s=false
+                            charles wait 50
+                                charles move x=70 t=1200 g=swing s=false
+                            yusie wait 100
+                                yusie move x=70 t=1200 g=swing s=false
+                            broski wait 300
+                                broski speak msg=carefully crafted in Malidret and imported- s=false
+                                    brostika wait 400
+                                        brostika displayText color=white center=false name=Town Guard msg=Sir, Captain Yusie has returned! t=400 s=false
+                                            charles setNormalText
+                                            charles setFontSize 1.7vw
+                                            broski wait 400
+                                                broski flipHorizontally s=false
+                                                    broski wait 700
+                                                        broski speak text=Ah! s=false
 
-                            yusie appear t=500
-            brostika closeTextBox
+
 frame
-    broski move x=5
-    broski appear t=1000
-    charles setNormalText
-    charles setFontSize 1.7vw
     broski preSpeak
         broski speak text=You've returned, my friends!
             broski wait t=300
-                broski contSpeak text =Thank you for recovering my beloved winery for me!
+                broski contSpeak text =Thank you for recovering my beloved winery!
 frame
-    broski speak text=It’s a pity that I’ve lost Tristan because of this incident!
-            broski wait t=200
-                broski contSpeak text =Tristan was a very capable staff, and he will be sorely missed.
+    broski speak text=It’s such a shame that I’ve lost Tristan because of this incident!
+            broski wait t=400
+                broski contSpeak text =Such a capable lad,
+                    broski wait 300
+                        broski contSpeak he will be sorely missed.
 
 frame
-    broski speak text=But it’s okay, as long as I’m still around, Brostikine will remain as the best-
-        sophie preSpeak
-            sophie speak text=Erm it's okay, Mr Broski!
-                sophie wait t=200
-                    sophie contSpeak text=We have heard enough of your stories and understand your passion...
+    broski speak BUT!
+
+frame
+    broski speak text=It’s okay,
+        broski wait 300
+            broski contSpeak as long as I’m still around,
+                broski wait 400
+                    broski contSpeak Brostikine will continue to produce the best-
+                        sophie interupt
+                            sophie speak text=Erm it's okay, Mr Broski!
+                                sophie wait t=200
+                                    sophie contSpeak text=I think we all understand how you feel...
 
 frame
     charles preSpeak
-        charles speak text=That's right
+        charles speak text=That's right.
             charles wait t=200
-                charles contSpeak text=It's getting a little late
+                charles contSpeak text=It's getting a little late.
 
 frame
-    charles speak text=We should start heading to Erithven soon!
+    yusie preSpeak
+        yusie speak Y-
+            yusie wait 300
+                yusie contSpeak yes, as much as I love your stories, I still have to take a statement from these folks.
 
-//Achievement Unlocked: Brostika's Sohpies_Room
+frame
+    yusie speak So, if you could excuse us,
+        yusie move x=20 t=500
+        broski wait 100
+            broski move x=20 t=500
+                yusie contSpeak Mr Broski...
+                    yusie move x=20 t=500
+                        broski wait 100
+                            broski move x=20 t=500
+                                broski speak Alright, goodbye!
+                                    broski wait 300
+                                        broski contSpeak Hope to see you fine folks again soon!
 
+frame
+    brostika displayText msg= name=none
+        yusie flipHorizontally
+        yusie wait 300
+            yusie move x=-20 t=500 s=false
+                yusie speak text=Phew, I thought he'd never leave. s=false
+
+frame
+    yusie speak So,
+        yusie wait 300
+            yusie contSpeak why were you in Brostika to begin with?
+
+frame
+    charles preSpeak
+        charles speak I don't see why we have to reveal any more-
+            sophie wait 300
+                sophie interupt
+                    sophie speak Come on, Charles, we can trust Yusie.
+
+frame
+    sophie speak We were just passing through here to Erithven!
+
+//Achievement Unlocked: Brostika's Sophies_Room
 frame
     yusie preSpeak
         yusie speak text=Oh
             yusie wait t=300
-                yusie move x=10
-                yusie flipHorizontally t=200
                 yusie contSpeak text=, you're heading to Erithven?
 
 frame
     sophie preSpeak
         sophie speak text=Yup!
             sophie wait t=200
-                sophie contSpeak text=We'll be making out way through Erithven before heading to Boriolsis
+                sophie contSpeak text=We'll be making out way through Erithven before heading to Boriolsis.
 
 frame
     yusie preSpeak
-        yusie speak text=In that case, could you assist our Guard team to deliver this stabilizer to a lady in Erithven?
+        yusie speak text=In that case, could you do me a favour and deliver something?
             yusie wait t=200
 
 frame
-    yusie speak text=It's a medication of sorts which helps to prevent a condition from worsening before the actual treatment begins
+    yusie speak text=I need to deliver some medication to a family in Erithven
 
 frame
     charles preSpeak
-        charles speak text=Who made this stabilizer?
-            charles wait t=200
+        charles speak text=Wow,
+            charles wait t=400
+                charles contSpeak text=I didn't expect the town guards to be THAT shorthanded
+
+frame
+    charles preSpeak
+        charles speak text=Who made this medicine anyway?
+            charles wait t=300
                 charles contSpeak text=And who is it for?
-                    charles wait t=200
-                        charles speak text=I don't want to go around running errands for causes which are unknown to me
+                    charles wait t=700
+                        charles speak text=We're not running a courier service.
+
 
 frame
     yusie preSpeak
-        yusie speak text=Excuse you?
-            yusie wait t=200
-                yusie speak text=What is there to doubt about the Guards?
+        yusie speak text=I'll have you know our staffing is perfectly sufficient!
 
 frame
-    yusie speak text=I am the Second-in-Command of the Brostikan Guards!
-        yusie wait t=200
-
-frame
-    yusie speak text=What is there to doubt about my words?
+    yusie speak text=Why do you even ask so many questions?
+        yusie wait 300
+            yusie contSpeak Do you still doubt me?
 
 frame
     sophie preSpeak
-        sophie speak text=Err...
+        sophie speak text=Err Yusie...
             sophie wait t=400
                 sophie contSpeak text=I'm sure Charles is not questioning you...
                     sophie wait t=200
@@ -157,53 +249,72 @@ frame
     yusie preSpeak
         yusie speak text=Hmphh!
             yusie wait t=400
+                yusie speak It seems to me that you folks don't even have the confidence to do a simple delivery,
+                    yusie wait 400
+                        yusie contSpeak or are you going to prove me wrong?
+                        //Yusie used Taunt!
 
 frame
+    //But it failed!
     charles preSpeak
         charles speak text=Sophie, since Yusie seems unwilling to divulge any of this information with us
             charles wait t=200
-                charles contSpeak text=, we should make our way-
+                charles contSpeak text=, I suppose we should make our way-
                     yusie setFontSize 2vw
                     yusie changeBold true
                     yusie preSpeak
                         yusie speak text=HEYYY!
                             yusie setFontSize 1.7vw
                             yusie setNormalText
-                            yusie wait t=200
+                            yusie wait t=300
                                 yusie contSpeak text=Hold up a little, alright?
 
 frame
-    yusie speak text=The stabilizer is made by a sage who specializes in morphicology
-        yusie wait t=200
-            yusie contSpeak text=It is meant for a kid in Erithven who has developed an extremely rare illness...
+    yusie speak I didn't think you all would really walk out...
 
 frame
-    yusie speak text=Apparently, the disease is so deadly that it could potentially wipe out the entire village if it broke free from the kid.
-        yusie wait t=200
-            yusie speak text=This news was not shared with the rest of Erithven in order to prevent the spread of mass hysteria
+    yusie speak text=The medicine was made by Brostika's sage.
 
 frame
-    yusie speak text=The sage in Brostika was called upon to concoct an elixir to cure the kid.
-        yusie wait t=200
-            yusie contSpeak text=However, he is still wrapping up on the concoction of the elixir.
-                yusie wait t=200
+    yusie contSpeak text=A kid in Erithven recently developed an extremely rare and deadly illness...
 
 frame
-    yusie speak text=That's why we need you to deliver the stablizer to get a bit more time for him. He should be done really soon.
+    yusie speak text=Right now, it is still in a dormant state, but if it spreads, all of Erithven could be in danger
+        yusie wait t=400
+            yusie speak text=Thus far, only a few people know of it so as to prevent mass hysteria.
+
+frame
+    yusie speak text=Our sage is working hard at a cure, but he is still searching for a few critical ingredients.
+
+frame
+    yusie speak text=That's why we need to deliver a stablizer to buy a bit more time.
+
+frame
+    yusie speak Having the town guards make this delivery would draw too much attention, so...
+
+frame
+    yusie speak I would really appreciate it if you could help me out.
+        yusie wait 300
+            yusie contSpeak Regardless, please keep this a secret from the townspeople...
 
 frame
     sophie preSpeak
         sophie speak text=Suree!
             sophie wait t=200
-                sophie contSpeak text=I'm sure we can help yo-
-                    charles preSpeak
-                        charles speak text=But how're supposed to know which house the lady lives in?
-                            charles wait t=200
-                                charles contSpeak text=It's our first time going to Erithven after all
+                sophie contSpeak text=I'm sure we can help you!
 
 frame
     yusie preSpeak
-        yusie speak text=... s=false time=1000
+        yusie speak Great! I'll need you to deliver it to his mother's house!
+frame
+    charles preSpeak
+        charles speak text=But how're supposed to know which house the lady lives in?
+            charles wait t=200
+                charles contSpeak text=It's our first time going to Erithven after all
+
+frame
+    yusie preSpeak
+        yusie speak text=Oh yeah... s=false
 frame
     yusie speak text=Hmm...
         yusie wait t=300
@@ -211,25 +322,68 @@ frame
 frame
     yusie speak text=I-I haven't really figured that out...
 frame
-    yusie contSpeak text=... s=false time=1000
+    yusie speak text=... s=false time=500
 
+frame
+    yusie speak Well, you could walk past the tall house, and-
+        yusie wait 300
+            yusie contSpeak Um...
+
+frame
+    yusie speak I think...
+        yusie wait 300
+            yusie contSpeak you then make a right until you reach a street
+
+frame
+    yusie speak Then you can make a turn and walk up the other street before making a-
+        yusie wait 300
+            yusie contSpeak umm,-
+                yusie wait 300
+                    yusie contSpeak right turn and then walk straight down...
+                        yusie wait 300
+                            yusie contSpeak I think.
 frame
     charles preSpeak
         charles speak text=Well, you could just tell us the color of the roof or the relative position of the house...
+            charles wait 300
+                charles contSpeak Street names would also help...
 frame
     yusie preSpeak
         yusie speak text=Actually...
 
 frame
-    yusie preSpeak
         yusie speak text=Never mind!
             yusie wait t=200
-                yusie contSpeak text=I don't think I can trust you...
-                    yusie wait t=200
-                        yusie speak text=I will just follow the three of you to Erithven
+                yusie contSpeak text=You all seem terrible at directions
+                    yusie wait t=500
+                        yusie speak text=I'll just bring the three of you to Erithven, so you don't get lost
 
 frame
-    yusie speak text=#playName , you shall hold onto this stabilizer while I lead all of you to Erithven
+    brostika changeOverlay o=0.55
+        charles bringAboveOverlay
+        charles preSpeak
+            charles setItalic
+            charles setFontSize 1.2vw
+            charles speak msg=Yeah, sure...
+                charles wait t=200
+                    charles endSpeak
+                    brostika changeOverlay o=0
+
+frame
+    sophie preSpeak
+        sophie speak Great! Let's all go together!
+
+frame
+    charles preSpeak
+        charles speak Whatever happened to town guards attracting too much attention?
+
+frame
+    yusie preSpeak
+        yusie speak I-
+            yusie wait 300
+                yusie speak I'll wear something else! No one will notice!
+frame
+    yusie speak text=#playName , can you hold onto this stabilizer? I'll lead all of you to Erithven!
 
 frame
     yusie endSpeak
@@ -241,4 +395,4 @@ frame
 
 frame
     sophie preSpeak
-        sophie speak text=On the bright side, we won't get lost!
+        sophie speak text=On the bright side, I'm sure things will be more lively!

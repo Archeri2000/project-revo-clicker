@@ -1,3 +1,13 @@
+function preSpeak(char,promise){
+    char.scale(1.05,1.05,200,function(){
+        char.bringToFront(function(){
+            if(typeof promise === "function"){
+                promise();
+            }
+        })
+    })
+}
+
 let policescene = new Scene("brostika_constable", [
   new Frame(function() { //frame 0
     brostika.bringCharacter(charles);

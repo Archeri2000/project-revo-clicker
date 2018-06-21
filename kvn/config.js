@@ -9,16 +9,16 @@ var hideOverflow = true;
 //The links to all your script in
 var scripts =
 [//"brostika.js"
-"brostika_alley.js",
+"brostika_alley.js"
 //"brostika_tristan.js",
 //,"brostika_constable.js"
 //,"brostika_winery.js"
-//,"brostika_constable_2.js
-"brostika_end.js",
-"erithven_welcome.js",
-"erithven_house.js",
-"erithven_pharma.js",
-"erithven_cliff.js"
+//,"brostika_constable_22.js"
+,"brostika_end.js"
+,"erithven_welcome.js"
+,"erithven_house.js"
+,"erithven_pharma.js"
+,"erithven_cliff.js"
 ];
 
 //allow for fullscreen
