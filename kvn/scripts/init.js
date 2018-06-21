@@ -213,7 +213,7 @@ var minion2 = new Character("minion2", "Minion", "v_boriolsis/ruskoff/arrogant.p
   .setDefaultAnimateInterpolation(swing)
   .complete();
 //Boriolsis Town Scene
-var alchemist = new Character("alchemist", "Alchemist", "v_boriolsis/alchemist/worry.png", 68, 95.2, 15, 25, 0, 100)
+var alchemist = new Character("alchemist", "June", "alchemist.png", 68, 95.2, 15, 25, 50, 50)
   .addSprite("confident", "v_boriolsis/alchemist/confident.png")
   .addSprite("cry", "v_boriolsis/alchemist/cry.png")
   .addSprite("smile", "v_boriolsis/alchemist/smile.png")
@@ -221,19 +221,21 @@ var alchemist = new Character("alchemist", "Alchemist", "v_boriolsis/alchemist/w
   .setDefaultSkippable(true)
   .setDefaultAnimateInterpolation(swing)
   .complete();
-var daughter = new Character("daughter", "Daughter", "v_boriolsis/alchemist_daughter/cry.png", 42.075, 58.905, 10, 50, 0, 100)
-  .addSprite("relieved", "v_boriolsis/alchemist_daughter/relieved.png")
-  .addSprite("smile", "v_boriolsis/alchemist_daughter/smile.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-var chief = new Character("chief", "Chief", "v_boriolsis/chief/smile.png", 68, 95.2, 12, 22, 0, 100)
+var chief = new Character("chief", "Helmuth", "cheif.png", 68, 95.2, 12, 22, 50, 50)
   .addSprite("serious", "v_boriolsis/chief/serious.png")
   .addSprite("wise", "v_boriolsis/chief/wise.png")
   .addSprite("worried", "v_boriolsis/chief/worried.png")
   .setDefaultSkippable(true)
   .setDefaultAnimateInterpolation(swing)
   .complete();
+var sSophie = new Character("smol_sophie","Sophie","sophie_young.png",68,68*1.4,0,0,50,50)
+    .setDefaultSkippable(true)
+    .setDefaultAnimateInterpolation(swing)
+    .complete();
+var sCharles = new Character("smol_charles","Charles","charles_young.png",68,68*1.4,0,0,50,50)
+    .setDefaultSkippable(true)
+    .setDefaultAnimateInterpolation(swing)
+    .complete();
 var deadsophie = new Character("deadsophie", "deadSophie", "sophie/dead_sophie.png", 68, 95.2, 12, 65, 50, 50)
   .setDefaultSkippable(true)
   .setDefaultAnimateInterpolation(swing)
@@ -310,7 +312,7 @@ var brostika = new Stage("brostika", "brostika_outside.jpg")
   .complete(); //creating a stage
 
 var boriolsis = new Stage("boriolsis", "boriolsis.jpg")
-  .addBackground("boriolsis_southforest", "boriolsis_sforest.png")
+  .addBackground("forest", "boriolsis_forest.png")
   .addBackground("boriolsis_chouse", "boriolsis_chouse.jpg")
   .addBackground("boriolsis_path", "boriolsis_path.jpg")
   .addBackground("boriolsis_valley", "boriolsis_valley.jpg")

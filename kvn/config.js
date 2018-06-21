@@ -20,6 +20,7 @@ var scripts =
 ,"erithven_house.js"
 ,"erithven_pharma.js"
 ,"erithven_cliff.js"
+,"boriolsis.js"
 ];
 
 //allow for fullscreen
