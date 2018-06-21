@@ -1,7 +1,7 @@
 declare sophie,yusie,charles,sophieslippedCG as character
 declare erithven as stage
 
-scene erithvenCliff erithven_cliff
+scene cliff erithven_cliff
 
 frame 0
     erithven bringCharacter sophie
@@ -36,3 +36,64 @@ frame 5
             charles speak text=I know you can read the carofles of others as long as you establish eye contact with them
                 charles wait t=200
                     charles cont text=But it's not about this...
+frame 6
+    charles speak text=A part of me was quite affected by the mother's earlier words
+        charles wait t=200
+            charles speak text=I don't like to see separation within families... t=1200 s=false
+frame 7
+    charles speak text=I'm not sure if I told you before...
+        charles wait t=200
+            charles cont text=But my parents were killed in an explosion in Boriolsis back when I was young
+frame 8
+    charles speak text=They were working for your parents back then during the war to create a weapon to defeat Kapitolis
+
+    frame 21
+        charles preSpeak
+            charles speak text=... t=1000 s=false
+                charles wait t=200
+                    charles speak text=Alright.
+    frame 22
+        charles speak text=But just this time.
+
+    frame 23
+        sophie setNormalText
+        sophie setFontSize 1.7vw
+        charles setNormalText
+        charles setFontSize 1.7vw
+        sophie preSpeak
+            sophie speak text=YAY!
+            charles flipHorizontally t=200
+            charles move x=-10 t=200
+            erithven changeOverlay yanse=black a=0 t=0
+                sophie bringBelowOverlay
+                charles bringBelowOverlay
+                    sophie wait t=200
+                        sophie speak text=So where can we find Rigortas and Meisumptums?
+    frame 24
+        comet preSpeak
+            comet speak text=They can be found at the Cliffs of Kusuri!
+                comet wait t=200
+                    comet cont text=Which isn't too far from here!
+    frame 25
+        comet speak text=Just walk along the port and after a steep ascent, you should see the cliffs in no time!
+            comet wait t=200
+                comet speak text=But do watch where you tread once you reach the cliffs!
+                    comet wait t=200
+                        comet cont text=Many have slipped and fallen to their deaths over there!
+    frame 26
+        halley preSpeak
+            halley speak text=Rubbish!
+                halley wait t=200
+                    halley cont text=What's so hard about keeping balance on a cliff?
+    frame 27
+        comet preSpeak
+            comet speak text=Sorry...
+                comet wait t=200
+                    comet cont text=Just ignore him...
+    frame 28
+        sophie preSpeak
+            sophie speak text=Alright!
+                sophie wait t=200
+                    sophie cont text=Just wait for us!
+    frame 29
+        sophie speak text=We'll be back in no time!

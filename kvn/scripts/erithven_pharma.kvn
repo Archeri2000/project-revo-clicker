@@ -151,51 +151,21 @@ frame 20
                 sophie speak text=Charles, please... t=800 s=false
 frame 21
     charles preSpeak
-        charles speak text=... t=1000 s=false
-            charles wait t=200
-                charles speak text=Alright.
+        charles speak No!
+            charles wait 300
+                charles cont I'm not going to allow you to participate in this!
 frame 22
-    charles speak text=But just this time.
-
+    sophie preSpeak
+        sophie speak ...... t=1000 s=false
+            sophie wait 300
+                sophie speak Fine...
+                    sophie,charles setNormalText
+                    sophie,charles setFontSize 1.7vw
 frame 23
-    sophie setNormalText
-    sophie setFontSize 1.7vw
-    charles setNormalText
-    charles setFontSize 1.7vw
-    sophie preSpeak
-        sophie speak text=YAY!
-        charles flipHorizontally t=200
-        charles move x=-10 t=200
-        erithven changeOverlay yanse=black a=0 t=0
-            sophie bringBelowOverlay
-            charles bringBelowOverlay
-                sophie wait t=200
-                    sophie speak text=So where can we find Rigortas and Meisumptums?
-frame 24
-    comet preSpeak
-        comet speak text=They can be found at the Cliffs of Kusuri!
-            comet wait t=200
-                comet cont text=Which isn't too far from here!
-frame 25
-    comet speak text=Just walk along the port and after a steep ascent, you should see the cliffs in no time!
-        comet wait t=200
-            comet speak text=But do watch where you tread once you reach the cliffs!
-                comet wait t=200
-                    comet cont text=Many have slipped and fallen to their deaths over there!
-frame 26
-    halley preSpeak
-        halley speak text=Rubbish!
-            halley wait t=200
-                halley cont text=What's so hard about keeping balance on a cliff?
-frame 27
-    comet preSpeak
-        comet speak text=Sorry...
-            comet wait t=200
-                comet cont text=Just ignore him...
-frame 28
-    sophie preSpeak
-        sophie speak text=Alright!
-            sophie wait t=200
-                sophie cont text=Just wait for us!
-frame 29
-    sophie speak text=We'll be back in no time!
+    erithven changeOverlay yanse=black opacity=0.55 t=0
+    charles flipHorizontally t=200
+    charles move x=10 t=200
+        charles preSpeak
+            charles speak I'm sorry but I think we'll rest the case at here
+                charles wait 200
+                    charles We don't have the luxury of time
