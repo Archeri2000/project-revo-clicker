@@ -15,6 +15,8 @@ frame 0
         yusie,halley flipHorizontally
         yusie preMove x=-25
         halley preMove x=-73
+        sophie preMove y=70
+        sophie preRotate degree=10
         charles,halley,yusie,charles appear t=1000
 frame 1
     yusie move x=20 t=600
@@ -100,9 +102,100 @@ frame 19
     charles speak It seems like Sophie has collected quite a number of the herbs already!
 frame 20
     yusie preSpeak
-        yusie speak Ahhh...!
+        yusie changeBold true
+        yusie setFontSize 2vw
+        yusie speak AHHHH!!!
         sophieslippedCG bringAboveOverlay
         yusie wait 700
             erithven closeTextBox
             sophieslippedCG appear t=1000
             erithven changeOverlay yanse=black a=1 t=700
+                sophieslippedCG wait 2000
+frame 21
+    sophieslippedCG disappear t=700
+    erithven changeOverlay yanse=black a=0 t=1000
+        charles changeBold true
+        charles setFontSize 2vw
+        charles preSpeak
+            charles speak text=SOPHIE! t=700 s=false
+                charles wait 200
+                    charles cont text=ARE YOU OKAY?!!! t=700 s=false
+frame 22
+    sophie wait 400
+    sophie setFontSize 1.2vw
+    sophie speak C-Charles..?
+        sophie wait 200
+            sophie cont Is that you?
+frame 23
+    charles preSpeak
+        charles speak YEAH!
+            charles wait 200
+                charles cont HANG ON THERE!
+frame 24
+    charles speak WE'LL TRY TO FIND A WAY TO GET YOU UP
+        yusie interupt
+            yusie speak AHHHH!!!
+            sophieslippedCG bringAboveOverlay
+            yusie endSpeak
+            yusie wait 700
+                erithven closeTextBox
+                sophieslippedCG appear t=1000
+                erithven changeOverlay yanse=black a=1 t=700
+                    sophieslippedCG move y=20 t=0 g=easeIn s=false
+                        sophieslippedCG wait t=150
+                            sophieslippedCG move y=-20 t=0 g=easeIn s=false
+                                sophieslippedCG wait 2000
+frame 25
+    sophieslippedCG disappear t=700
+    erithven changeOverlay yanse=black a=0 t=1000
+        sophie speak I'm okay!
+            sophie wait 200
+frame 26
+    charles setNormalText
+    charles setFontSize 1.7vw
+    charles preSpeak
+        charles speak Halley, I think we need your help right now!
+frame 27
+    halley changeItalic true
+    halley setFontSize 1.4vw
+    halley preSpeak
+        halley speak text=Should I help them...?
+frame 28
+    charles preSpeak
+        charles speak Ugh...
+            charles wait 200
+                charles cont Forget about it
+frame 29
+    charles flipHorizontally t=200
+        charles move x=-80 t=850
+        yusie wait 250
+            yusie move x=-90 t=950
+                halley wait 400
+                    halley flipHorizontally t=200
+                        halley move x=-30 t=300
+                            charles,yusie,halley disappear
+                            charles,yusie,halley move x=140
+                            erithven closeTextBox
+                            erithven changeBackground opacity=1 background=finalcliff t=1000
+frame 30
+    charles,yusie,halley appear
+        charles move x=-50 t=850
+        yusie move x=-30 t=850
+        halley move x=-50 t=850
+            charles preSpeak
+                charles changeBold
+                charles setFontSize 2vw
+                charles speak Sophie!
+                    charles wait 200
+                        charles cont Hang on! I'll figure out a way to get you up!
+frame 31
+
+
+    charles endSpeak
+    sophie setFontSize 1.5vw
+    sophie speak It's okay!
+            sophie wait 500
+                sophie cont text=I'm a-almost up... t=1200 s=false
+frame 32
+    sophie appear t=1000
+        sophie move y=-50 t=2500 g= easeOut

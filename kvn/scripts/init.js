@@ -25,7 +25,7 @@ function publicStaticVoidMain(id) {
   if (id === 0) {
     //the first scene to be played here
     //playScene(scene,frame);
-    playScene("erithven_cliff", 0);
+    playScene("erithven_cliff", 29);
   }
 
 }
@@ -324,6 +324,7 @@ var erithven = new Stage("erithven", "erithven.jpg")
   .addBackground("house", "sick_boy_s_room.png")
   .addBackground("pharma", "pharma.png")
   .addBackground("cliff", "cliff.png")
+  .addBackground("finalcliff", "finalcliff.png")
   .complete(); //creating a stage
 
 var malidret = new Stage("malidret", "malidret.png")
