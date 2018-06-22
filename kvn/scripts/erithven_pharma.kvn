@@ -1,4 +1,4 @@
-declare sophie,halley,charles,comet as character
+declare sophie,halley,charles,comet,yusie as character
 declare erithven as stage
 
 scene erithvenPharma erithven_pharma
@@ -8,13 +8,14 @@ frame 0
     erithven bringCharacter charles
     erithven bringCharacter halley
     erithven bringCharacter comet
-    halley setTextColor white
+    erithven bringCharacter yusie
+    halley,yusie setTextColor white
     comet setTextColor white
     sophie setTextColor white
     charles setTextColor white
     erithven display backgroundAlpha=0 t=0
         erithven changeBackground background=pharma o=1 t=1000
-            sophie preMove x=-50
+            sophie,yusie preMove x=-50
             charles preMove x=-70
             halley appear t=1000
             comet appear t=1000
@@ -92,11 +93,11 @@ frame 11
 
 frame 12
     comet preSpeak
-        comet speak text=Ye-
+        comet speak text=Yes! Of cour-
             halley interupt
-                halley speak text=Duhh...
-                    halley wait t=200
-                        halley cont text=All herbs originate in the wild...
+                halley speak text=Duhh...!
+                    halley wait t=300
+                        halley speak text=It's common sense that all herbs originate in the wild...
 frame 13
     sophie bringAboveOverlay
     charles bringAboveOverlay
@@ -113,59 +114,264 @@ frame 13
                                 charles speak text=Sophie!
 frame 14
     charles speak text=We cannot afford to help!
-        charles wait t=200
+        charles wait t=300
             charles cont text=To be honest, we can never be sure when the disease will break free from the Jakris's body
-                charles wait t=200
-                    charles speak text=That's why we need to stop sticking our nose into the problem here and leave straight away
 frame 15
+    charles speak text=That's why we need to stop sticking our nose into the problem and leave straight away
+frame 16
     sophie changeItalic true
     sophie setFontSize 1.2vw
     sophie preSpeak
             sophie speak text=B-But we promised to help!
                 sophie wait t=200
                     sophie cont text=We can't just leave Jakris here alone!
-frame 16
+frame 17
     charles preSpeak
         charles speak text=We only promised to check on the ingredients at the pharmacy
             charles wait t=200
                 charles speak text=We didn't promise anything about providing the cure or anything along that line
-frame 17
-    charles speak text=From the look of the boy, the situation is an increaisngly precarious one.
+frame 18
+    charles speak text=From the look of the boy, the situation is an increasingly precarious one.
         charles wait t=200
             charles speak text=Think about your parents and Novala.
                 charles wait t=200
                     charles cont text=There's no reason why we should take such risks when we've so much more at stake
-frame 18
+frame 19
     sophie preSpeak
-        sophie speak text=B-But think about Erithven!
+        sophie speak text=B-But what about Erithven?!
             sophie wait t=200
                 sophie cont text=The entire village is at stake!
-frame 19
+frame 20
     sophie speak text=If we don't help them, I'll definitely regret for the rest of my life!
         sophie wait t=200
             sophie speak text=How am I going to face the people of Novala in the future...
-frame 20
+frame 21
     charles preSpeak
         charles speak text=Bu-
             sophie interupt
                 sophie speak text=Charles, please... t=800 s=false
-frame 21
+frame 22
     charles preSpeak
         charles speak No!
             charles wait 300
                 charles cont I'm not going to allow you to participate in this!
-frame 22
+frame 23
     sophie preSpeak
-        sophie speak ...... t=1000 s=false
+        sophie speak text=...... t=1000 s=false
             sophie wait 300
                 sophie speak Fine...
                     sophie,charles setNormalText
                     sophie,charles setFontSize 1.7vw
-frame 23
-    erithven changeOverlay yanse=black opacity=0.55 t=0
+frame 24
+    erithven changeOverlay yanse=black opacity=0 t=0
     charles flipHorizontally t=200
-    charles move x=10 t=200
+    charles move x=-10 t=200
         charles preSpeak
-            charles speak I'm sorry but I think we'll rest the case at here
+            charles speak I'm sorry but I don't think we'll be needing your help to find the herbs anymore
                 charles wait 200
-                    charles We don't have the luxury of time
+                    charles speak We shall be taking our leave now
+frame 25
+    comet preSpeak
+        comet speak No worries!
+            comet wait 200
+                comet cont Don't hesitate to pop by our pharmacy if you need any medication!
+frame 26
+    sophie,charles flipHorizontally t=200
+        charles move x=-70 t=850
+        sophie move x=-5 t=1000 s=false
+            sophie wait 1000
+                sophie flipHorizontally t=200
+                    sophie wait 1000
+                        sophie flipHorizontally t=200
+                            sophie move x=-40 t=1000 s=false
+frame 27
+    comet,halley disappear t=1000
+        erithven closeTextBox
+        erithven changeBackground background=default t=1000 s=false
+            yusie appear
+                yusie,charles flipHorizontally
+                yusie,charles move t=1000
+frame 28
+    charles preSpeak
+        charles speak So where's the way that leads to Boriolsis?
+            charles wait 300
+                charles speak We've been going around in circles...
+frame 29
+    yusie flipHorizontally t=200
+        yusie preSpeak
+            yusie speak Can you stop being so impatient?
+                yusie wait 200
+
+frame 30
+    charles preSpeak
+        charles speak Well, we've wasted enough time finding our way around Erithven.
+            charles wait 200
+                charles speak It's time we start heading in the right direction
+frame 31
+        yusie preSpeak
+            yusie speak Just give me a little more time...
+                yusie wait 700
+                    yusie speak Hey!
+                        yusie wait 200
+                            yusie cont Where's Sophie?
+frame 32
+    charles preSpeak
+        charles speak Huh?
+            charles wait 200
+                charles contSay Wasn't she behind us all this while?
+frame 33
+    yusie preSpeak
+        yusie speak Did she got lost or something?
+frame 34
+    charles preSpeak
+        charles speak text=... t=500 s=false
+            charles wait 300
+                charles speak I think I know where she might have gone to...
+frame 35
+    yusie preSpeak
+        yusie speak text=A prasine shop...?
+            yusie wait 200
+                yusie cont I mean she kept going on and on about prasines...
+frame 36
+    yusie speak She might have broken contact from us when we went by the bakery earlier
+frame 37
+    charles preSpeak
+        charles speak I don't think she'll be at the bakery.
+            charles wait 300
+                charles cont It's more likely that she had gone back to the pharmacy to ask for the location of the missing herbs
+frame 38
+    charles speak Let's hurry!
+        charles wait 200
+            charles cont text=We need to catch her before she goes off hunting for the herbs s=false
+                charles flipHorizontally t=200
+                    charles move x=-80 t=800
+                    yusie move x=-100 t=850
+                        erithven closeTextBox
+                        erithven changeBackground background=pharma t=1000 s=false
+                            halley,comet appear 1000
+frame 39
+    charles,yusie flipHorizontally
+    charles move t=850
+    yusie move x=30 t=850
+        comet preSpeak
+            comet speak Huh? You're back so soon?
+                comet wait 200
+                    comet cont Didn't we just give you the location to find the ingredients?
+frame 40
+    charles preSpeak
+        charles speak Wait
+            charles wait 200
+                charles cont so Sophie has left?
+frame 41
+    halley preSpeak
+        halley speak Yes.
+            halley wait 200
+                halley cont Your beloved Princess Sophie has left without you.
+                    halley wait 400
+                        halley speak Aren't you worried now?
+
+frame 42
+    charles preSpeak
+        charles speak text=Wait... t=1000 s=false
+            charles wait 300
+                charles cont text=How...? t=1000 s=false
+frame 43
+    yusie preSpeak
+        yusie speak text=Wait, what's going on?
+            yusie wait 200
+                yusie cont Sophie is the Princess...?
+frame 44
+    charles preSpeak
+        charles speak Yusie...not now
+            charles wait 300
+                charles speak Who are you, Halley?
+                    charles wait 300
+                        charles cont And how long have you known about this?
+
+frame 45
+    halley preSpeak
+        halley speak I'm just a harmless stranger who happened to recognize a royalty when I see one.
+            halley wait 200
+                halley speak And don't worry about me!
+
+frame 46
+    halley speak Though I might not bear the friendliest of intentions towards the Royal Family, I'm not the biggest threat to her right now.
+        halley wait 400
+            halley speak Comet, do you want to share with them where our dear Princess Sophie has headed to?
+frame 47
+    comet preSpeak
+        comet speak We told her to try her luck at the Cliffs of Kusuri
+            comet wait 200
+                comet speak Usually, a healthy amount of Quinnsetas tend to grow by the Cliffs of Kusuri - which isn't too far from here
+
+frame 48
+    comet speak It's simply a short walk along the port and after a steep ascent, you should see the cliffs in no time!
+        comet wait t=400
+            comet speak text=But do watch where you tread once you reach the cliffs!
+                comet wait t=400
+                    comet cont text=Many have slipped and fallen to their deaths over there!
+
+frame 49
+    charles preSpeak
+        charles speak text=What?! t=600 s=false
+            charles wait 200
+                charles cont text=How could you send her to such a dangerous place?!
+frame 50
+    yusie preSpeak
+        yusie speak Are you all crazy?!
+            yusie wait 200
+                yusie cont Why would you all encourage her to do such a dangerous thing?!
+
+frame 51
+    halley preSpeak
+        halley speak text=Rubbish!
+            halley wait t=200
+                halley cont text=What's so hard about keeping balance on a cliff?
+
+frame 52
+    comet preSpeak
+        comet speak Sorry, just ignore Halley...
+            comet wait 200
+                comet cont Well, we didn't know that she would be going alon-
+                    halley interupt
+                        halley speak It doesn't matter.
+frame 53
+    halley speak What's wrong with a member of the Royal Family dying?
+        halley wait 200
+            halley speak People die every single day
+                halley wait 200
+                    halley speak There's no reason why they should be exempted fro-
+                        yusie interupt
+                            yusie changeBold true
+                            yusie setFontSize 2vw
+                            yusie speak THAT'S TOO MUCH!
+frame 54
+    yusie speak Who do you think you are?
+        yusie wait 200
+            yusie cont Speaking as if you're the Master of Death!
+frame 55
+    yusie speak Can you even scale the Cliffs of Kusuri?!
+        yusie wait 200
+            yusie speak Who knows you might just be someone who talks really tough behind your stupid pharmacy counter?!
+frame 56
+    halley preSpeak
+        halley changeBold true
+        halley setFontSize 2vw
+        halley speak What did you say?!
+            halley wait 200
+                halley cont How dare you question my ability?!
+frame 57
+    yusie preSpeak
+        yusie speak You've got a problem with that, Mr Pharmacy Assistant?
+frame 58
+    halley preSpeak
+        halley speak Fine!
+            halley wait 200
+                halley cont Let me show you how it's done!
+                    halley wait 200
+                        halley speak I will go with you and get the herbs from the steepest cliff!
+                            halley,yusie setNormalText
+                            halley,yusie setFontSize 1.7vw
+frame 59
+    yusie preSpeak
+        yusie speak Let's see about that!
