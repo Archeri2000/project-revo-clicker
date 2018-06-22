@@ -199,3 +199,24 @@ frame 31
 frame 32
     sophie appear t=1000
         sophie move y=-50 t=2500 g= easeOut
+            sophie move x=3 y=2 t=300
+                sophie wait 100
+                    sophie rotateClockwise t=200
+                    sophie move x=3 y=-22 t=400 g=swing
+frame 33
+    sophie setFontSize 1.7vw
+    yusie,halley,charles setFontSize 1.7vw
+    yusie,halley,charles setNormalText
+    sophie preSpeak
+        sophie speak text=Pheww... t=1000 s=false
+            sophie wait 500
+                sophie cont That was close!
+frame 34
+    yusie preSpeak
+        yusie speak I'm so glad that you're safe!
+            yusie wait 200
+                yusie cont We were so worried about you!
+frame 35
+    sophie preSpeak
+        sophie speak Sorry for causing all of you to get so worried...
+frame 36
