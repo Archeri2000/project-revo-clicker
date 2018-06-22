@@ -1,0 +1,81 @@
+declare sophie,halley,charles,comet,yusie as character
+declare erithven as stage
+
+scene erithvenElixir erithven_elixir
+
+frame 0
+    erithven bringCharacter sophie
+    erithven bringCharacter charles
+    erithven bringCharacter halley
+    erithven bringCharacter comet
+    erithven bringCharacter yusie
+    halley,yusie setTextColor white
+    comet setTextColor white
+    sophie setTextColor white
+    charles setTextColor white
+    erithven display backgroundAlpha=0 t=0
+        erithven changeBackground background=pharma o=1 t=1000
+            sophie preMove x=-50
+            charles preMove x=-70
+            halley preMove x=-120
+            comet preMove x=15
+            halley flipHorizontally
+            halley appear t=1000
+            comet appear t=1000
+            sophie,charles,halley appear
+frame 1
+    sophie,charles move t=850
+    halley move x=88 t= 800
+            comet preSpeak
+                comet speak text=Welcome back!
+frame 2
+    comet speak So were you all impressed by Halley's abilities?
+        comet wait 300
+            comet speak I mean after all, he used to be a ranger
+                comet wait 300
+                    comet speak The cliffs shouldn't have been an issue for him
+frame 3
+    halley preSpeak
+        halley speak I didn't need to do anything
+            halley wait 300
+                halley speak Princess Sophie managed to get them from the cliff by herself
+frame 4
+    comet preSpeak
+        comet speak Woah!
+            comet wait 300
+                comet cont That's really impressive!
+frame 5
+    comet speak But anyways,
+        comet wait 300
+            comet cont while all of you were gone, the sage had come by and dropped the incomplete elixir over here
+frame 6
+    comet speak I have already been briefed by him on how to add the remaining ingredients to produce the elixir
+frame 7
+    sophie preSpeak
+        sophie speak That's great!
+            sophie wait 200
+                sophie cont Here are the ingredients!
+                    sophie move x=70 t=850
+                        sophie wait 300
+                            sophie move t=850
+frame 8
+    comet preSpeak
+        comet speak Alright!
+            comet wait 300
+                comet cont Give me a moment while I head to the back to prepare the elixir!
+                    comet disappear t=1000
+frame 9
+    comet wait 800
+        comet appear t=1000
+            comet speak Alright!
+                comet wait 200
+                    comet cont The elixir is ready for collection
+frame 10
+    sophie preSpeak
+        sophie speak Thank you so much!
+            sophie wait 200
+                    sophie move x=70 t=850
+                        sophie wait 300
+                            sophie move t=850
+frame 11
+    charles preSpeak

@@ -15,7 +15,7 @@ frame 0
         yusie,halley flipHorizontally
         yusie preMove x=-25
         halley preMove x=-73
-        sophie preMove y=70
+        sophie preMove x=-10 y=70
         sophie preRotate degree=10
         charles,halley,yusie,charles appear t=1000
 frame 1
@@ -189,8 +189,6 @@ frame 30
                     charles wait 200
                         charles cont Hang on! I'll figure out a way to get you up!
 frame 31
-
-
     charles endSpeak
     sophie setFontSize 1.5vw
     sophie speak It's okay!
@@ -220,3 +218,178 @@ frame 35
     sophie preSpeak
         sophie speak Sorry for causing all of you to get so worried...
 frame 36
+    halley preSpeak
+        halley speak text=Hey... t=1000 s=false
+            halley wait 200
+                halley cont I'm sorry for not stopping Princess Sophie from attempting such a dangerous thing
+frame 37
+    yusie preSpeak
+        yusie speak You better be!
+            yusie wait 300
+                yusie cont You were still so reluctant to save Princess Sophie when Charles asked you to do so earlier
+frame 38
+    yusie speak I've no idea what was going on in your head!
+frame 39
+    halley preSpeak
+        halley speak Hey!
+        halley wait 300
+            halley cont I've already apologized!
+                halley wait 300
+                    halley speak Can you stop bugging me?
+frame 40
+    yusie preSpeak
+        yusie speak I just don't understand what do you hold against the Royal Family...
+frame 41
+    halley preSpeak
+        halley speak They abandoned me back then in the Great War against Kapitolis
+            halley wait 300
+                halley speak Is that a good enough reason?
+frame 42
+    charles preSpeak
+        charles speak What do you mean by that?
+frame 43
+    sophie preSpeak
+        sophie speak You knew my parents personally?
+frame 44
+    halley preSpeak
+        halley speak Back then during the Great War, I served as the Royal Ranger who led an elite team of rangers to lay an ambush in the mountains that bordered Kapitolis
+            halley wait 300
+                halley speak text=However, because our ambush plans were compromised by a defeated Novalan Battalion, t=1100 se=false
+                    halley wait 300
+                        halley cont the King and Queen ordered our reinforcements to retreat, leaving us stranded behind the enemy lines
+frame 45
+    halley speak text=In the end, I was the only ranger who made it out alive t=1000 s=false
+        halley wait 300
+            halley speak I lost all of my brothers who had fought along side me because of one command
+                halley wait 300
+                    halley speak One stupid command from the King and the Queen!
+frame 46
+    halley speak Tell me!
+        halley wait 300
+            halley cont Is it wrong of me to hate them?
+frame 47
+    yusie preSpeak
+        yusie speak text=... t=1000 s=false
+frame 48
+    sophie preSpeak
+        sophie speak text=Halley, I'm so sorry about that... t=1000 s=false
+            sophie wait 400
+                sophie cont I know that there's nothing that I can do to make it up to you...
+frame 49
+    sophie speak But I hope that you can forgive my parents on my behalf!
+frame 50
+    halley preSpeak
+        halley speak text=... t=1000 s=false
+            halley wait 300
+                halley cont I don't think that I can ever forgive anyone who treated my life like shit
+frame 51
+    halley speak But I must say that I have been quite impressed with you
+        halley wait 300
+            halley speak It's been a while since I've seen anyone with this amount of moral courage
+frame 52
+    halley speak The kind of selflessness and sense of responsibility which you've shown is really commendable!
+        halley wait 300
+            halley speak Not to mention the agility which you've exhibited when you scaled this cliff
+frame 53
+    sophie preSpeak
+        sophie speak It's really nothing much...
+            sophie wait 300
+                sophie cont My parents always told me that we owe our power to the people
+frame 54
+    sophie speak And I believe that as long as the tasks are within my means, I should always put in my best to make things right for others
+frame 55
+    halley preSpeak
+        halley speak Well said!
+            halley wait 300
+                halley speak If you don't mind me asking, may I know what actually happened back at the castle?
+                    halley wait 300
+                        halley cont Why are both of you on the run?
+frame 56
+    charles preSpeak
+        charles speak Minister Mistrassimo launched a coup and ordered a secret force which he had been developing for years to chase after the Royal Family
+            charles wait 300
+                charles speak We broke up with Princess Sophie's parents while escaping and we're now trying to rendezvous with them
+                    charles wait 300
+                        charles speak The King and Queen were last seen in Malidret and that's where we're heading for now
+frame 57
+    yusie preSpeak
+        yusie speak text=I see... t=1000 s=false
+            yusie wait 200
+                yusie cont Now everything makes sense!
+frame 58
+    sophie preSpeak
+        sophie speak Mistrassimo's network of underlings is so humongous that we've no choice but to keep a low profile
+            sophie wait 200
+                sophie cont His control over the media makes it even harder for us to progress to Malidret!
+frame 59
+    yusie preSpeak
+        yusie speak Don't you worry, Princess Sophie!
+            yusie wait 200
+                yusie cont I will definitely join your side and help you take down Mistrassimo!
+frame 60
+    yusie preSpeak
+        yusie speak What about you Halley?
+frame 61
+    halley preSpeak
+        halley speak Me?
+            halley wait 300
+                halley cont I will never help anyone from the Royal Family!
+frame 62
+    yusie preSpeak
+        yusie speak Charles, why're you so quiet?
+frame 63
+    erithven displayText msg=... t=1000 s=false
+frame 64
+    sophie preSpeak
+        sophie speak text=Err... t=1000 s=false
+            sophie wait 300
+                sophie cont I'm sorry Charles...
+frame 65
+    sophie speak Can you stop being angry...?
+frame 66
+    charles preSpeak
+        charles speak How do you expect me to be calm about this?
+            charles wait 300
+                charles speak Your parents left you in my care and yet you disobeyed my instructions
+frame 67
+    charles speak I can't believe you can't see the big picture...
+        charles wait 200
+            charles speak I understand that you want to save people and make them happy
+frame 68
+    charles speak But we're talking about your parents and the fate of the entire Kingdom over here
+        charles wait 300
+            charles speak Can you imagine what the other countries would do to us the moment they become aware of our political instability?
+frame 69
+    sophie preSpeak
+        sophie speak B-Bu...
+            sophie wait 200
+                sophie cont You're right...
+frame 70
+    sophie speak I was too reckless...
+        sophie wait 300
+            sophie cont I should have listened to you and not ran off on my own...
+frame 71
+    sophie speak I p-promise you that I won't do this again...
+frame 72
+    charles preSpeak
+        charles speak Have you gotten the herbs?
+            charles wait 300
+                charles contSpeak If you've collected them already, let's return to the pharmacy
+                    charles flipHorizontally 200
+                        charles move x=80 t=850
+frame 73
+    yusie preSpeak
+        yusie speak Is Charles still angry...?
+frame 74
+    sophie preSpeak
+        sophie speak I think so...
+            sophie wait 500
+frame 75
+    sophie cont Let's catch up with him!
+        sophie wait 300
+            sophie speak I'm done collecting all the herbs
+frame 76
+    sophie move x=100 t=1050
+    yusie wait 200
+        halley,yusie flipHorizontally t=200
+            halley,yusie move x=100 t=1050
