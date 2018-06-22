@@ -25,7 +25,15 @@ function publicStaticVoidMain(id) {
   if (id === 0) {
     //the first scene to be played here
     //playScene(scene,frame);
+<<<<<<< HEAD
     playScene("brostika_end", 0);
+=======
+<<<<<<< HEAD
+    playScene("erithven_cliff", 29);
+=======
+    playScene("boriolsis_welcome", 7);
+>>>>>>> 3912fe4b4bd32b969deedefb330c7fae3f8acee4
+>>>>>>> 6aff426499d37bb8a363da54678babc1338a5d11
   }
 
 }
@@ -324,6 +332,7 @@ var erithven = new Stage("erithven", "erithven.jpg")
   .addBackground("house", "sick_boy_s_room.png")
   .addBackground("pharma", "pharma.png")
   .addBackground("cliff", "cliff.png")
+  .addBackground("finalcliff", "finalcliff.png")
   .complete(); //creating a stage
 
 var malidret = new Stage("malidret", "malidret.png")
