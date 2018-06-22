@@ -444,7 +444,7 @@ let brostikaEnd =  new Scene("brostika_end",
 	sophie.preSpeak(function() {
 		sophie.speak('Sure!',function() {
 			sophie.wait(200,function() {
-				sophie.contSpeaking('We can help, right Charles');
+				sophie.contSpeaking('We can help, right Charles?');
 			});
 		});
 	});
@@ -500,7 +500,7 @@ let brostikaEnd =  new Scene("brostika_end",
 ,new Frame(function(){
 	yusie.speak('Then you can make a turn and walk up the other street before making a-',function() {
 		yusie.wait(300,function() {
-			yusie.contSpeaking('umm,-',function() {
+			yusie.contSpeaking('umm,',function() {
 				yusie.wait(300,function() {
 					yusie.contSpeaking('right turn and then walk straight down...',function() {
 						yusie.wait(300,function() {

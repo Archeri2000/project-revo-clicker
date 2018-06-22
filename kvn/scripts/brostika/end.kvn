@@ -313,7 +313,7 @@ frame
     sophie preSpeak
         sophie speak text=Sure!
             sophie wait t=200
-                sophie contSpeak text=We can help, right Charles
+                sophie contSpeak text=We can help, right Charles?
 
 frame
     charles preSpeak
@@ -351,7 +351,7 @@ frame
 frame
     yusie speak Then you can make a turn and walk up the other street before making a-
         yusie wait 300
-            yusie contSpeak umm,-
+            yusie contSpeak umm,
                 yusie wait 300
                     yusie contSpeak right turn and then walk straight down...
                         yusie wait 300
