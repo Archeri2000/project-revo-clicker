@@ -18,8 +18,8 @@ var scripts =
 ,"brostika_end.js"
 ,"erithven_welcome.js"
 ,"erithven_house.js"
-//,"erithven_pharma.js"
-//,"erithven_cliff.js"
+,"erithven_pharma.js"
+,"erithven_cliff.js"
 ,"boriolsis.js"
 ];
 
