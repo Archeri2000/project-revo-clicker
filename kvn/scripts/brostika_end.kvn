@@ -36,7 +36,7 @@ frame
         yusie speak We could have taken them even without your help...
             yusie wait 400
                 yusie contSpeak but,
-                    yusie wait 400
+                    yusie wait 300
                         yusie contSpeak thanks...
 
 frame
@@ -51,7 +51,7 @@ frame
 frame
     yusie preSpeak
         yusie speak Hey!
-            yusie wait 300
+            yusie wait 500
                 yusie contSpeak My weapon was just dull from a lack of use recently!
 
 frame
@@ -59,16 +59,19 @@ frame
 
 frame
     charles preSpeak
-        charles speak It's a shame your weapon's not as sharp as your tongue...
+        charles speak It's a shame your weapon's not as sharp as your tongue, or-
+            yusie wait 150
+                yusie interupt
+                    yusie speak Excuse me?!
 
 frame
-    yusie preSpeak
-        yusie speak Excuse me?!
-
-frame
-    yusie speak A-
-        yusie wait 100
-            yusie contSpeak Anyway, we should go back.
+    yusie speak I-
+        yusie wait 400
+            yusie contSpeak Did you just-
+                yusie wait 500
+                    yusie speak Ugh,
+                        yusie wait 400
+                            yusie contSpeak we should go back.
 
 frame
     yusie speak I'll need you all to make a statement.
@@ -79,12 +82,11 @@ frame
         charles preSpeak
             charles setItalic
             charles setFontSize 1.2vw
-            charles speak msg=Not Mr Broski again...
-                charles wait t=200
-                    charles endSpeak
-                    brostika changeOverlay o=0
+            charles speak msg=I hope Mr Broski isn't still there...
+
 frame
     brostika setOpacity 0
+    brostika changeOverlay o=0
     charles bringBelowOverlay
         yusie bringToFront
             brostika closeTextBox
@@ -101,43 +103,43 @@ frame
                         broski move x=10
                         broski flipHorizontally
                         broski appear t=500
-                        broski speak msg=...and you must know that we age our wines in the very best oak barrels, s=false
-                            sophie move x=70 t=1200 g=swing s=false
-                            charles wait 50
-                                charles move x=70 t=1200 g=swing s=false
-                            yusie wait 100
-                                yusie move x=70 t=1200 g=swing s=false
-                            broski wait 300
-                                broski speak msg=carefully crafted in Malidret and imported- s=false
-                                    brostika wait 400
-                                        brostika displayText color=white center=false name=Town Guard msg=Sir, Captain Yusie has returned! t=400 s=false
-                                            charles setNormalText
-                                            charles setFontSize 1.7vw
-                                            broski wait 400
-                                                broski flipHorizontally s=false
-                                                    broski wait 700
-                                                        broski speak text=Ah! s=false
+                        broski preSpeak
+                            broski speak msg=...and you must know that we age our wines in the very best oak barrels, s=false
+                                sophie move x=70 t=1200 g=swing s=false
+                                charles wait 50
+                                    charles move x=70 t=1200 g=swing s=false
+                                yusie wait 100
+                                    yusie move x=70 t=1200 g=swing s=false
+                                broski wait 300
+                                    broski speak msg=carefully crafted in Malidret and imported- s=false
+                                        brostika wait 300
+                                            brostika displayText msg=Sir, Captain Yusie has returned! color=white center=false name=Town Guard t=400 s=false
+                                                charles setNormalText
+                                                charles setFontSize 1.7vw
+                                                broski wait 400
+                                                    broski flipHorizontally s=false
+                                                        broski wait 700
+                                                            broski speak text=Ah! s=false
 
 
 frame
-    broski preSpeak
-        broski speak text=You've returned, my friends!
-            broski wait t=300
-                broski contSpeak text =Thank you for recovering my beloved winery!
+    broski speak text=You've returned, my friends!
+        broski wait t=400
+            broski contSpeak text =Thank you for recovering my beloved winery!
 frame
     broski speak text=It’s such a shame that I’ve lost Tristan because of this incident!
             broski wait t=400
-                broski contSpeak text =Such a capable lad,
-                    broski wait 300
-                        broski contSpeak he will be sorely missed.
+                broski contSpeak text=Such a capable lad...
+                    broski wait 700
+                        broski contSpeak text=He will be sorely missed. t=500
 
 frame
     broski speak BUT!
 
 frame
-    broski speak text=It’s okay,
-        broski wait 300
-            broski contSpeak as long as I’m still around,
+    broski speak text=It’s okay!
+        broski wait 600
+            broski contSpeak As long as I’m still around,
                 broski wait 400
                     broski contSpeak Brostikine will continue to produce the best-
                         sophie interupt
@@ -155,7 +157,11 @@ frame
     yusie preSpeak
         yusie speak Y-
             yusie wait 300
-                yusie contSpeak yes, as much as I love your stories, I still have to take a statement from these folks.
+                yusie contSpeak yes,
+                    yusie wait 200
+                        yusie contSpeak as much as I love your stories,
+                            yusie wait 300
+                                yusie contSpeak I still have to take a statement from these folks.
 
 frame
     yusie speak So, if you could excuse us,
@@ -171,11 +177,11 @@ frame
                                         broski contSpeak Hope to see you fine folks again soon!
 
 frame
-    brostika displayText msg= name=none
+    yusie speak Phew,
         yusie flipHorizontally
         yusie wait 300
             yusie move x=-20 t=500 s=false
-                yusie speak text=Phew, I thought he'd never leave. s=false
+                yusie contSpeak text=I thought he'd never leave. s=false
 
 frame
     yusie speak So,
@@ -201,41 +207,45 @@ frame
 
 frame
     sophie preSpeak
-        sophie speak text=Yup!
+        sophie speak text=Yes,
             sophie wait t=200
-                sophie contSpeak text=We'll be making out way through Erithven before heading to Boriolsis.
+                sophie contSpeak text=we'll be making our way through Erithven before heading to Boriolsis.
 
 frame
     yusie preSpeak
-        yusie speak text=In that case, could you do me a favour and deliver something?
-            yusie wait t=200
+        yusie speak text=Excellent,
+            yusie wait 200
+                yusie contSpeak in that case, could you do me a favour and deliver something?
 
 frame
-    yusie speak text=I need to deliver some medication to a family in Erithven
+    yusie speak text=I need to deliver some medication to a family in Erithven.
 
 frame
     charles preSpeak
         charles speak text=Wow,
             charles wait t=400
-                charles contSpeak text=I didn't expect the town guards to be THAT shorthanded
-
-frame
-    charles preSpeak
-        charles speak text=Who made this medicine anyway?
-            charles wait t=300
-                charles contSpeak text=And who is it for?
-                    charles wait t=700
-                        charles speak text=We're not running a courier service.
-
+                charles contSpeak text=I didn't expect the town guards to be THAT shorthanded.
 
 frame
     yusie preSpeak
         yusie speak text=I'll have you know our staffing is perfectly sufficient!
 
 frame
-    yusie speak text=Why do you even ask so many questions?
-        yusie wait 300
-            yusie contSpeak Do you still doubt me?
+    charles preSpeak
+        charles speak Why not do it yourself?
+
+frame
+    charles speak text=Who made this medicine anyway?
+        charles wait t=300
+            charles contSpeak text=And who is it for?
+                charles wait t=700
+                    charles speak text=We're not running a courier service.
+
+frame
+    yusie preSpeak
+        yusie speak text=Why do you even ask so many questions?
+            yusie wait 300
+                yusie contSpeak Do you still doubt me?
 
 frame
     sophie preSpeak
@@ -251,22 +261,24 @@ frame
             yusie wait t=400
                 yusie speak It seems to me that you folks don't even have the confidence to do a simple delivery,
                     yusie wait 400
-                        yusie contSpeak or are you going to prove me wrong?
+                        yusie contSpeak or will you prove me wrong?
                         //Yusie used Taunt!
 
 frame
     //But it failed!
     charles preSpeak
-        charles speak text=Sophie, since Yusie seems unwilling to divulge any of this information with us
+        charles flipHorizontally
+        charles speak text=Sophie, since Yusie seems unwilling to divulge any of this information with us,
             charles wait t=200
-                charles contSpeak text=, I suppose we should make our way-
+                charles contSpeak text=I suppose we should make our way-
                     yusie setFontSize 2vw
                     yusie changeBold true
                     yusie preSpeak
                         yusie speak text=HEYYY!
                             yusie setFontSize 1.7vw
                             yusie setNormalText
-                            yusie wait t=300
+                            charles flipHorizontally
+                            yusie wait t=400
                                 yusie contSpeak text=Hold up a little, alright?
 
 frame
@@ -279,7 +291,7 @@ frame
     yusie contSpeak text=A kid in Erithven recently developed an extremely rare and deadly illness...
 
 frame
-    yusie speak text=Right now, it is still in a dormant state, but if it spreads, all of Erithven could be in danger
+    yusie speak text=Right now, it is still in a dormant state, but if it spreads, all of Erithven could be in danger!
         yusie wait t=400
             yusie speak text=Thus far, only a few people know of it so as to prevent mass hysteria.
 
@@ -290,7 +302,7 @@ frame
     yusie speak text=That's why we need to deliver a stablizer to buy a bit more time.
 
 frame
-    yusie speak Having the town guards make this delivery would draw too much attention, so...
+    yusie speak Having the town guards make this delivery would have drawn too much attention, so...
 
 frame
     yusie speak I would really appreciate it if you could help me out.
@@ -299,18 +311,20 @@ frame
 
 frame
     sophie preSpeak
-        sophie speak text=Suree!
+        sophie speak text=Sure!
             sophie wait t=200
-                sophie contSpeak text=I'm sure we can help you!
+                sophie contSpeak text=We can help, right Charles
 
 frame
-    yusie preSpeak
-        yusie speak Great! I'll need you to deliver it to his mother's house!
+    charles preSpeak
+        charles speak I don't know, we don't have much-
+            yusie preSpeak
+                yusie speak Great! I'll need you to deliver it to his mother's house!
 frame
     charles preSpeak
         charles speak text=But how're supposed to know which house the lady lives in?
             charles wait t=200
-                charles contSpeak text=It's our first time going to Erithven after all
+                charles contSpeak text=It's our first time going to Erithven after all...
 
 frame
     yusie preSpeak
@@ -327,12 +341,12 @@ frame
 frame
     yusie speak Well, you could walk past the tall house, and-
         yusie wait 300
-            yusie contSpeak Um...
+            yusie contSpeak uhh...
 
 frame
     yusie speak I think...
         yusie wait 300
-            yusie contSpeak you then make a right until you reach a street
+            yusie contSpeak you then make a right until you reach a street.
 
 frame
     yusie speak Then you can make a turn and walk up the other street before making a-
@@ -354,9 +368,9 @@ frame
 frame
         yusie speak text=Never mind!
             yusie wait t=200
-                yusie contSpeak text=You all seem terrible at directions
+                yusie contSpeak text=You all seem terrible at directions.
                     yusie wait t=500
-                        yusie speak text=I'll just bring the three of you to Erithven, so you don't get lost
+                        yusie speak text=I'll just bring the three of you to Erithven, so you don't get lost!
 
 frame
     brostika changeOverlay o=0.55
@@ -365,12 +379,12 @@ frame
             charles setItalic
             charles setFontSize 1.2vw
             charles speak msg=Yeah, sure...
-                charles wait t=200
-                    charles endSpeak
-                    brostika changeOverlay o=0
 
 frame
+    brostika changeOverlay o=0
     sophie preSpeak
+        charles setNormalText
+        charles setFontSize 1.7vw
         sophie speak Great! Let's all go together!
 
 frame
