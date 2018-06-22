@@ -59,7 +59,7 @@ var displaySpriteName = false;
 var enableSound = true;
 
 //embbed mode
-var embbedMode = true;
+var embbedMode = false;
 //ratios still apply, whether to set to 100% 100% for the most parent div for the KVN application
 var cssWidth = false;
 var embbedFSWidth = 100; //in view width

@@ -23,7 +23,7 @@ function soundLoadPhase() {
 function publicStaticVoidMain(id) {
 
     if (id === 0) {
-        
+        playScene('boriolsis_welcome',4);
     }
 
 }

@@ -92,7 +92,7 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 							yusie.wait(500,function() {
 								yusie.speak('And its not my fault!',function() {
 									yusie.wait(500,function() {
-										yusie.speak('It says right here in the map that this is the place!');
+										yusie.contSpeaking('It says right here in the map that this is the place!');
 									});
 								});
 							});
@@ -109,7 +109,9 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 			halley.wait(500,function() {
 				halley.contSpeaking('This is like the fifth time you said \"I\'m pretty sure it was here...\"!',function() {
 					halley.wait(500,function() {
-						halley.speak('At this rate, we will never reach boriolsis!');
+						halley.speak('At this rate, we will never reach boriolsis!',function() {
+							halley.endSpeak();
+						});
 					});
 				});
 			});
@@ -117,15 +119,114 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 	});
 })
 ,new Frame(function(){
+	halley.setDefaultSkippable(false);
+	yusie.setDefaultSkippable(false);
+	halley.speak('Give me the map!',function() {
+		halley.move(45,null,500,function() {
+			halley.wait(200,function() {
+				halley.move(-2,null,300,function() {
+					yusie.wait(50,function() {
+						yusie.move(-5,null,150);
+						halley.move(-5,null,150,function() {
+							yusie.speak('H-',function() {
+								yusie.wait(100,function() {
+									yusie.contSpeaking('Hey!',function() {
+										yusie.wait(500,function() {
+											yusie.move(5,null,150);
+											halley.move(5,null,150,function() {
+												yusie.wait(500,function() {
+													yusie.move(-5,null,150);
+													halley.move(-5,null,150);
+													halley.speak('Give it to me!',function() {
+														halley.wait(500,function() {
+															halley.speak('Let me do it instead, maybe we will finally reach',function() {
+																halley.move(-4,null,50,null,linear);
+																yusie.wait(50,function() {
+																	yusie.move(-5,null,150,null,stepped);
+																});
+																halley.contSpeaking('Boriolsis!',function() {
+																	halley.wait(200,function() {
+																		halley.speak('Hmm...',function() {
+																			halley.flipHorizontally(function() {
+																				halley.wait(700,function() {
+																					halley.flipHorizontally(function() {
+																						halley.wait(700,function() {
+																							halley.flipHorizontally(function() {
+																								halley.wait(700,function() {
+																									halley.flipHorizontally(function() {
+																										halley.wait(700,function() {
+																											halley.speak('It should be...');
+																											halley.move(15,null,800,function() {
+																												halley.wait(150,function() {
+																													halley.move(15,null,800,function() {
+																														halley.wait(150,function() {
+																															halley.move(15,null,800,function() {
+																																halley.wait(150,function() {
+																																	halley.move(15,null,800,function() {
+																																		halley.wait(150);
+																																	},swing);
+																																});
+																															},swing);
+																															yusie.flipHorizontally(function() {
+																																yusie.speak('Hey!',function() {
+																																	yusie.wait(500,function() {
+																																		yusie.contSpeaking('Get back here!!',function() {
+																																			yusie.move(40,null,500);
+																																		});
+																																	});
+																																});
+																															},200);
+																														});
+																													},swing);
+																												});
+																											},swing);
+																										});
+																									},200);
+																								});
+																							},200);
+																						});
+																					},200);
+																				});
+																			},200);
+																		},null,false);
+																	});
+																});
+															});
+															halley.move(-3,null,1500,null,easeIn);
+															yusie.wait(50,function() {
+																yusie.move(-2,null,1450,null,easeIn);
+															});
+														});
+													});
+												});
+											});
+										});
+									});
+								});
+							});
+						});
+					});
+				},easeOut);
+			});
+		});
+	});
+})
+,new Frame(function(){
+	halley.setDefaultSkippable(false);
+	yusie.setDefaultSkippable(false);
 	sophie.bringAboveOverlay();
 	charles.bringAboveOverlay();
-	boriolsis.changeOverlay(0.55,'black',200);
-	charles.preSpeak(function() {
-		charles.speak('There they go again...',function() {
-			charles.wait(500,function() {
-				charles.speak('I\'m sure we would have reached boriolsis if they don\'t argue every other minute.',function() {
+	boriolsis.changeOverlay(0.55,'black',200,function() {
+		charles.move(20);
+		sophie.move(10,null,null,function() {
+			charles.preSpeak(function() {
+				charles.speak('There they go again...',function() {
 					charles.wait(500,function() {
-						charles.speak('Frankly speaking, I wish they would just keep quiet.');
+						charles.speak('I\'m sure we would have reached boriolsis if they don\'t argue every other minute.',function() {
+							charles.wait(500,function() {
+								charles.speak('Frankly speaking, I wish they would just keep quiet.');
+							});
+						});
 					});
 				});
 			});
@@ -155,39 +256,7 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 	chief.setDefaultSkippable(false);
 	halley.setDefaultSkippable(false);
 	sophie.setDefaultSkippable(false);
-	boriolsis.changeOverlay(0,null,null,function() {
-		charles.bringBelowOverlay(function() {
-			sophie.bringBelowOverlay(function() {
-				halley.bringToFront(function() {
-					sophie.bringToFront(function() {
-						yusie.bringToFront(function() {
-							chief.changeName('???');
-							chief.speak('Stop right there!');
-							yusie.wait(300,function() {
-								yusie.flipHorizontally(function() {
-									yusie.move(-20,null,400);
-									sophie.wait(50,function() {
-										sophie.move(-5,null,100);
-										charles.wait(50,function() {
-											charles.move(-5,null,100);
-											halley.wait(50,function() {
-												halley.move(-5,null,100,function() {
-													boriolsis.pan(-10,null,300,function() {
-														halley.move(-80,null,800);
-														yusie.move(-80,null,800);
-														charles.move(10);
-													},swing);
-												});
-											});
-										});
-									});
-								},100);
-							});
-						});
-					});
-				});
-			});
-		});
-	});
+})
+,new Frame(function(){
 })
 ]);
