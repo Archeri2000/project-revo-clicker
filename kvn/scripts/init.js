@@ -1,4 +1,4 @@
-var playName = "Marcus";
+    var playName = "Marcus";
 
 function soundLoadPhase() {
   //load/create sounds here		window.boriolsis_townM = new GameSound(VN, "Boriolsis_Town.mp3, true");		window.boriolsis_forestM = new GameSound(VN, "Boriolsis_Forest.mp3, true");		window.boriolsis_valleyM = new GameSound(VN, "Boriolsis_Valley.mp3, true");		window.boys_roomM = new GameSound(VN, "Boys_Room.mp3, true");
@@ -25,7 +25,7 @@ function publicStaticVoidMain(id) {
   if (id === 0) {
     //the first scene to be played here
     //playScene(scene,frame);
-    playScene("brostika_end");
+    playScene("boriolsis_welcome",8);
   }
 
 }
@@ -36,7 +36,8 @@ function publicStaticVoidMain(id) {
 			COMMON CHARACTERS
 ===============================================*/
 //HEIGHT ON SCREEN TBC
-var sophie = new Character("sophie", "Sophie", "sophie.png", 61.2, 61.2 * 1.4, -35, 59, 50, 50).addSprite("smile", "sophie/smile.png")
+var sophie = new Character("sophie", "Sophie", "sophie.png", 61.2, 61.2 * 1.4, -35, 56, 50, 50).addSprite("smile", "sophie/smile.png")
+  .addSprite("old","sophie_o.png")
   .addSprite("angry", "sophie/angry.png")
   .addSprite("angry_speak", "sophie/angry_speak.png")
   .addSprite("cry", "sophie/cry.png")
@@ -312,7 +313,7 @@ var brostika = new Stage("brostika", "brostika_outside.jpg")
   .complete(); //creating a stage
 
 var boriolsis = new Stage("boriolsis", "boriolsis.jpg")
-  .addBackground("forest", "boriolsis_forest.png")
+  .addBackground("forest", "boriolsis_forest.jpg")
   .addBackground("boriolsis_chouse", "boriolsis_chouse.jpg")
   .addBackground("boriolsis_path", "boriolsis_path.jpg")
   .addBackground("boriolsis_valley", "boriolsis_valley.jpg")

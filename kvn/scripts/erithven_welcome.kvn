@@ -31,10 +31,10 @@ frame 2
 
         yusie flipHorizontally
             yusie preSpeak
-                yusie speak text = Holy Prazines! So this is Erithven!
+                yusie speak text=Holy Prazines! So this is Erithven!
 frame 3
-    yusie speak text = Look at the huge boats, the fluffy white clouds
-        yusie cont t=1000 text= and the BOOOOUNNNDDDLEESSSS OCEAN!
+    yusie speak text= Look at the huge boats, the fluffy white clouds
+        yusie cont t=1000 text=and the BOOOOUNNNDDDLEESSSS OCEAN!
 frame 4
     charles preSpeak
         charles setFontSize 1.2vw
