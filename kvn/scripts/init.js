@@ -25,7 +25,7 @@ function publicStaticVoidMain(id) {
   if (id === 0) {
     //the first scene to be played here
     //playScene(scene,frame);
-    playScene("erithven_cliff", 0);
+    playScene("boriolsis_welcome", 7);
   }
 
 }

@@ -92,13 +92,18 @@ frame
     yusie,charles,chief,halley,sophie setDefSkip false
     boriolsis changeOverlay 0
         charles/sophie bringBelowOverlay
-            chief changeName ???
-            chief say Stop right there!
-            yusie wait 300
-                yusie flipHorizontally 100
-                    yusie move x=-10 t=100
-                    sophie wait 50
-                        sophie move x=-5 t=100
-                        charles wait 50
-                            charles move x=-5 t=100
-                            
+            halley/sophie/yusie bringToFront
+                chief changeName ???
+                chief say Stop right there!
+                yusie wait 300
+                    yusie flipHorizontally 100
+                        yusie move x=-20 t=400
+                        sophie wait 50
+                            sophie move x=-5 t=100
+                            charles wait 50
+                                charles move x=-5 t=100
+                                halley wait 50
+                                    halley move x=-5 t=100
+                                        boriolsis pan x=-10 t=300 g=swing
+                                            halley,yusie move x=-80 t=800
+                                            charles move x=10
