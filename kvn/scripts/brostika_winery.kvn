@@ -1,7 +1,7 @@
 declare charles,sophie,broski,slime,slime2 as character
 declare brostika as stage
 
-scene brostikaConstable brostika_constable
+scene brostikaWinery brostika_winery
 frame 0
     brostika bringCharacter sophie
     brostika bringCharacter charles

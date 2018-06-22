@@ -1,4 +1,4 @@
-let wineryscene =  new Scene("=",
+let wineryscene2 =  new Scene("brostika_winery2",
 [new Frame(function(){
 	brostika.bringCharacter(charles);
 	brostika.bringCharacter(sophie);
@@ -6,7 +6,7 @@ let wineryscene =  new Scene("=",
 	brostika.bringCharacter(broski);
 	charles.preMove(-80);
 	sophie.preMove(-50);
-	brostika.display(0, 1, 0,,null,null,function() {
+	brostika.display(0,1,0,function() {
 		brostika.setAnchorX(0);
 		brostika.setAnchorY(0);
 		brostika.setWidth(150);

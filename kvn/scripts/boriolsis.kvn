@@ -1,0 +1,104 @@
+declare yusie,charles,sophie,chief,june,halley as character
+declare boriolsis as stage
+
+
+scene boriolsisWelcome boriolsis_welcome
+
+frame
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter june
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter halley
+
+    yusie,charles,sophie,june,chief,halley setTextColor white
+
+    boriolsis display t=0 bgO=0
+        yusie setXOffSet 8
+        sophie setXOffSet -7
+        halley setXOffSet -24
+        charles setXOffSet -41
+        charles,yusie,halley,sophie animate
+        yusie,halley flipHorizontally
+        boriolsis setAY 0
+        boriolsis setAX 0
+        charles/halley/sophie/yusie bringToFront
+        boriolsis scale x=2 y=1 t=0
+            boriolsis changeBackground bg=forest a=1 t=1000 s=false
+                yusie,sophie,charles,halley appear t=500 s=false
+
+frame
+    yusie setDefSkip false
+    yusie move x=25 t=800
+        yusie flipHorizontally t=200
+            yusie wait 500
+                yusie flipHorizontally t=200
+                    yusie wait 1000
+                        yusie flipHorizontally t=200
+                            yusie wait 500
+                                yusie preSpeak
+                                    yusie speak Hmm...
+                                        yusie wait 500
+                                            yusie cont I'm pretty sure it was here...
+                                                yusie wait 500
+frame
+    yusie setDefSkip
+    halley preSpeak
+        halley speak Again?
+            halley wait 500
+                halley cont You are lost again?!
+                    halley wait 500
+                        halley cont How many time does this make it, Miss I-am-good-with-directions?
+frame
+    yusie preSpeak
+        yusie speak Hey!
+          yusie wait 500
+            yusie cont What do you mean again?
+                yusie wait 500
+                    yusie cont This is pretty much the first time!
+                        yusie wait 500
+                            yusie speak And its not my fault!
+                                yusie wait 500
+                                    yusie speak It says right here in the map that this is the place!
+frame
+    halley preSpeak
+        halley speak Yeah, yeah.
+            halley wait 500
+                halley cont This is like the fifth time you said "I'm pretty sure it was here..."!
+                    halley wait 500
+                        halley speak At this rate, we will never reach boriolsis!
+frame
+    sophie,charles bringAboveOverlay
+    boriolsis changeOverlay yanse=black a=0.55 t=200
+    charles preSpeak
+        charles speak There they go again...
+            charles wait 500
+                charles say I'm sure we would have reached boriolsis if they don't argue every other minute.
+                    charles wait 500
+                        charles say Frankly speaking, I wish they would just keep quiet.
+
+frame
+    sophie preSpeak
+        sophie say Don't be like that Charles!
+            sophie wait 500
+                sophie say At least our journey is lively.
+frame
+    sophie say I may die of boredom if tooo quiet
+frame
+    charles preSpeak
+        charles say If you say so...
+frame
+    yusie,charles,chief,halley,sophie setDefSkip false
+    boriolsis changeOverlay 0
+        charles/sophie bringBelowOverlay
+            chief changeName ???
+            chief say Stop right there!
+            yusie wait 300
+                yusie flipHorizontally 100
+                    yusie move x=-10 t=100
+                    sophie wait 50
+                        sophie move x=-5 t=100
+                        charles wait 50
+                            charles move x=-5 t=100
+                            
