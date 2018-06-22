@@ -158,18 +158,33 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 	boriolsis.changeOverlay(0,null,null,function() {
 		charles.bringBelowOverlay(function() {
 			sophie.bringBelowOverlay(function() {
-				chief.changeName('???');
-				chief.speak('Stop right there!');
-				yusie.wait(300,function() {
-					yusie.flipHorizontally(function() {
-						yusie.move(-10,null,100);
-						sophie.wait(50,function() {
-							sophie.move(-5,null,100);
-							charles.wait(50,function() {
-								charles.move(-5,null,100);
+				halley.bringToFront(function() {
+					sophie.bringToFront(function() {
+						yusie.bringToFront(function() {
+							chief.changeName('???');
+							chief.speak('Stop right there!');
+							yusie.wait(300,function() {
+								yusie.flipHorizontally(function() {
+									yusie.move(-20,null,400);
+									sophie.wait(50,function() {
+										sophie.move(-5,null,100);
+										charles.wait(50,function() {
+											charles.move(-5,null,100);
+											halley.wait(50,function() {
+												halley.move(-5,null,100,function() {
+													boriolsis.pan(-10,null,300,function() {
+														halley.move(-80,null,800);
+														yusie.move(-80,null,800);
+														charles.move(10);
+													},swing);
+												});
+											});
+										});
+									});
+								},100);
 							});
 						});
-					},100);
+					});
 				});
 			});
 		});
