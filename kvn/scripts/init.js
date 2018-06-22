@@ -22,9 +22,9 @@ function soundLoadPhase() {
 
 function publicStaticVoidMain(id) {
 
-  if (id === 0) {
-    
-  }
+    if (id === 0) {
+        
+    }
 
 }
 //====================CHARACTER INIT HERE============
