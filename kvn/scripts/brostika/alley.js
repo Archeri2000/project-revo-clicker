@@ -70,7 +70,7 @@ let alleyscene =  new Scene("brostika_alley",
 	});
 })
 ,new Frame(function(){
-	tristan.speak('Slimes....',null,1000);
+	tristan.speak('Arachne....',null,1000);
 })
 ,new Frame(function(){
 	sophie.disappear(100);

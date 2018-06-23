@@ -51,7 +51,7 @@ frame 4
             tristan wait t=400
                 tristan cont text=Help... append=false
 frame 5
-    tristan speak msg=Slimes.... t=1000
+    tristan speak msg=Arachne.... t=1000
 
 
 frame
