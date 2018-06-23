@@ -91,40 +91,44 @@ frame
                                                     yusie,halley move x=-5 t=150
                                                     halley say Give it to me!
                                                         halley wait 500
+                                                            halley move x=-3 t=1000 g=easeIn
+                                                            yusie wait 50
+                                                                yusie move x=2 t=1000 g=easeIn
                                                             halley say Let me do it instead, maybe we will finally reach
-                                                                halley move x=-4 t=50 g=linear
-                                                                yusie wait 50
-                                                                    yusie move x=-8 t=150 g=stepped
+                                                                halley move x=-4 t=50 g=swing
+                                                                yusie move x=-8 t=150 g=stepped
                                                                 halley cont Boriolsis!
                                                                     halley wait 800
                                                                         halley speak msg=Hmm... s=false
-                                                                            halley flipHorizontally 400
-                                                                                halley wait 900
-                                                                                    halley flipHorizontally 400
-                                                                                        halley wait 900
-                                                                                            halley flipHorizontally 400
-                                                                                                halley wait 900
-                                                                                                    halley flipHorizontally 400
-                                                                                                        halley wait 900
-                                                                                                            halley say It should be...
-                                                                                                            halley move x=15 t=800 g=swing
-                                                                                                                halley wait 150
-                                                                                                                    halley move x=15 t=800 g=swing
-                                                                                                                        halley wait 150
-                                                                                                                            halley move x=15 t=800 g=swing
-                                                                                                                                halley wait 150
-                                                                                                                                    halley move x=15 t=800 g=swing
-                                                                                                                                        halley wait 150
-                                                                                                                                    yusie flipHorizontally 200
-                                                                                                                                        yusie say Hey!
-                                                                                                                                            yusie wait 500
-                                                                                                                                                yusie cont Get back here!!
-                                                                                                                                                    yusie move x=40 t=500
-                                                                                                                    yusie move x=25 t=600 g=swing
-                                                                                                                        yusie say Hey!
-                                                            halley move x=-3 t=1500 g=easeIn
-                                                            yusie wait 50
-                                                                yusie move x=2 t=1450 g=easeIn
+                                                                            halley wait 500
+                                                                                halley flipHorizontally 400
+                                                                                    halley wait 900
+                                                                                        halley flipHorizontally 400
+                                                                                            halley wait 900
+                                                                                                halley flipHorizontally 400
+                                                                                                    halley wait 900
+                                                                                                        halley flipHorizontally 400
+                                                                                                            halley wait 900
+                                                                                                                halley say It should be...
+                                                                                                                halley move x=15 t=800 g=swing
+                                                                                                                    halley wait 150
+                                                                                                                        halley move x=15 t=800 g=swing
+                                                                                                                            halley wait 150
+                                                                                                                                halley move x=15 t=800 g=swing
+                                                                                                                                    halley wait 150
+                                                                                                                                        halley move x=15 t=800 g=swing
+                                                                                                                                            halley wait 150
+                                                                                                                                        yusie flipHorizontally 200
+                                                                                                                                            yusie say Hey!
+                                                                                                                                                yusie wait 500
+                                                                                                                                                    yusie cont Get back here!!
+                                                                                                                                                        yusie move x=40 t=500
+                                                                                                                        yusie move x=25 t=600 g=swing
+                                                                                                                            yusie say Hey!!
+
+                                                                                    yusie speak Hey!
+
+
 frame
     halley,yusie setDefSkip false
     sophie,charles bringAboveOverlay
@@ -139,17 +143,36 @@ frame
                                 charles wait 500
                                     charles say Frankly speaking, I wish they weren't coming with us.
                                         charles wait 500
-                                            charles cont We would have reached erithven by down
+                                            charles cont We would have reached erithven by now if not for them
                 sophie flipHorizontally 100
+
+
 
 frame
     sophie preSpeak
-        sophie say Don't be like that Charles!
-            sophie wait 500
-                sophie say At least our journey is lively.
+        sophie say Its more lively this way~
 frame
     sophie say I may die of boredom if tooo quiet
 frame
+    chief setXOffSet -60
+    chief flipHorizontally
+    chief appear
     charles preSpeak
         charles say If you say so...
 frame
+    charles endSpeak
+    boriolsis changeOverlay 0
+    charles,sophie bringBelowOverlay
+
+    chief changeName ???
+    chief say Hey!
+        charles wait 500
+            charles flipHorizontally 200
+            charles move x=10 t=200 g=swing
+            sophie move x=10 t=200 g=swing
+            chief wait 200
+                chief say Stop right there!
+frame
+    chief move x=30 t=800
+    charles move x=15 t=300
+    sophie move x=-5 t=150

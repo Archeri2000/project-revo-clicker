@@ -23,7 +23,7 @@ function soundLoadPhase() {
 function publicStaticVoidMain(id) {
 
     if (id === 0) {
-        playScene('boriolsis_welcome',4);
+        playScene('boriolsis_welcome',8);
     }
 
 }
@@ -220,7 +220,7 @@ var june = new Character("alchemist", "June", "alchemist.png", 68, 95.2, 15, 25,
   .setDefaultSkippable(true)
   .setDefaultAnimateInterpolation(swing)
   .complete();
-var chief = new Character("chief", "Helmuth", "cheif.png", 68, 95.2, 12, 22, 50, 50)
+var chief = new Character("chief", "Helmuth", "chief.png", 68, 95.2, 12, 22, 50, 50)
   .addSprite("serious", "v_boriolsis/chief/serious.png")
   .addSprite("wise", "v_boriolsis/chief/wise.png")
   .addSprite("worried", "v_boriolsis/chief/worried.png")
