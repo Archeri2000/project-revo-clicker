@@ -42,7 +42,7 @@ frame 3
                     comet speak text=Halley, can you go to the back and check them for me?
 frame 4
     halley preSpeak
-        halley speak text=Alright,aright...
+        halley speak text=Alright,alright...
             comet move x=-2 t=200
             comet flipHorizontally t=150
 frame 5
@@ -63,9 +63,11 @@ frame 7
                 comet cont text=You must understand that both Rigortas and Meisumptums are really rare herbs
 frame 7
     charles preSpeak
-        charles speak text=Indeed!
+        charles speak text=Indeed... t=800 s=false
             charles wait t=200
                 charles contSpeak text=They are part of the Quinnsetas family after all
+frame 8
+    charles speak The rarity of these herbs is due to their tendency to thrive in the most trecherous of locations
 frame 8
     comet preSpeak
         comet speak text=Oh
@@ -84,12 +86,16 @@ frame 10
     charles preSpeak
         charles speak text=It's really nothing much...
             charles wait t=200
-                charles cont text=Just read them from a book somewhere before
+                charles speak text=Read them from a book somewhere before
 frame 11
     sophie preSpeak
         sophie speak text=Actually
             sophie wait t=200
                 sophie cont text=, is it possible for us to find these herbs out in the wild ourselves?
+frame 12
+    sophie speak Well erm...erm
+        sophie wait 300
+            sophie cont I-I have plenty of experience p-picking herbs in the wild!
 
 frame 12
     comet preSpeak
@@ -117,7 +123,7 @@ frame 14
         charles wait t=300
             charles cont text=To be honest, we can never be sure when the disease will break free from the Jakris's body
 frame 15
-    charles speak text=That's why we need to stop sticking our nose into the problem and leave straight away
+    charles speak text=That's why we need to stop sticking our nose into everything and leave straight away
 frame 16
     sophie changeItalic true
     sophie setFontSize 1.2vw
@@ -131,11 +137,9 @@ frame 17
             charles wait t=200
                 charles speak text=We didn't promise anything about providing the cure or anything along that line
 frame 18
-    charles speak text=From the look of the boy, the situation is an increasingly precarious one.
+    charles speak text=Think about your parents and Novala.
         charles wait t=200
-            charles speak text=Think about your parents and Novala.
-                charles wait t=200
-                    charles cont text=There's no reason why we should take such risks when we've so much more at stake
+            charles cont text=There's no reason why we should take such risks when we've so much more at stake
 frame 19
     sophie preSpeak
         sophie speak text=B-But what about Erithven?!
@@ -154,7 +158,9 @@ frame 22
     charles preSpeak
         charles speak No!
             charles wait 300
-                charles cont I'm not going to allow you to participate in this!
+                charles cont I'm not going to allow you to participate in this
+                    charles wait 300
+                        charles speak And what was that lie about having experience picking herbs all about?
 frame 23
     sophie preSpeak
         sophie speak text=...... t=1000 s=false

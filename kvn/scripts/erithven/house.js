@@ -8,6 +8,8 @@ let erithvenHouse =  new Scene("erithven_house",
 	sophie.preMove();
 	charles.preMove();
 	yusie.preMove();
+	sickchild.changeName('???');
+	mother.changeName('???');
 	sickchild.setTextColor('white');
 	mother.setTextColor('white');
 	sophie.setTextColor('white');
@@ -239,30 +241,36 @@ let erithvenHouse =  new Scene("erithven_house",
 	mother.flipHorizontally();
 	mother.move(25,null,500,function() {
 		mother.preSpeak(function() {
-			mother.speak('Jakris, drink this slowly',function() {
-				mother.wait(400,function() {
-					mother.speak('Alright, go and rest!',function() {
-						mother.wait(200,function() {
-							mother.flipHorizontally();
-							mother.move(-25,null,500,function() {
-								erithven.pan(50,null,1000,null,swing);
-								sophie.move(40,null,1000,null,swing);
-								charles.move(40,null,1000,null,swing);
-								mother.move(40,null,1000,null,swing);
-								sickchild.move(40,null,1000,null,swing);
-							},null,false);
-						});
-					},500);
-				});
-			},800);
+			mother.speak('Jakris...',null,1000,false);
 		});
 	},null,false);
 })
 ,new Frame(function(){
+	mother.speak('Drink this slowly...',function() {
+		mother.wait(300,function() {
+			mother.contSpeaking('You\'ll feel better');
+		});
+	});
+})
+,new Frame(function(){
+	mother.speak('Alright, close your eyes and rest...',function() {
+		mother.wait(200,function() {
+			mother.flipHorizontally();
+			mother.move(-25,null,500,function() {
+				erithven.pan(50,null,1000,null,swing);
+				sophie.move(40,null,1000,null,swing);
+				charles.move(40,null,1000,null,swing);
+				mother.move(40,null,1000,null,swing);
+				sickchild.move(40,null,1000,null,swing);
+			},null,false);
+		});
+	},1000,false);
+})
+,new Frame(function(){
 	sophie.preSpeak(function() {
-		sophie.speak('Wow...',function() {
+		sophie.speak('Woahh',function() {
 			sophie.wait(200,function() {
-				sophie.contSpeaking('The stabilizer sure works fast');
+				sophie.speak('The stabilizer sure works fast...');
 			});
 		});
 	});
@@ -271,9 +279,9 @@ let erithvenHouse =  new Scene("erithven_house",
 	charles.preSpeak(function() {
 		charles.speak('I took a look at the stabilizer earlier.',function() {
 			charles.wait(200,function() {
-				charles.contSpeaking('It seems like the sage is trying to hold the disease in by freezing up all of its activity within the kid\'s body',function() {
+				charles.speak('The sage probably employed morphicology to freeze all activities of the harmful entities within the kid\'s body',function() {
 					charles.wait(200,function() {
-						charles.speak('Drowsiness is probably one of the side effects');
+						charles.speak('Drowsiness is hence probably one of the side effects');
 					});
 				});
 			});
@@ -284,7 +292,7 @@ let erithvenHouse =  new Scene("erithven_house",
 	sophie.preSpeak(function() {
 		sophie.speak('Anyway, sorry for eavesdropping...',function() {
 			sophie.wait(200,function() {
-				sophie.contSpeaking('But we heard something about sending your child to Malidret');
+				sophie.contSpeaking('But we heard something about sending your child to Malidret?');
 			});
 		});
 	});
@@ -312,13 +320,24 @@ let erithvenHouse =  new Scene("erithven_house",
 ,new Frame(function(){
 	mother.speak('He said that the sea breeze at Erithven would be detrimental for Jakris\'s condition.',function() {
 		mother.wait(200,function() {
-			mother.contSpeaking('So I knew that no matter how hard it would be for my husband and I to send Jakris all the way to Malidret, we must do so because it would be for the good of our child');
+			mother.contSpeaking('So I knew that no matter how hard it would be for my husband and I to send Jakris all the way to Malidret',function() {
+				mother.wait(300,function() {
+					mother.speak('We must do so because it would be for the good of our child');
+				});
+			});
 		});
 	});
 })
 ,new Frame(function(){
 	sophie.preSpeak(function() {
-		sophie.speak('Then why is Jakris so against the plan?',function() {
+		sophie.speak('Malidret is really far from here...',function() {
+			sophie.wait(400);
+		},1000,false);
+	});
+})
+,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('But why is Jakris so against the plan?',function() {
 			sophie.wait(200,function() {
 				sophie.contSpeaking('Doesn\'t he want to get well?');
 			});
@@ -353,13 +372,17 @@ let erithvenHouse =  new Scene("erithven_house",
 	});
 })
 ,new Frame(function(){
-	charles.preSpeak(function() {
-		charles.speak('What do you mean by that?');
+	sophie.preSpeak(function() {
+		sophie.speak('Huh...?',function() {
+			sophie.wait(200,function() {
+				sophie.contSpeaking('Why is that so?');
+			});
+		});
 	});
 })
 ,new Frame(function(){
 	mother.preSpeak(function() {
-		mother.speak('The sage had come once and told us that he was unable to concoct anything that can cure Jakris',function() {
+		mother.speak('The last time the sage came, he told us that he was unable to concoct anything that can cure Jakris',function() {
 			mother.wait(200,function() {
 				mother.speak('He told us that Jakris didn\'t have much longer to live');
 			});
@@ -370,9 +393,7 @@ let erithvenHouse =  new Scene("erithven_house",
 	mother.speak('The sage mentioned that staying at Malidret might help to make his life more comfortable.',function() {
 		mother.wait(200,function() {
 			mother.contSpeaking('But Jakris kept insisting that it no longer made any difference if he was still going to die at the end',function() {
-				mother.wait(200,function() {
-					mother.speak('I can totally understand where Jakris is coming from...');
-				});
+				mother.wait(200);
 			});
 		});
 	});
@@ -389,10 +410,17 @@ let erithvenHouse =  new Scene("erithven_house",
 	});
 })
 ,new Frame(function(){
+	mother.speak('He must be in so much agony all the time...',function() {
+		mother.wait(300,function() {
+			mother.speak('How I wish I can take his place instead...',null,1000,false);
+		});
+	},1000,false);
+})
+,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Don\'t worry!',function() {
 			sophie.wait(200,function() {
-				sophie.contSpeaking('The sage has just informed us that he had already managed to come up with an elixir that can cure Jakris!');
+				sophie.contSpeaking('We were just informed us that the sage had already managed to come up with an elixir that can cure Jakris!');
 			});
 		});
 	});
@@ -402,7 +430,7 @@ let erithvenHouse =  new Scene("erithven_house",
 		sophie.wait(200,function() {
 			sophie.contSpeaking('The sage himself will be coming shortly',function() {
 				sophie.wait(200,function() {
-					sophie.speak('Jakris will be alright in no time!');
+					sophie.speak('Jakris will be alright in no time!',null,null,false);
 				});
 			});
 		});
@@ -418,10 +446,10 @@ let erithvenHouse =  new Scene("erithven_house",
 	});
 })
 ,new Frame(function(){
-	charles.preSpeak(function() {
-		charles.speak('Of course not!',function() {
-			charles.wait(200,function() {
-				charles.contSpeaking('We just came from Brostika, and we have the recipe with us!');
+	sophie.preSpeak(function() {
+		sophie.speak('Of course not!',function() {
+			sophie.wait(200,function() {
+				sophie.contSpeaking('We just came from Brostika, and we have the recipe with us!');
 			});
 		});
 	});
@@ -432,14 +460,14 @@ let erithvenHouse =  new Scene("erithven_house",
 	mother.preSpeak(function() {
 		mother.speak('Thank God!',function() {
 			mother.wait(200,function() {
-				mother.contSpeaking('I must release more coconut offerings into the ocean to thank god for being merciful!');
+				mother.setNormalText();
+				mother.setFontSize('1.7vw');
+				mother.contSpeaking('I must carve more coconut offerings in return for its mercy!');
 			});
 		});
 	});
 })
 ,new Frame(function(){
-	mother.setNormalText();
-	mother.setFontSize('1.7vw');
 	mother.speak('Thank you for bringing such good news to me!');
 })
 ,new Frame(function(){
@@ -486,10 +514,10 @@ let erithvenHouse =  new Scene("erithven_house",
 	});
 })
 ,new Frame(function(){
-	charles.preSpeak(function() {
-		charles.speak('Yusie',function() {
-			charles.wait(200,function() {
-				charles.contSpeaking(', you\'re still around?');
+	sophie.preSpeak(function() {
+		sophie.speak('Yusie',function() {
+			sophie.wait(200,function() {
+				sophie.contSpeaking(', you\'re still around?');
 			});
 		});
 	});
@@ -521,6 +549,9 @@ let erithvenHouse =  new Scene("erithven_house",
 	});
 })
 ,new Frame(function(){
+	sophie.speak('It would be good to have one more person aboard!');
+})
+,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('C-can I?',function() {
 			yusie.wait(200,function() {
@@ -540,7 +571,11 @@ let erithvenHouse =  new Scene("erithven_house",
 ,new Frame(function(){
 	yusie.speak('Besides, you look like you\'re bad with directions.',function() {
 		yusie.wait(200,function() {
-			yusie.contSpeaking('As a member of the prestigious Guards, I cannot leave all of you in the lurch');
+			yusie.contSpeaking('As a member of the prestigious Guards,',function() {
+				yusie.wait(200,function() {
+					yusie.contSpeaking('I cannot leave all of you in the lurch');
+				});
+			});
 		});
 	});
 })
@@ -557,16 +592,21 @@ let erithvenHouse =  new Scene("erithven_house",
 	yusie.preSpeak(function() {
 		yusie.speak('Of course you should be glad!',function() {
 			yusie.wait(400,function() {
-				yusie.speak('Charles, why do you look so unhappy?');
+				yusie.speak('You just got free navigation and security services!');
 			});
 		});
 	});
 })
 ,new Frame(function(){
+	yusie.speak('Hey Charles, what\'s with that unhappy look on your face?');
+})
+,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Never mind...',function() {
 			charles.wait(200,function() {
-				charles.speak('Let\'s head to the pharmacy');
+				charles.speak('Let\'s head to the pharmacy',function() {
+					charles.endSpeak();
+				});
 			});
 		});
 	});
