@@ -4,7 +4,7 @@ function soundLoadPhase() {
 var playName = 'Marcus';
 function publicStaticVoidMain(id){
 if(id===0){
-	playScene('brostika_tristan',0);
+	playScene('boriolsis_welcome',15);
 }
 }
 window.sophie = new Character('sophie','Sophie','sophie.png',61.2,61.2*1.4,-35,56,50,50);
@@ -12,7 +12,7 @@ sophie.addSprite('shy','sophie/shy.png');
 sophie.setDefaultSkippable(true);
 sophie.setDefaultAnimateInterpolation(swing);
 sophie.complete();
-window.charles = new Character('charles','Charles',null,68,68*1.4,-15,55,50,50);
+window.charles = new Character('charles','Charles','charles.png',68,68*1.4,-15,55,50,50);
 charles.setHorizontalFlip(true);
 charles.setDefaultSkippable(true);
 charles.setDefaultAnimateInterpolation(swing);

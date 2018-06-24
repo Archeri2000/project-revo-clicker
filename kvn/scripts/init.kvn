@@ -18,7 +18,7 @@ create sound xperrorM soundgroup=VN source=stab.mp3 loop=true
 create sound footsteps soundgroup=VN source=footstep.wav loop=true
 
 start
-    play brostika_tristan 0
+    play boriolsis_welcome 15
 
 macro com char
     char setDefSkip true
@@ -33,7 +33,7 @@ create character sophie name=Sophie image=sophie.png w=61.2 h=61.2*1.4 x=-35 y=5
     addSprite sophie shy
     com sophie
 
-create character charles name=Charles iamge=charles.png w=68 h=68*1.4 x=-15 y=55 aX=50 aY=50
+create character charles name=Charles image=charles.png w=68 h=68*1.4 x=-15 y=55 aX=50 aY=50
     charles setHorizontalFlip true
     com charles
 
