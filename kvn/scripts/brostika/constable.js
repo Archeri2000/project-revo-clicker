@@ -105,7 +105,7 @@ let brostikaConstable =  new Scene("brostika_constable",
 	charles.preSpeak(function() {
 		charles.speak('Before we go ahead with that, let\'s pass Tristan\'s body to the guard.',function() {
 			charles.wait(200,function() {
-				charles.contSpeaking('' + playName + ' , we will need your help to scout for the location of the winery.');
+				charles.contSpeaking('' + playName + ', we will need your help to scout for the location of the winery.');
 			});
 		});
 	});

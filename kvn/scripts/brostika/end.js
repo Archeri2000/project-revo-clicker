@@ -570,7 +570,7 @@ let brostikaEnd =  new Scene("brostika_end",
 	});
 }, function(){return null})
 ,new Frame(function(){
-	yusie.speak('' + playName + ' , can you hold onto this stabilizer? I\'ll lead all of you to Erithven!');
+	yusie.speak('' + playName + ', can you hold onto this stabilizer? I\'ll lead all of you to Erithven!');
 }, function(){return null})
 ,new Frame(function(){
 	yusie.endSpeak(function() {

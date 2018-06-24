@@ -1,3 +1,13 @@
+var reply = 'I knew it!';
+var exp = 'overjoyed';
+window.youRight = new Options('Of course! I will never hurt you!','youRight',function() {
+	return false;
+});
+window.maybeRight = new Options('Yeah, probably.','maybeRight',function() {
+	reply = 'Why are you so uncertain...';
+	exp = 'sad';
+	return false;
+});
 let boriolsisWelcome =  new Scene("boriolsis_welcome",
 [new Frame(function(){
 	boriolsis.bringCharacter(charles);
@@ -193,7 +203,22 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 																							});
 																						},400);
 																					});
-																					yusie.speak('Hey!');
+																					yusie.speak('Hey!',function() {
+																						yusie.wait(800,function() {
+																							yusie.setFontSize('1.8vw');
+																							yusie.contSpeaking('Hey!',function() {
+																								yusie.wait(1500,function() {
+																									yusie.setFontSize('1.9vw');
+																									yusie.contSpeaking('Hey!',function() {
+																										yusie.wait(1500,function() {
+																											yusie.setFontSize('2.0vw');
+																											yusie.contSpeaking('Hey!');
+																										});
+																									});
+																								});
+																							});
+																						});
+																					});
 																				},400);
 																			});
 																		},null,false);
@@ -216,6 +241,7 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 	});
 }, function(){return null})
 ,new Frame(function(){
+	yusie.setFontSize('1.7vw');
 	halley.setDefaultSkippable(true);
 	yusie.setDefaultSkippable(true);
 	sophie.bringAboveOverlay();
@@ -344,5 +370,205 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 	});
 }, function(){return null})
 ,new Frame(function(){
+	sophie.move(5,null,null,function() {
+		sophie.preSpeak(function() {
+			sophie.speak('No!',function() {
+				sophie.wait(200,function() {
+					sophie.speak('There\'re not!');
+				});
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('It\'s alright princess!',function() {
+			chief.wait(200,function() {
+				chief.contSpeaking('I don\'t know what they are threatening you with, but you can come over here!');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.speak('I swear on my life that I will protect you from these thugs!');
+}, function(){return null})
+,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('No...',function() {
+			sophie.wait(200,function() {
+				sophie.contSpeaking('It\'s a misunderstanding!');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	charles.move(-10,null,1000,function() {
+		charles.speak('Hmm....');
+	});
+}, function(){return null})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('Are you by any chance...',function() {
+			charles.wait(300,function() {
+				charles.contSpeaking('Helmuth?');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.changeName('Helmuth');
+	chief.preSpeak(function() {
+		chief.speak('Huh!',function() {
+			chief.wait(200,function() {
+				chief.speak('Wait a minute...',null,1500);
+				chief.move(5,null,1000);
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.speak('Charles...?!',function() {
+		chief.wait(500,function() {
+			chief.contSpeaking('Are you Charles?',function() {
+				chief.wait(500,function() {
+					chief.contSpeaking('Our village\'s child prodigy that made it to the Royal Academy?');
+				});
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('Yes, I am Charles indeed.',function() {
+			charles.wait(200,function() {
+				charles.contSpeaking('How many years has it been Helmuth?');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('What are you doing with the Princess?',function() {
+			chief.wait(200,function() {
+				chief.contSpeaking('Have you turned against the Royal Family?');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('It\'s a long story.',function() {
+			charles.wait(300,function() {
+				charles.contSpeaking('Mistrassimo stage a coup and the Royal Family are all on the run.');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	charles.speak('In order to catch them while putting himself in a good light, Mistrasimmo sent out news that the Royal family has been kidnapped.');
+}, function(){return null})
+,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('Mistrassimmo?',function() {
+			chief.wait(200,function() {
+				chief.contSpeaking('He did that?');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('What Charles said is the truth!');
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('Charles has been escorting us along with this warriors!');
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('They have been really helpful,',function() {
+		sophie.wait(200,function() {
+			sophie.contSpeaking('and they will never harm me!',function() {
+				sophie.wait(200,function() {
+					sophie.moveAnchorY(10,null,function() {
+						sophie.setXOffSet(0);
+						sophie.preScale(1.15,1.15);
+						sophie.animate(500,function() {
+							sophie.flipHorizontally(function() {
+								sophie.contSpeaking('Right, ' + playName + '?',function() {
+									boriolsis.displayOption([youRight,maybeRight]);
+								});
+							},200);
+						});
+					});
+				});
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.scale(null,null,500,function() {
+		sophie.changeSprite('' + exp + '',function() {
+			sophie.speak('' + reply + '');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.flipHorizontally(function() {
+		sophie.moveAnchorY(null,null,function() {
+			sophie.move(5,null,800,function() {
+				sophie.changeSprite(def,function() {
+					sophie.speak('Anyways,',function() {
+						sophie.wait(500,function() {
+							sophie.contSpeaking('I assure you that they are my allies!');
+						});
+					});
+				});
+			});
+		});
+	},200);
+}, function(){return null})
+,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('Hmm...');
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.speak('It\'s hard to believe Mistrasimmo has turned against the family,',function() {
+		chief.wait(200,function() {
+			chief.contSpeaking('but if both Charles and Princess Sophie are saying so, there isn\'t much reason to doubt it...');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.speak('I always thought Mistrassimo was acting strange, but',function() {
+		chief.wait(300,function() {
+			chief.contSpeaking('staging a coup?',function() {
+				chief.wait(300,function() {
+					chief.contSpeaking('That\'s unexpected...');
+				});
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.speak('That aside,',function() {
+		chief.wait(500,function() {
+			chief.contSpeaking('it\'s really dangerous in this forest right now.');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('Dangerous?');
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('Let\'s hurry to my house first.',function() {
+			chief.wait(500,function() {
+				chief.contSpeaking('I will explain later.');
+			});
+		});
+	});
 }, function(){return null})
 ]);

@@ -18,7 +18,7 @@ create sound xperrorM soundgroup=VN source=stab.mp3 loop=true
 create sound footsteps soundgroup=VN source=footstep.wav loop=true
 
 start
-    play boriolsis_welcome 15
+    play boriolsis_welcome 30
 
 macro com char
     char setDefSkip true
@@ -26,11 +26,12 @@ macro com char
     char complete
 
 macro addSprite charr nible
-    charr addSprite name=nible path=charr/nible.png
+    charr addSprite name=nible path=charr.png
 
 //BASIC CHARACTERS
 create character sophie name=Sophie image=sophie.png w=61.2 h=61.2*1.4 x=-35 y=56 aX=50 aY=50
-    addSprite sophie shy
+    addSprite sophie overjoyed
+    addSprite sophie sad
     com sophie
 
 create character charles name=Charles image=charles.png w=68 h=68*1.4 x=-15 y=55 aX=50 aY=50
@@ -143,14 +144,18 @@ create character minion3 name=Minion image=v_boriolsis/ruskoff/arrogant.png widt
 /////////////////////////////////////////
 //              STAGES               ///
 /////////////////////////////////////////
+macro addBG bgg nawa
+    bgg addBackground name=nawa path=bgg/nawa.jpg
+
 create stage brostika image=brostika_outside.jpg
     brostika addBackground name=alley       path=alley.png
     brostika addBackground name=police      path=police.png
     brostika addBackground name=winery      path=winery.png
     com brostika
 
-create stage boriolsis image=boriolsis.jpg
-    boriolsis addBackground name=forest     path=boriolsis_forest.jpg
+create stage boriolsis image=town.jpg
+    addBG boriolsis house
+    addBG boriolsis forest
     com boriolsis
 create stage erithven image=erithven.jpg
     boriolsis addBackground name=outsidehouse path=outsidehouse.png

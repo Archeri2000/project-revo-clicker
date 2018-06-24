@@ -1,6 +1,15 @@
 declare yusie,charles,sophie,chief,june,halley as character
 declare boriolsis as stage
 
+let reply be I knew it! as string
+let exp be overjoyed as string
+
+
+
+create option youRight msg=Of course! I will never hurt you!
+create option maybeRight msg=Yeah, probably.
+    mod reply = 'Why are you so uncertain...'
+    mod exp = 'sad'
 
 scene boriolsisWelcome boriolsis_welcome
 
@@ -30,7 +39,7 @@ frame
 
 frame
     yusie setDefSkip false
-    yusie move x=25 t=800
+    yusie move left=25 t=800
         yusie flipHorizontally t=200
             yusie wait 500
                 yusie flipHorizontally t=200
@@ -123,24 +132,32 @@ frame
                                                                                                                             yusie say Hey!!
 
                                                                                     yusie speak Hey!
-
+                                                                                        yusie wait 800
+                                                                                            yusie setFontSize 1.8vw
+                                                                                            yusie cont Hey!
+                                                                                                yusie wait 1500
+                                                                                                    yusie setFontSize 1.9vw
+                                                                                                    yusie cont Hey!
+                                                                                                        yusie wait 1500
+                                                                                                            yusie setFontSize 2.0vw
+                                                                                                            yusie cont Hey!
 
 frame
+    yusie setFontSize 1.7vw
     halley,yusie setDefSkip true
     sophie,charles bringAboveOverlay
     boriolsis changeOverlay yanse=black a=0.55 t=200
         charles move x=20 t=300
         sophie move x=30 t=500
-
-                charles preSpeak
-                    charles speak There they go again...
-                        charles wait 500
-                            charles say I'm sure we would have reached boriolsis if they don't argue every other minute.
-                                charles wait 500
-                                    charles say Frankly speaking, I wish they weren't coming with us.
-                                        charles wait 500
-                                            charles cont We would have reached erithven by now if not for them
-                sophie flipHorizontally 100
+            charles preSpeak
+                charles speak There they go again...
+                    charles wait 500
+                        charles say I'm sure we would have reached boriolsis if they don't argue every other minute.
+                            charles wait 500
+                                charles say Frankly speaking, I wish they weren't coming with us.
+                                    charles wait 500
+                                        charles cont We would have reached erithven by now if not for them
+            sophie flipHorizontally 100
 
 
 
@@ -209,4 +226,120 @@ frame
         chief say Needless to say, you people are the ones who kidnapped her!!
         chief move x=-10 t=100
 frame
-    
+    sophie move x=5
+        sophie preSpeak
+            sophie speak No!
+                sophie wait 200
+                    sophie say There're not!
+frame
+    chief preSpeak
+        chief say It's alright princess!
+            chief wait 200
+                chief cont I don't know what they are threatening you with, but you can come over here!
+frame
+    chief say I swear on my life that I will protect you from these thugs!
+frame
+    sophie preSpeak
+        sophie say No...
+            sophie wait 200
+                sophie cont It's a misunderstanding!
+frame
+    charles move x=-10 t=1000
+        charles speak Hmm....
+frame
+    charles preSpeak
+        charles say Are you by any chance...
+            charles wait 300
+                charles cont Helmuth?
+frame
+    chief changeName Helmuth
+    chief preSpeak
+        chief say Huh!
+            chief wait 200
+                chief say msg=Wait a minute... t=1500
+                chief move x=5 t=1000
+frame
+    chief speak Charles...?!
+        chief wait 500
+            chief cont Are you Charles?
+                chief wait 500
+                    chief cont Our village's child prodigy that made it to the Royal Academy?
+frame
+    charles preSpeak
+        charles speak Yes, I am Charles indeed.
+            charles wait 200
+                charles cont How many years has it been Helmuth?
+frame
+    chief preSpeak
+        chief say What are you doing with the Princess?
+            chief wait 200
+                chief cont Have you turned against the Royal Family?
+frame
+    charles preSpeak
+        charles say It's a long story.
+            charles wait 300
+                charles cont Mistrassimo stage a coup and the Royal Family are all on the run.
+frame
+    charles say In order to catch them while putting himself in a good light, Mistrasimmo sent out news that the Royal family has been kidnapped.
+frame
+    chief preSpeak
+        chief say Mistrassimmo?
+            chief wait 200
+                chief cont He did that?
+
+frame
+    sophie preSpeak
+        sophie say What Charles said is the truth!
+frame
+    sophie say Charles has been escorting us along with this warriors!
+
+frame
+    sophie say They have been really helpful,
+        sophie wait 200
+            sophie cont and they will never harm me!
+                sophie wait 200
+                    sophie moveAnchorY 10
+                        sophie setXOffSet 0
+                        sophie preScale x=1.15 y=1.15
+                        sophie animate t=500
+                            sophie flipHorizontally 200
+                                sophie cont Right, #playName ?
+                                    boriolsis displayOption [youRight,maybeRight]
+frame
+    sophie scale t=500
+        sophie changeSprite #exp
+            sophie say #reply
+frame
+    sophie flipHorizontally 200
+        sophie moveAnchorY
+            sophie move x=5 t=800
+                sophie changeSprite def
+                    sophie say Anyways,
+                        sophie wait 500
+                            sophie cont I assure you that they are my allies!
+frame
+    chief preSpeak
+        chief say Hmm...
+frame
+    chief say It's hard to believe Mistrasimmo has turned against the family,
+        chief wait 200
+            chief cont but if both Charles and Princess Sophie are saying so, there isn't much reason to doubt it...
+frame
+    chief say I always thought Mistrassimo was acting strange, but
+        chief wait 300
+            chief cont msg=staging a coup?
+                chief wait 300
+                    chief cont That's unexpected...
+frame
+    chief say That aside,
+        chief wait 500
+            chief cont it's really dangerous in this forest right now.
+
+frame
+    sophie preSpeak
+        sophie say Dangerous?
+frame
+    chief preSpeak
+        chief say Let's hurry to my house first.
+            chief wait 500
+                chief cont I will explain later.

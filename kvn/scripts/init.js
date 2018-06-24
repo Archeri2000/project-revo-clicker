@@ -4,11 +4,12 @@ function soundLoadPhase() {
 var playName = 'Marcus';
 function publicStaticVoidMain(id){
 if(id===0){
-	playScene('boriolsis_welcome',15);
+	playScene('boriolsis_welcome',30);
 }
 }
 window.sophie = new Character('sophie','Sophie','sophie.png',61.2,61.2*1.4,-35,56,50,50);
-sophie.addSprite('shy','sophie/shy.png');
+sophie.addSprite('overjoyed','sophie.png');
+sophie.addSprite('sad','sophie.png');
 sophie.setDefaultSkippable(true);
 sophie.setDefaultAnimateInterpolation(swing);
 sophie.complete();
@@ -135,8 +136,9 @@ brostika.addBackground('winery','winery.png');
 brostika.setDefaultSkippable(true);
 brostika.setDefaultAnimateInterpolation(swing);
 brostika.complete();
-window.boriolsis = new Stage('boriolsis','boriolsis.jpg');
-boriolsis.addBackground('forest','boriolsis_forest.jpg');
+window.boriolsis = new Stage('boriolsis','town.jpg');
+boriolsis.addBackground('house','boriolsis/house.jpg');
+boriolsis.addBackground('forest','boriolsis/forest.jpg');
 boriolsis.setDefaultSkippable(true);
 boriolsis.setDefaultAnimateInterpolation(swing);
 boriolsis.complete();
