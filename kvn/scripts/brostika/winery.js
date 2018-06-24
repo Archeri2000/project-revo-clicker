@@ -16,7 +16,7 @@ let brostikaWinery =  new Scene("brostika_winery",
 		brostika.setWidth(150);
 		brostika.changeBackground('winery',1,800);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.appear();
 	charles.appear();
@@ -27,10 +27,10 @@ let brostikaWinery =  new Scene("brostika_winery",
 			sophie.rotateClockwise(23,300);
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.rotateClockwise(null,200);
-})
+}, function(){return null})
 ,new Frame(function(){
 	brostika.pan(-30,null,500,null,swing);
 	sophie.move(-20,null,500);
@@ -41,7 +41,7 @@ let brostikaWinery =  new Scene("brostika_winery",
 	charles.changeItalic();
 	sophie.setFontSize('1.2vw');
 	charles.setFontSize('1.2vw');
-})
+}, function(){return null})
 ,new Frame(function(){
 	brostika.pan(30,null,500);
 	sophie.move(null,null,500);
@@ -53,7 +53,7 @@ let brostikaWinery =  new Scene("brostika_winery",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('We should keep our eyes peeled for the slimes',function() {
@@ -62,7 +62,7 @@ let brostikaWinery =  new Scene("brostika_winery",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	slime.disappear(10);
 	slime2.disappear(10);
@@ -73,7 +73,7 @@ let brostikaWinery =  new Scene("brostika_winery",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	brostika.pan(-40,null,500,function() {
 		sophie.move(-30,null,500);
@@ -84,20 +84,20 @@ let brostikaWinery =  new Scene("brostika_winery",
 			},swing);
 		},swing);
 	},swing);
-})
+}, function(){return null})
 ,new Frame(function(){
 	brostika.setAnchorX(80);
 	brostika.setAnchorY(50);
 	brostika.scaleBackground(2,2,500,function() {
 		broski.appear(1000);
 	},swing,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.move(30,null,500);
 	charles.move(30,null,500,function() {
 		sophie.speak('Are you Mr Broski?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.preSpeak(function() {
 		broski.speak('Yes.',function() {
@@ -106,7 +106,7 @@ let brostikaWinery =  new Scene("brostika_winery",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('We\'re here to save you Mr Broski.',function() {
@@ -115,12 +115,12 @@ let brostikaWinery =  new Scene("brostika_winery",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.preSpeak(function() {
 		broski.speak('If that\'s the case, I think we should get moving now while the slimes are away.');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('You\'re right.',function() {
@@ -129,7 +129,7 @@ let brostikaWinery =  new Scene("brostika_winery",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.move(30,null,200,function() {
 		charles.triggered(601,function() {
@@ -138,10 +138,10 @@ let brostikaWinery =  new Scene("brostika_winery",
 			});
 		},false,null,150);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Let\'s leave!');
 	});
-})
+}, function(){return null})
 ]);

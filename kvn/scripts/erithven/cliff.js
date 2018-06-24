@@ -22,7 +22,7 @@ let cliff =  new Scene("erithven_cliff",
 		yusie.appear(1000);
 		charles.appear(1000);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.move(20,null,600,function() {
 		yusie.flipHorizontally(function() {
@@ -31,10 +31,10 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		},200);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('It would really be quite impressive for a Princess if Sophie were to achieve such a feat');
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('What\'s so difficult about ascending this cliff?',function() {
@@ -43,7 +43,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('So much for talking tough...',function() {
@@ -52,7 +52,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Hey!',function() {
@@ -69,7 +69,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	erithven.closeTextBox();
 	charles.wait(1200,function() {
@@ -79,14 +79,14 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('So I should be looking out for clusters of this color around the cliffs which are more accessible than the rest',function() {
 		charles.wait(200,function() {
 			charles.speak('Those places will most likely be where I will be able to find Soph-');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Charles...?',function() {
@@ -95,12 +95,12 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Yeah');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('When do you want me to get the herbs for you?',function() {
@@ -109,7 +109,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Actually...',function() {
@@ -122,20 +122,20 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('And don\'t worry because you\'ll still be able to show your trekking and climbing ability');
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Sorry but I\'m not going to do anything for any member of the Royal Family');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('We\'ll see then');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.move(10,null,500,function() {
 		erithven.closeTextBox();
@@ -147,12 +147,12 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Is that Sophie on the right hand side of the red cluster of herbs?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('You mean the left hand side?',function() {
@@ -161,10 +161,10 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('It seems like Sophie has collected quite a number of the herbs already!');
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.changeBold(true);
@@ -179,7 +179,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophieslippedCG.disappear(700);
 	erithven.changeOverlay(0,'black',1000,function() {
@@ -193,7 +193,7 @@ let cliff =  new Scene("erithven_cliff",
 			},700,false);
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.wait(400);
 	sophie.setFontSize('1.2vw');
@@ -202,7 +202,7 @@ let cliff =  new Scene("erithven_cliff",
 			sophie.contSpeaking('Is that you?');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('YEAH!',function() {
@@ -211,7 +211,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('WE\'LL TRY TO FIND A WAY TO GET YOU UP',function() {
 		yusie.interupt(function() {
@@ -233,7 +233,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophieslippedCG.disappear(700);
 	erithven.changeOverlay(0,'black',1000,function() {
@@ -241,21 +241,21 @@ let cliff =  new Scene("erithven_cliff",
 			sophie.wait(200);
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.setNormalText();
 	charles.setFontSize('1.7vw');
 	charles.preSpeak(function() {
 		charles.speak('Halley, I think we need your help right now!');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.changeItalic(true);
 	halley.setFontSize('1.4vw');
 	halley.preSpeak(function() {
 		halley.speak('Should I help them...?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Ugh...',function() {
@@ -264,7 +264,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.flipHorizontally(function() {
 		charles.move(-80,null,850);
@@ -287,7 +287,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	},200);
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.appear();
 	yusie.appear();
@@ -306,7 +306,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.endSpeak();
 	sophie.setFontSize('1.5vw');
@@ -315,10 +315,10 @@ let cliff =  new Scene("erithven_cliff",
 			sophie.contSpeaking('I\'m a-almost up...',null,1200,false);
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.appear(1000,function() {
 		sophie.move(null,-50,2500,null,easeOut);
 	});
-})
+}, function(){return null})
 ]);

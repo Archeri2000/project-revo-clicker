@@ -7,7 +7,7 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 	charles.setTextColor('white');
 	yusie.setTextColor('white');
 	erithven.display(1,null,1000);
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preMove(-50);
 	charles.preMove(-50);
@@ -20,7 +20,7 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 		charles.move(null,null,650);
 		yusie.move(80,null,750);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.move(20,null,800,function() {
 		yusie.flipHorizontally(function() {
@@ -29,12 +29,12 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('Look at the huge boats, the fluffy white clouds',function() {
 		yusie.contSpeaking('and the BOOOOUNNNDDDLEESSSS OCEAN!',null,1000);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.setFontSize('1.2vw');
@@ -42,46 +42,46 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 			charles.setFontSize('1.7vw');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Hey! I\'m on official duty right now!');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('W-Who says I\'m on a holiday!!');
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('I-I\'m just admiring the secnery while at work!');
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('But oh myy, the this place is really beautif-');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('I KNOW, RIGHT?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('At this rate, I think I am really going to fall in love with this place!');
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Alright, alright, whatever you say, manta ray....');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Uuuuuuu');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('Well whatever! Let\'s move on!',function() {
 		yusie.endSpeak();
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	erithven.closeTextBox();
 	sophie.flipHorizontally();
@@ -93,7 +93,7 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 		yusie.move(10,null,1000);
 		charles.flipHorizontally();
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.setFontSize('1.2vw');
 	yusie.preSpeak(function() {
@@ -104,7 +104,7 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 			});
 		},swing);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		charles.flipHorizontally();
@@ -113,5 +113,5 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 		yusie.setFontSize('2vw');
 		yusie.speak('Noooooooooo~');
 	});
-})
+}, function(){return null})
 ]);

@@ -1,0 +1,164 @@
+let playName be Marcus as string
+
+create sound brostikaM soundgroup=VN source=Brostika.mp3 loop=true
+create sound darkAlleyM soundgroup=VN source=Dark_Ally.mp3 loop=true
+create sound edgeOfBoriolsisM soundgroup=VN source=Edge_of_Boriolsis.mp3 loop=true
+
+create sound erithvenM soundgroup=VN source=Erithven.mp3 loop=true
+create sound erithvenApothecaryM soundgroup=VN source=Erithven_Apothecary.mp3 loop=true
+create sound malidretM soundgroup=VN source=malidret.mp3 loop=true
+create sound revelationRevolutionM soundgroup=VN source=Revelation_Revolution.mp3 loop=true
+create sound deathM soundgroup=VN source=Royal_Death.mp3 loop=true
+create sound solemnStrengthM soundgroup=VN source=erithven.mp3 loop=true
+create sound sophiesRoomM soundgroup=VN source=Sophies_Room.mp3 loop=true
+create sound titleM soundgroup=VN source=The_Princess_Saviour.mp3 loop=true
+create sound valleyOfKusuriM soundgroup=VN source=Valley_of_Kusuri.mp3 loop=true
+create sound stabM soundgroup=VN source=stab.mp3 loop=true
+create sound xperrorM soundgroup=VN source=stab.mp3 loop=true
+create sound footsteps soundgroup=VN source=footstep.wav loop=true
+
+start
+    play brostika_tristan 0
+
+macro com char
+    char setDefSkip true
+    char setDefGraph swing
+    char complete
+
+macro addSprite charr nible
+    charr addSprite name=nible path=charr/nible.png
+
+//BASIC CHARACTERS
+create character sophie name=Sophie image=sophie.png w=61.2 h=61.2*1.4 x=-35 y=56 aX=50 aY=50
+    addSprite sophie shy
+    com sophie
+
+create character charles name=Charles iamge=charles.png w=68 h=68*1.4 x=-15 y=55 aX=50 aY=50
+    charles setHorizontalFlip true
+    com charles
+
+////////////////////////////////////////
+//        BROSTIKA CHARACTERS         //
+///////////////////////////////////////
+create character chelsea name=Chelsea image=Chelsea.png width=68 height=58*1.4 x=30.9 y=65 aX=50 aY=50
+    chelsea setFontSize 1.5vw
+    com chelsea
+
+//Brostika Alley Scene (Tristan is unique in that his default face is sad_speak, not smile_speak)
+create character tristan name=Tristan image=tristan.png width=60 height=60*1.4 x=60.2 y=36 aX=10 aY=10
+    com tristan
+
+create character yusie name=Yusie image=yusie.png width=60 height=60*1.4 x=30 y=55 aX=50 aY=50
+    com yusie
+
+create character broski name=Broski image=broski.png width=55 height=55*1.4 x=30 y=55 aX=50 aY=50
+    com broski
+
+create character healingMagicCG name=CG 1 image=cg1.jpg width=100 height=56.25 x=0 y=0 aX=50 aY=50
+    com healingMagicCG
+
+create character yusieHelpedCG name=CG 2 image=cg_help.jpg width=100 height=56.25 x=0 y=0 aX=50 aY=50
+    com yusieHelpedCG
+
+create character slime name=Slime image=slime.png width=25 height=25 x=60 y=0 aX=50 aY=50
+    com slime
+
+create character slime2 name=Slime image=slime.png width=28 height=28 x=70 y=20 aX=50 aY=50
+    com slime2
+
+////////////////////////////////////////
+//        Erithven CHARACTERS         //
+///////////////////////////////////////
+//Erithven House Scenes (Child is special in that his default face is ill_speak, not smile_speak)
+create character sickchild name=Sick Child image=sickchild.png width=22 height=22*1.4 x=25 y=28 aX=0 aY=100
+    com sickchild
+
+//Erithven House Scenes (Mother is special in that her default face is worry_speak, not smile_speak)
+create character mother name=Mother image=mother.png width=60 height=60*1.4 x=15 y=30 aX=0 aY=100
+    com mother
+//Apothecary Scenes
+create character halley name=Halley image=halley.png width=66 height=66*1.4 x=40 y=50 aX=50 aY=50
+    com halley
+
+create character comet name=Comet image=salley.png width=60 height=60*1.4 x=25 y=55 aX=50 aY=50
+    com comet
+
+create character sophieslippedCG name=CG 3 image=cg_slipcliff.jpg width=100 height=56.25 x=0 y=0 aX=50 aY=50
+    com sophieslippedCG
+
+////////////////////////////////////////
+//        BORIOLSIS CHARACTERS        //
+///////////////////////////////////////
+
+//Ruskoff Fighting Scene in Boriolsis
+create character ruskoff name=Ruskoff image=v_boriolsis/ruskoff/arrogant.png width=68 height=68*1.4 x=8 y=12 aX=0 aY=100
+    com ruskoff
+
+create character minion name=Minion image=v_boriolsis/ruskoff/arrogant.png width=68 height=68*1.4 x=-20 y=15 aX=0 aY=100
+    com minion
+
+create character minion1 name=Minion image=v_boriolsis/ruskoff/arrogant.png width=68 height=68*1.4 x=-40 y=18 aX=0 aY=100
+    com minion1
+
+create character minion2 name=Minion image=v_boriolsis/ruskoff/arrogant.png width=68 height=68*1.4 x=-8 y=12 aX=0 aY=100
+    com minion2
+
+//Boriolsis Town Scene
+create character june name=June image=alchemist.png width=68 height=68*1.4 x=15 y=25 aX=50 aY=50
+    com june
+
+create character chief name=Helmuth image=chief.png width=68 height=68*1.4 x=12 y=53 aX=50 aY=50
+    com chief
+
+create character sSophie name=Sophie image=sophie_young.png width=68 height=68*1.4 x=0 y=0 aX=50 aY=50
+    com sSophie
+
+create character sCharles name=Charles image=charles_young.png width=68 height=68*1.4 x=0 y=0 aX=50 aY=50
+    com sCharles
+
+create character slane name=Slane image=v_boriolsis/slane/slysmile.png width=68 height=68*1.4 x=12 y=15 aX=50 aY=50
+    com slane
+
+create character wizard name=Wizard image=v_boriolsis/wizard/polite.png width=69 height=68*1.4 x=10 y=8 aX=0 aY=100
+    com wizard
+
+//Murder Scene (King is special in that his default face is smile, not smile_speak)
+create character king name=King image=v_boriolsis/king/smile.png width=68 height=68*1.4 x=35.9 y=15.7 aX=50 aY=50
+    king setFontSize 1.5vw
+    com king
+create character queen name=Queen image=v_boriolsis/queen/smile.png width=68 height=68*1.4 x=25.9 y=20.5 aX=50 aY=50
+    queen setFontSize 1.5vw
+    com queen
+
+////////////////////////////////////////
+//        BORIOLSIS CHARACTERS        //
+///////////////////////////////////////
+create character patrick name=Patrick image=v_malidret/patrick/pain.png width=60 height=60*1.4 x=15 y=28 aX=0 aY=100
+    com patrick
+
+create character minion3 name=Minion image=v_boriolsis/ruskoff/arrogant.png width=68 height=68*1.4 x=-6 y=12 aX=0 aY=100
+    com minion3
+
+
+/////////////////////////////////////////
+//              STAGES               ///
+/////////////////////////////////////////
+create stage brostika image=brostika_outside.jpg
+    brostika addBackground name=alley       path=alley.png
+    brostika addBackground name=police      path=police.png
+    brostika addBackground name=winery      path=winery.png
+    com brostika
+
+create stage boriolsis image=boriolsis.jpg
+    boriolsis addBackground name=forest     path=boriolsis_forest.jpg
+    com boriolsis
+create stage erithven image=erithven.jpg
+    boriolsis addBackground name=outsidehouse path=outsidehouse.png
+    boriolsis addBackground name=house        path=sick_boy_s_room.png
+    boriolsis addBackground name=pharma       path=pharma.png
+    boriolsis addBackground name=cliff        path=cliff.png
+    boriolsis addBackground name=finalcliff   path=finalcliff.png
+    com erithven
+
+create stage malidret image=malidret.png
+    com malidret

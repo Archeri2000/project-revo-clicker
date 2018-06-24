@@ -1,333 +1,155 @@
-    var playName = "Marcus";
-
 function soundLoadPhase() {
-  //load/create sounds here		window.boriolsis_townM = new GameSound(VN, "Boriolsis_Town.mp3, true");		window.boriolsis_forestM = new GameSound(VN, "Boriolsis_Forest.mp3, true");		window.boriolsis_valleyM = new GameSound(VN, "Boriolsis_Valley.mp3, true");		window.boys_roomM = new GameSound(VN, "Boys_Room.mp3, true");
-  window.brostikaM = new GameSound(VN, "Brostika.mp3", true);
-  window.dark_alleyM = new GameSound(VN, "Dark_Alley.mp3", true);
-  window.edge_of_boriolsisM = new GameSound(VN, "Edge_of__Boriolsis.mp3", true);
-  window.erithvenM = new GameSound(VN, "Erithven.mp3", true);
-  window.erithven_apothecaryM = new GameSound(VN, "Erithven_Apothecary.mp3", true);
-  window.malidretM = new GameSound(VN, "malidret.mp3", true);
-  window.revelation_revolutionM = new GameSound(VN, "Revelation_Revolution.mp3", true);
-  window.deathM = new GameSound(VN, "Royal_Death.mp3", true);
-  window.solemn_strengthM = new GameSound(VN, "erithven.mp3", true);
-  window.sophies_roomM = new GameSound(VN, "Sohpies_Room.mp3", true);
-  window.titleM = new GameSound(VN, "The_Princess__Saviour.mp3", true);
-  window.valley_of_kusuriM = new GameSound(VN, "Valley_of_Kusuri.mp3", true);
-  window.stabM = new GameSound(VN, "stab.mp3", false);
-  window.xperrorM = new GameSound(VN, "error.mp3", false);
-  window.footsteps = new GameSound(VN, "footstep.wav",true);
+	window.brostikaM = new GameSound(VN,'Brostika.mp3',true);	window.darkAlleyM = new GameSound(VN,'Dark_Ally.mp3',true);	window.edgeOfBoriolsisM = new GameSound(VN,'Edge_of_Boriolsis.mp3',true);	window.erithvenM = new GameSound(VN,'Erithven.mp3',true);	window.erithvenApothecaryM = new GameSound(VN,'Erithven_Apothecary.mp3',true);	window.malidretM = new GameSound(VN,'malidret.mp3',true);	window.revelationRevolutionM = new GameSound(VN,'Revelation_Revolution.mp3',true);	window.deathM = new GameSound(VN,'Royal_Death.mp3',true);	window.solemnStrengthM = new GameSound(VN,'erithven.mp3',true);	window.sophiesRoomM = new GameSound(VN,'Sophies_Room.mp3',true);	window.titleM = new GameSound(VN,'The_Princess_Saviour.mp3',true);	window.valleyOfKusuriM = new GameSound(VN,'Valley_of_Kusuri.mp3',true);	window.stabM = new GameSound(VN,'stab.mp3',true);	window.xperrorM = new GameSound(VN,'stab.mp3',true);	window.footsteps = new GameSound(VN,'footstep.wav',true);}
+
+var playName = 'Marcus';
+function publicStaticVoidMain(id){
+if(id===0){
+	playScene('brostika_tristan',0);
 }
-
-
-function publicStaticVoidMain(id) {
-
-    if (id === 0) {
-        playScene('boriolsis_welcome',8);
-    }
-
 }
-//====================CHARACTER INIT HERE============
-//creating a new character - id, name, image, width, height, xoffset, yoffset, vertical align, horizontal align
-
-/*===============================================
-			COMMON CHARACTERS
-===============================================*/
-//HEIGHT ON SCREEN TBC
-var sophie = new Character("sophie", "Sophie", "sophie.png", 61.2, 61.2 * 1.4, -35, 56, 50, 50).addSprite("smile", "sophie/smile.png")
-  .addSprite("old","sophie_o.png")
-  .addSprite("angry", "sophie/angry.png")
-  .addSprite("angry_speak", "sophie/angry_speak.png")
-  .addSprite("cry", "sophie/cry.png")
-  .addSprite("cry_speak", "sophie/cry_speak.png")
-  .addSprite("embarassed", "sophie/embarassed.png")
-  .addSprite("embarassed_speak", "sophie/embarassed_speak.png")
-  .addSprite("exclaim_speak", "sophie/exclaim_speak.png")
-  .addSprite("joy", "sophie/joy.png")
-  .addSprite("joy_speak", "sophie/joy_speak.png")
-  .addSprite("pout", "sophie/pout.png")
-  .addSprite("proud", "sophie/proud.png")
-  .addSprite("proud_speak", "sophie/proud_speak.png")
-  .addSprite("sad", "sophie/sad.png")
-  .addSprite("sad_speak", "sophie/sad_speak.png")
-  .addSprite("scared", "sophie/scared.png")
-  .addSprite("scared_speak", "sophie/scared_speak.png")
-  .addSprite("shocked", "sophie/shocked.png")
-  .addSprite("shocked_speak", "sophie/shocked_speak.png")
-  .addSprite("shy", "sophie/shy.png")
-  .addSprite("shy_speak", "sophie/shy_speak.png")
-  .addSprite("sulk", "sophie/sulk.png")
-  .addSprite("tear", "sophie/tear.png")
-  .addSprite("tear_speak", "sophie/tear_speak.png")
-  .addSprite("terrified", "sophie/terrified.png")
-  .addSprite("terrified_speak", "sophie/terrified.png")
-  .setDefaultSkippable(true) //make all animation skippable unless othewise stated. if this is not called, the default skippable's default is false
-  .setDefaultAnimateInterpolation(swing) //make all animation swing instead of linearly animate
-  .complete(); //complete the construction of the character
-
-//HEIGHT ON SCREEN TBC
-var charles = new Character("charles", "Charles", "charles.png", 68, 68 * 1.4, -15, 55, 50, 50)
-  .setHorizontalFlip(true)
-  .addSprite("angry_speak", "charles/angry_speak.png")
-  .addSprite("upset", "charles/upset.png")
-  .addSprite("annoyed_speak", "charles/annoyed_speak.png")
-  .addSprite("proud", "charles/proud.png")
-  .addSprite("smile", "charles/smile.png")
-  .addSprite("shadow", "charles/shadow.png")
-  .addSprite("blood", "charles/blood.png")
-  .complete();
-
-
-
-/*===============================================
-			BROSTIKA INIT(NEED UPDATE)
-===============================================*/
-//Brostika First Scene (HEIGHT ON SCREEN TBC)
-var chelsea = new Character("chelsea", "Chelsea", "Chelsea.png", 68, 95.2, 30.9, 65, 50, 50)
-  .addSprite("smile", "v_brostika/chelsea/smile.png")
-  .addSprite("surprised_speak", "v_brostika/chelsea/surprised_speak.png")
-  .addSprite("joy", "v_brostika/chelsea/joy.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .setFontSize("1.5vw")
-  .complete();
-//Brostika Alley Scene (Tristan is unique in that his default face is sad_speak, not smile_speak)
-var tristan = new Character("tristan", "Tristan", "tristan.png", 60, 60 * 1.4, 60.2, 36, 10, 10)
-  .addSprite("bleed", "v_brostika/tristan/bleed.png")
-  .addSprite("pain", "v_brostika/tristan/pain.png")
-  .addSprite("pain_speak", "v_brostika/tristan/pain_speak.png")
-  .addSprite("worried", "v_brostika/tristan/worried.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-//Brostika
-var yusie = new Character("yusie", "Yusie", "yusie.png", 60, 60 * 1.4, 30, 55, 50, 50)
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-var broski = new Character("broski", "Mr Broski", "broski.png", 55, 55 * 1.4, 30, 55, 50, 50)
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-var healingMagicCG = new Character("healingmagic", "CG 1", "cg1.jpg", 100, 56.25, 0, 0, 50, 50)
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-var yusieHelpedCG = new Character("yusiehelpcg", "CG 2", "cg_help.jpg", 100, 56.25, 0, 0, 50, 50)
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-var slime = new Character("slime", "slime", "slime.png", 25, 25, 60, 0, 50, 50)
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-var slime2 = new Character("slime2", "slime2", "slime.png", 28, 28, 70, 20, 50, 50)
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-/*===============================================
-			ERITHVEN INIT(NEED UPDATE)
-===============================================*/
-//Erithven House Scenes (Child is special in that his default face is ill_speak, not smile_speak)
-var sickchild = new Character("sickchild", "Sick Child", "sickchild.png", 22, 22*1.4,25, 28, 0, 100)
-  .addSprite("cough", "v_erithven/child/cough.png")
-  .addSprite("smile_speak", "v_erithven/child/smile_speak.png")
-  .addSprite("sad", "v_erithven/child/sad.png")
-  .addSprite("joy_speak", "v_erithven/child/joy_speak.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-//Erithven House Scenes (Mother is special in that her default face is worry_speak, not smile_speak)
-var mother = new Character("erithven_mother", "Mother", "mother.png", 60, 60*1.4, 15, 30, 0, 100)
-  .addSprite("angry_speak", "v_erithven/mother/angry_speak.png")
-  .addSprite("cry_speak", "v_erithven/mother/cry_speak.png")
-  .addSprite("smile_speak", "v_erithven/mother/smile_speak.png")
-  .addSprite("smile", "v_erithven/mother/smile.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-//Apothecary Scenes
-var halley = new Character("guy_staff", "Halley", "halley.png", 66, 66*1.4, 40, 50, 50, 50)
-  .addSprite("annoyed_speak", "v_erithven/apothecary_guy/annoyed_speak.png")
-  .addSprite("sheepish", "v_erithven/apothecary_guy/sheepish.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-var comet = new Character("girl_staff", "Comet", "salley.png", 60, 60*1.4, 25 ,55, 50, 50)
-  .addSprite("annoyed_speak", "v_erithven/apothecary_girl/annoyed_speak.png")
-  .addSprite("sheepish", "v_erithven/apothecary_girl/blush_speak.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-var sophieslippedCG = new Character("sophieslippedcg", "CG 3", "cg_slipcliff.jpg", 100, 56.25, 0, 0, 50, 50)
-    .setDefaultSkippable(true)
-    .setDefaultAnimateInterpolation(swing)
-    .complete();
-
-/*===============================================
-			BORIOLSIS INIT(NEED UPDATE)
-===============================================*/
-
-//Ruskoff Fighting Scene in Boriolsis
-var ruskoff = new Character("ruskoff", "Ruskoff", "v_boriolsis/ruskoff/arrogant.png", 68, 95.2, 8, 12, 0, 100)
-  .addSprite("angry", "v_boriolsis/ruskoff/angry.png")
-  .addSprite("angry_speak", "v_boriolsis/ruskoff/angry_speak.png")
-  .addSprite("pain_speak", "v_boriolsis/ruskoff/pain_speak.png")
-  .addSprite("smile_speak", "v_boriolsis/ruskoff/smile_speak.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-var minion = new Character("minion", "Minion", "v_boriolsis/ruskoff/arrogant.png", 68, 95.2, -20, 15, 0, 100)
-  .addSprite("angry", "v_boriolsis/ruskoff/angry.png")
-  .addSprite("angry_speak", "v_boriolsis/ruskoff/angry_speak.png")
-  .addSprite("pain_speak", "v_boriolsis/ruskoff/pain_speak.png")
-  .addSprite("smile_speak", "v_boriolsis/ruskoff/smile_speak.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-var minion1 = new Character("minion1", "Minion", "v_boriolsis/ruskoff/arrogant.png", 68, 95.2, -40, 18, 0, 100)
-  .addSprite("angry", "v_boriolsis/ruskoff/angry.png")
-  .addSprite("angry_speak", "v_boriolsis/ruskoff/angry_speak.png")
-  .addSprite("pain_speak", "v_boriolsis/ruskoff/pain_speak.png")
-  .addSprite("smile_speak", "v_boriolsis/ruskoff/smile_speak.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-var minion2 = new Character("minion2", "Minion", "v_boriolsis/ruskoff/arrogant.png", 68, 95.2, 8, 12, 0, 100)
-  .addSprite("angry", "v_boriolsis/ruskoff/angry.png")
-  .addSprite("angry_speak", "v_boriolsis/ruskoff/angry_speak.png")
-  .addSprite("pain_speak", "v_boriolsis/ruskoff/pain_speak.png")
-  .addSprite("smile_speak", "v_boriolsis/ruskoff/smile_speak.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-//Boriolsis Town Scene
-var june = new Character("alchemist", "June", "alchemist.png", 68, 95.2, 15, 25, 50, 50)
-  .addSprite("confident", "v_boriolsis/alchemist/confident.png")
-  .addSprite("cry", "v_boriolsis/alchemist/cry.png")
-  .addSprite("smile", "v_boriolsis/alchemist/smile.png")
-  .addSprite("thankful", "v_boriolsis/alchemist/thankful.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-var chief = new Character("chief", "Helmuth", "chief.png", 68, 95.2, 12, 22, 50, 50)
-  .addSprite("serious", "v_boriolsis/chief/serious.png")
-  .addSprite("wise", "v_boriolsis/chief/wise.png")
-  .addSprite("worried", "v_boriolsis/chief/worried.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-var sSophie = new Character("smol_sophie","Sophie","sophie_young.png",68,68*1.4,0,0,50,50)
-    .setDefaultSkippable(true)
-    .setDefaultAnimateInterpolation(swing)
-    .complete();
-var sCharles = new Character("smol_charles","Charles","charles_young.png",68,68*1.4,0,0,50,50)
-    .setDefaultSkippable(true)
-    .setDefaultAnimateInterpolation(swing)
-    .complete();
-var deadsophie = new Character("deadsophie", "deadSophie", "sophie/dead_sophie.png", 68, 95.2, 12, 65, 50, 50)
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-var slane = new Character("slane", "Slane", "v_boriolsis/slane/slysmile.png", 68, 95.2, 12, 15, 0, 100)
-  .addSprite("smile", "v_boriolsis/slane/smile.png")
-  .addSprite("angry", "v_boriolsis/slane/angry.png")
-  .addSprite("laugh", "v_boriolsis/slane/laugh.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-var wizard = new Character("wizard", "Wizard", "v_boriolsis/wizard/polite.png", 68, 95.2, 10, 8, 0, 100)
-  .addSprite("serious", "v_boriolsis/wizard/serious.png")
-  .addSprite("angry", "v_boriolsis/wizard/angry.png")
-  .addSprite("annoyed", "v_boriolsis/wizard/annoyed.png")
-  .addSprite("awkward", "v_boriolsis/wizard/awkward.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-//Murder Scene (King is special in that his default face is smile, not smile_speak)
-var king = new Character("king", "King", "v_boriolsis/king/smile.png", 68, 95.2, 35.9, 15.7, 50, 50)
-  .addSprite("bleed", "v_boriolsis/king/bleed.png")
-  .addSprite("despair_speak", "v_boriolsis/king/despair_speak.png")
-  .addSprite("joy", "v_boriolsis/king/joy.png")
-  .addSprite("shocked_speak", "v_boriolsis/king/shocked_speak")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .setFontSize("1.5vw")
-  .complete();
-//Murder Scene (Queen is special in that her default face is smile, not smile_speak)
-var queen = new Character("queen", "Queen", "v_boriolsis/queen/smile.png", 68, 95.2, 25.9, 20.5, 50, 50)
-  .addSprite("bleed", "v_boriolsis/queen/bleed.png")
-  .addSprite("despair_speak", "v_boriolsis/queen/despair_speak.png")
-  .addSprite("joy_speak", "v_boriolsis/queen/joy_speak.png")
-  .addSprite("shocked_speak", "v_boriolsis/queen/shocked_speak")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .setFontSize("1.5vw")
-  .complete();
-
-//Murder Scene (this is a panning background)
-var village = new Character("village", "Village", "boriolsis.jpg", 133.3, 75, 0, 0, 0, 0)
-  .setDefaultSkippable(true) //make all animation skippable unless othewise stated. if this is not called, the default skippable's default is false
-  .setDefaultAnimateInterpolation(swing) //make all animation swing instead of linearly animate
-  .complete();
-/*===============================================
-    MALIDRET INIT(NEED UPDATE)
-===============================================*/
-
-//Traveller in Malidret
-var patrick = new Character("patrick", "Patrick", "v_malidret/patrick/pain.png", 60, 84, 15, 28, 0, 100)
-  .addSprite("tired", "v_malidret/patrick/tired.png")
-  .addSprite("smile", "v_malidret/patrick/smile.png")
-  .addSprite("tiredsmile", "v_malidret/patrick/tiredsmile.png")
-  .addSprite("excited", "v_malidret/patrick/excited.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-var minion3 = new Character("minion3", "Minion", "v_boriolsis/ruskoff/arrogant.png", 68, 95.2, -6, 12, 0, 100)
-  .addSprite("angry", "v_boriolsis/ruskoff/angry.png")
-  .addSprite("angry_speak", "v_boriolsis/ruskoff/angry_speak.png")
-  .addSprite("pain_speak", "v_boriolsis/ruskoff/pain_speak.png")
-  .addSprite("smile_speak", "v_boriolsis/ruskoff/smile_speak.png")
-  .setDefaultSkippable(true)
-  .setDefaultAnimateInterpolation(swing)
-  .complete();
-
-//====================STAGE INIT HERE============
-var brostika = new Stage("brostika", "brostika_outside.jpg")
-  .addBackground("alley", "alley.png")
-  .addBackground("police", "police.png")
-  .addBackground("winery", "winery.png")
-  .setDefaultAnimateInterpolation(swing)
-  .complete(); //creating a stage
-
-var boriolsis = new Stage("boriolsis", "boriolsis.jpg")
-  .addBackground("forest", "boriolsis_forest.jpg")
-  .addBackground("boriolsis_chouse", "boriolsis_chouse.jpg")
-  .addBackground("boriolsis_path", "boriolsis_path.jpg")
-  .addBackground("boriolsis_valley", "boriolsis_valley.jpg")
-  .complete(); //creating a stage
-
-var erithven = new Stage("erithven", "erithven.jpg")
-  .addBackground("outsidehouse", "outsidehouse.png")
-  .addBackground("house", "sick_boy_s_room.png")
-  .addBackground("pharma", "pharma.png")
-  .addBackground("cliff", "cliff.png")
-  .addBackground("finalcliff", "finalcliff.png")
-  .complete(); //creating a stage
-
-var malidret = new Stage("malidret", "malidret.png")
-  .addBackground("malidret_corner", "malidret_corner.png")
-  .addBackground("malidret_bakery", "malidret_bakery.jpg")
-  .addBackground("malidret_rent", "malidret_rent.jpg")
-  .addBackground("malidret_deadroom", "malidret_deadroom.jpg")
-  .complete(); //creating a stage
+window.sophie = new Character('sophie','Sophie','sophie.png',61.2,61.2*1.4,-35,56,50,50);
+sophie.addSprite('shy','sophie/shy.png');
+sophie.setDefaultSkippable(true);
+sophie.setDefaultAnimateInterpolation(swing);
+sophie.complete();
+window.charles = new Character('charles','Charles',null,68,68*1.4,-15,55,50,50);
+charles.setHorizontalFlip(true);
+charles.setDefaultSkippable(true);
+charles.setDefaultAnimateInterpolation(swing);
+charles.complete();
+window.chelsea = new Character('chelsea','Chelsea','Chelsea.png',68,58*1.4,30.9,65,50,50);
+chelsea.setFontSize('1.5vw');
+chelsea.setDefaultSkippable(true);
+chelsea.setDefaultAnimateInterpolation(swing);
+chelsea.complete();
+window.tristan = new Character('tristan','Tristan','tristan.png',60,60*1.4,60.2,36,10,10);
+tristan.setDefaultSkippable(true);
+tristan.setDefaultAnimateInterpolation(swing);
+tristan.complete();
+window.yusie = new Character('yusie','Yusie','yusie.png',60,60*1.4,30,55,50,50);
+yusie.setDefaultSkippable(true);
+yusie.setDefaultAnimateInterpolation(swing);
+yusie.complete();
+window.broski = new Character('broski','Broski','broski.png',55,55*1.4,30,55,50,50);
+broski.setDefaultSkippable(true);
+broski.setDefaultAnimateInterpolation(swing);
+broski.complete();
+window.healingMagicCG = new Character('healingMagicCG','CG 1','cg1.jpg',100,56.25,0,0,50,50);
+healingMagicCG.setDefaultSkippable(true);
+healingMagicCG.setDefaultAnimateInterpolation(swing);
+healingMagicCG.complete();
+window.yusieHelpedCG = new Character('yusieHelpedCG','CG 2','cg_help.jpg',100,56.25,0,0,50,50);
+yusieHelpedCG.setDefaultSkippable(true);
+yusieHelpedCG.setDefaultAnimateInterpolation(swing);
+yusieHelpedCG.complete();
+window.slime = new Character('slime','Slime','slime.png',25,25,60,0,50,50);
+slime.setDefaultSkippable(true);
+slime.setDefaultAnimateInterpolation(swing);
+slime.complete();
+window.slime2 = new Character('slime2','Slime','slime.png',28,28,70,20,50,50);
+slime2.setDefaultSkippable(true);
+slime2.setDefaultAnimateInterpolation(swing);
+slime2.complete();
+window.sickchild = new Character('sickchild','Sick Child','sickchild.png',22,22*1.4,25,28,0,100);
+sickchild.setDefaultSkippable(true);
+sickchild.setDefaultAnimateInterpolation(swing);
+sickchild.complete();
+window.mother = new Character('mother','Mother','mother.png',60,60*1.4,15,30,0,100);
+mother.setDefaultSkippable(true);
+mother.setDefaultAnimateInterpolation(swing);
+mother.complete();
+window.halley = new Character('halley','Halley','halley.png',66,66*1.4,40,50,50,50);
+halley.setDefaultSkippable(true);
+halley.setDefaultAnimateInterpolation(swing);
+halley.complete();
+window.comet = new Character('comet','Comet','salley.png',60,60*1.4,25,55,50,50);
+comet.setDefaultSkippable(true);
+comet.setDefaultAnimateInterpolation(swing);
+comet.complete();
+window.sophieslippedCG = new Character('sophieslippedCG','CG 3','cg_slipcliff.jpg',100,56.25,0,0,50,50);
+sophieslippedCG.setDefaultSkippable(true);
+sophieslippedCG.setDefaultAnimateInterpolation(swing);
+sophieslippedCG.complete();
+window.ruskoff = new Character('ruskoff','Ruskoff','v_boriolsis/ruskoff/arrogant.png',68,68*1.4,8,12,0,100);
+ruskoff.setDefaultSkippable(true);
+ruskoff.setDefaultAnimateInterpolation(swing);
+ruskoff.complete();
+window.minion = new Character('minion','Minion','v_boriolsis/ruskoff/arrogant.png',68,68*1.4,-20,15,0,100);
+minion.setDefaultSkippable(true);
+minion.setDefaultAnimateInterpolation(swing);
+minion.complete();
+window.minion1 = new Character('minion1','Minion','v_boriolsis/ruskoff/arrogant.png',68,68*1.4,-40,18,0,100);
+minion1.setDefaultSkippable(true);
+minion1.setDefaultAnimateInterpolation(swing);
+minion1.complete();
+window.minion2 = new Character('minion2','Minion','v_boriolsis/ruskoff/arrogant.png',68,68*1.4,-8,12,0,100);
+minion2.setDefaultSkippable(true);
+minion2.setDefaultAnimateInterpolation(swing);
+minion2.complete();
+window.june = new Character('june','June','alchemist.png',68,68*1.4,15,25,50,50);
+june.setDefaultSkippable(true);
+june.setDefaultAnimateInterpolation(swing);
+june.complete();
+window.chief = new Character('chief','Helmuth','chief.png',68,68*1.4,12,53,50,50);
+chief.setDefaultSkippable(true);
+chief.setDefaultAnimateInterpolation(swing);
+chief.complete();
+window.sSophie = new Character('sSophie','Sophie','sophie_young.png',68,68*1.4,0,0,50,50);
+sSophie.setDefaultSkippable(true);
+sSophie.setDefaultAnimateInterpolation(swing);
+sSophie.complete();
+window.sCharles = new Character('sCharles','Charles','charles_young.png',68,68*1.4,0,0,50,50);
+sCharles.setDefaultSkippable(true);
+sCharles.setDefaultAnimateInterpolation(swing);
+sCharles.complete();
+window.slane = new Character('slane','Slane','v_boriolsis/slane/slysmile.png',68,68*1.4,12,15,50,50);
+slane.setDefaultSkippable(true);
+slane.setDefaultAnimateInterpolation(swing);
+slane.complete();
+window.wizard = new Character('wizard','Wizard','v_boriolsis/wizard/polite.png',69,68*1.4,10,8,0,100);
+wizard.setDefaultSkippable(true);
+wizard.setDefaultAnimateInterpolation(swing);
+wizard.complete();
+window.king = new Character('king','King','v_boriolsis/king/smile.png',68,68*1.4,35.9,15.7,50,50);
+king.setFontSize('1.5vw');
+king.setDefaultSkippable(true);
+king.setDefaultAnimateInterpolation(swing);
+king.complete();
+window.queen = new Character('queen','Queen','v_boriolsis/queen/smile.png',68,68*1.4,25.9,20.5,50,50);
+queen.setFontSize('1.5vw');
+queen.setDefaultSkippable(true);
+queen.setDefaultAnimateInterpolation(swing);
+queen.complete();
+window.patrick = new Character('patrick','Patrick','v_malidret/patrick/pain.png',60,60*1.4,15,28,0,100);
+patrick.setDefaultSkippable(true);
+patrick.setDefaultAnimateInterpolation(swing);
+patrick.complete();
+window.minion3 = new Character('minion3','Minion','v_boriolsis/ruskoff/arrogant.png',68,68*1.4,-6,12,0,100);
+minion3.setDefaultSkippable(true);
+minion3.setDefaultAnimateInterpolation(swing);
+minion3.complete();
+window.brostika = new Stage('brostika','brostika_outside.jpg');
+brostika.addBackground('alley','alley.png');
+brostika.addBackground('police','police.png');
+brostika.addBackground('winery','winery.png');
+brostika.setDefaultSkippable(true);
+brostika.setDefaultAnimateInterpolation(swing);
+brostika.complete();
+window.boriolsis = new Stage('boriolsis','boriolsis.jpg');
+boriolsis.addBackground('forest','boriolsis_forest.jpg');
+boriolsis.setDefaultSkippable(true);
+boriolsis.setDefaultAnimateInterpolation(swing);
+boriolsis.complete();
+window.erithven = new Stage('erithven','erithven.jpg');
+boriolsis.addBackground('outsidehouse','outsidehouse.png');
+boriolsis.addBackground('house','sick_boy_s_room.png');
+boriolsis.addBackground('pharma','pharma.png');
+boriolsis.addBackground('cliff','cliff.png');
+boriolsis.addBackground('finalcliff','finalcliff.png');
+erithven.setDefaultSkippable(true);
+erithven.setDefaultAnimateInterpolation(swing);
+erithven.complete();
+window.malidret = new Stage('malidret','malidret.png');
+malidret.setDefaultSkippable(true);
+malidret.setDefaultAnimateInterpolation(swing);
+malidret.complete();

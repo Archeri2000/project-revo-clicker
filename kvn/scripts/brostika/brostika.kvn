@@ -3,9 +3,11 @@ declare charles,sophie,chelsea as character
 
 scene brostika_scene brostika_outside
 
+;
 
 frame
-    mod  brostikaM play );
+     let a be 5 as string
+     mod brostikaM play );
      brostika bringCharacter charles
      brostika bringCharacter sophie
      brostika bringCharacter chelsea

@@ -8,7 +8,7 @@ let alleyscene =  new Scene("brostika_alley",
 			brostika.displayText('--Village of Brostika--',400,null,null,true,'2.5vw','white');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.setTextColor('white');
 	charles.setTextColor('white');
@@ -26,7 +26,7 @@ let alleyscene =  new Scene("brostika_alley",
 			charles.speak('Turn left into the alley... and-');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	footsteps.play();
 	footsteps.rate(0.75);;
@@ -38,7 +38,7 @@ let alleyscene =  new Scene("brostika_alley",
 				charles.speak('Someone\'s coming...');
 			});
 		});
-})
+}, function(){return null})
 ,new Frame(function(){
 	tristan.appear(null,function() {
 		brostika.wait(425,function() {
@@ -58,7 +58,7 @@ let alleyscene =  new Scene("brostika_alley",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	tristan.setFontSize('1.35vw');
 	tristan.preSpeak(function() {
@@ -68,10 +68,10 @@ let alleyscene =  new Scene("brostika_alley",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	tristan.speak('Arachne....',null,1000);
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.disappear(100);
 	tristan.disappear(100);
@@ -79,5 +79,5 @@ let alleyscene =  new Scene("brostika_alley",
 	brostika.unDisplay(100,function() {
 		brostika.closeTextBox();
 	});
-})
+}, function(){return null})
 ]);

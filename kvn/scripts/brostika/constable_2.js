@@ -11,7 +11,7 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 	brostika.display(0,1,0,function() {
 		brostika.changeBackground('police',1,800);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.setTextColor('white');
 	charles.setTextColor('white');
@@ -30,7 +30,7 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.preSpeak(function() {
 		broski.speak('Yusie, thank you for dispatching this group of helpful people to free me.',function() {
@@ -40,7 +40,7 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			broski.contSpeaking('If not for them, I would still be tied up in the old shed next to my winery.');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Actually...',function() {
@@ -53,14 +53,14 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('I am so sorry, -',function() {
 		yusie.wait(300,function() {
 			yusie.speak('What are your names again?');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('I am Sophie and they are Charles and',function() {
@@ -73,12 +73,12 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.preSpeak(function() {
 		broski.speak('Yusie, now that we\'ve confirmed the matter, you should take your men to arrest the Revolutionists.');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Of Course!',function() {
@@ -87,12 +87,12 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Yusie, let us assist you in fighting the Revolutionists!');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Assist me?',function() {
@@ -101,34 +101,34 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Let\'s hope you don\'t mix up the good and bad guys again...');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Excuse me?!');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('...');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Just wait here while I show you how it\'s done.');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.endSpeak(function() {
 		yusie.flipHorizontally(function() {
 			yusie.move(50,null,500);
 		},200);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.move(20,null,500,function() {
 		broski.flipHorizontally(function() {
@@ -137,7 +137,7 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		},200);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('No problem, if you would excuse us now, we have to-',function() {
@@ -148,13 +148,13 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.speak('I\'m Mr Broski, the 16th generation head of hte Brostikine winery family.');
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.speak('Our family has a long history, making wine for Brostika for many centuries.');
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.speak('Last year, we sold, erm...',function() {
 		broski.wait(200,function() {
@@ -167,7 +167,7 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.cycle(function() {
 		sophie.disappear(150,function() {
@@ -291,7 +291,7 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 				});
 			});
 		});
-})
+}, function(){return null})
 ,new Frame(function(){
 	brostika.textbox.speed=1;
 		sophie.stopCycle(100);
@@ -311,10 +311,10 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 				});
 			});
 		});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('Sophie...');
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('Sophie!',function() {
 		sophie.wait(100,function() {
@@ -325,14 +325,14 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('We should find a way to leave soon.',function() {
 		charles.wait(200,function() {
 			charles.contSpeaking('We shouldn\'t waste any more time here');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.setFontSize('1.2vw');
 	sophie.changeBold(true);
@@ -343,12 +343,12 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('No...');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Doesn\'t that mean that they\'ve been gone for a raelly long time?',function() {
@@ -357,7 +357,7 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('I\'m sure that the guards will manage fine on their own',function() {
@@ -366,7 +366,7 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('But you promised to help me...',function() {
@@ -375,19 +375,19 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('...',null,600,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('Alright,',function() {
 		charles.wait(null,function() {
 			charles.contSpeaking('alright');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.move(null,0,200,function() {
 		brostika.changeOverlay(0,null,null,function() {
@@ -400,7 +400,7 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.preSpeak(function() {
 		broski.speak('Huh?',function() {
@@ -409,26 +409,26 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.speak('Now that you mention it');
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.contSpeaking('They have been goen for far too long');
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.speak('They should have returned by now',function() {
 		broski.wait(200,function() {
 			broski.contSpeaking('Perhaps something happened to them?');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.speak('I\'m sure hope not, I need my winery to be safe');
-})
+}, function(){return null})
 ,new Frame(function(){
 	broski.speak('Let us go take a look!');
-})
+}, function(){return null})
 ,new Frame(function(){
 	brostika.closeTextBox(function() {
 		sophie.disappear();
@@ -444,11 +444,11 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
-	yusie.setDefaultAnimationInterpolation(easeOut);
-	slime.setDefaultAnimationInterpolation(easeOut);
-	slime2.setDefaultAnimationInterpolation(easeOut);
+	yusie.setDefaultAnimateInterpolation(easeOut);
+	slime.setDefaultAnimateInterpolation(easeOut);
+	slime2.setDefaultAnimateInterpolation(easeOut);
 	brostika.bringCharacter(slime,function() {
 		brostika.bringCharacter(slime2,function() {
 			yusie.move(-20,null,null,function() {
@@ -461,9 +461,9 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 					slime.move(-50);
 					slime2.move(-50);
 					brostika.pan(-50,null,805);
-					slime.setDefaultAnimationInterpolation(easeOut);
-					slime2.setDefaultAnimationInterpolation(easeOut);
-					yusie.setDefaultAnimationInterpolation(easeOut);
+					slime.setDefaultAnimateInterpolation(easeOut);
+					slime2.setDefaultAnimateInterpolation(easeOut);
+					yusie.setDefaultAnimateInterpolation(easeOut);
 					slime.cycle(function() {
 						slime.wait(250,function() {
 							slime.move(-8,null,200,function() {
@@ -511,10 +511,10 @@ let brostika_constable2 =  new Scene("brostika_constable2",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Hurry! Let\'s go help her!');
 	});
-})
+}, function(){return null})
 ]);

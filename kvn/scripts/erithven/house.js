@@ -21,7 +21,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			yusie.flipHorizontally();
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.appear();
 	yusie.appear();
@@ -30,12 +30,12 @@ let erithvenHouse =  new Scene("erithven_house",
 		charles.move(null,null,650);
 		yusie.move(80,null,750);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('This should be the house!');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Let\'s go in to pass the stabilizer!',function() {
@@ -53,28 +53,28 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sickchild.speak('Nooo!',function() {
 		sickchild.wait(250,function() {
 			sickchild.contSpeaking('I want to stay in Erithven with you and Papa!');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.speak('Listen to me!',function() {
 		mother.wait(200,function() {
 			mother.contSpeaking('The warm weather in Malidret will only do you good!');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sickchild.speak('Nooo!',function() {
 		sickchild.wait(250,function() {
 			sickchild.contSpeaking('I don\'t want to leave you and Papa!');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.speak('Don\'t you understand?!',function() {
 		mother.wait(200,function() {
@@ -87,7 +87,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sickchild.speak('B-But I am dying soon...',function() {
 		sickchild.wait(700,function() {
@@ -104,15 +104,15 @@ let erithvenHouse =  new Scene("erithven_house",
 			},800,false);
 		});
 	},1000,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	erithven.displayText('......',1000,null,null,null,null,null,null,null,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Was that the sick boy and his mother arguing..?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('It appears so...',function() {
@@ -121,7 +121,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.disappear(1000);
 	charles.disappear(1000);
@@ -149,7 +149,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	erithven.pan(-50,null,1000,null,swing);
 	sophie.move(-40,null,1000,null,swing);
@@ -170,12 +170,12 @@ let erithvenHouse =  new Scene("erithven_house",
 			},null,false);
 		},null,false);
 	},swing);
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.preSpeak(function() {
 		mother.speak('Hello, you are?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Hi, I am Sophie!',function() {
@@ -184,10 +184,10 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('We are here to deliver the stabilizer from Brostika');
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.preSpeak(function() {
 		mother.speak('Oh it\'s here already?',function() {
@@ -204,7 +204,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('You\'re welcome!',function() {
@@ -219,7 +219,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	erithven.pan(-50,null,1000,null,swing);
 	sophie.move(-40,null,1000,null,swing);
@@ -234,7 +234,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			},null,false);
 		},null,false);
 	},swing);
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.flipHorizontally();
 	mother.move(25,null,500,function() {
@@ -257,7 +257,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			},800);
 		});
 	},null,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Wow...',function() {
@@ -266,7 +266,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('I took a look at the stabilizer earlier.',function() {
@@ -279,7 +279,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Anyway, sorry for eavesdropping...',function() {
@@ -288,14 +288,14 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('What was that all about?',function() {
 		sophie.wait(200,function() {
 			sophie.contSpeaking('I\'m just curious because we\'ll be heading to Malidret as well');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.preSpeak(function() {
 		mother.speak('Err...',function() {
@@ -308,14 +308,14 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		},800,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.speak('He said that the sea breeze at Erithven would be detrimental for Jakris\'s condition.',function() {
 		mother.wait(200,function() {
 			mother.contSpeaking('So I knew that no matter how hard it would be for my husband and I to send Jakris all the way to Malidret, we must do so because it would be for the good of our child');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Then why is Jakris so against the plan?',function() {
@@ -324,7 +324,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.preSpeak(function() {
 		mother.speak('There are two main reasons for this.',function() {
@@ -337,26 +337,26 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.speak('Erithven might be a bustling and prosperous port but fishermen families like ours lead very difficult lives.',function() {
 		mother.wait(200,function() {
 			mother.speak('Because of the recent encroachment of our fishing areas by the Kapitolian fishermen, the size of our catch has been decreasingly steadily');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.speak('That\'s why it\'s important for us to stay behind to safeguard our fishing area and to maintain our source of income to sustain the heavy cost of living at Malidret should Jakris move there',function() {
 		mother.wait(200,function() {
 			mother.speak('Secondly, Jakris knows that it\'s very unlikely that he will ever get well.');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('What do you mean by that?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.preSpeak(function() {
 		mother.speak('The sage had come once and told us that he was unable to concoct anything that can cure Jakris',function() {
@@ -365,7 +365,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.speak('The sage mentioned that staying at Malidret might help to make his life more comfortable.',function() {
 		mother.wait(200,function() {
@@ -376,7 +376,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.speak('All he wanted was to stay close with us and be with the family',function() {
 		mother.wait(200,function() {
@@ -387,7 +387,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Don\'t worry!',function() {
@@ -396,7 +396,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('He passed us a recipe to collect some missing ingredients from the pharmacy in Erithven.',function() {
 		sophie.wait(200,function() {
@@ -407,7 +407,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.preSpeak(function() {
 		mother.speak('I-Is that really true?',function() {
@@ -416,7 +416,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		},700,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Of course not!',function() {
@@ -425,7 +425,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.setFontSize('2vw');
 	mother.changeBold(true);
@@ -436,12 +436,12 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.setNormalText();
 	mother.setFontSize('1.7vw');
 	mother.speak('Thank you for bringing such good news to me!');
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('You\'re welcome!',function() {
@@ -452,7 +452,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.preSpeak(function() {
 		mother.speak('That will be great!',function() {
@@ -461,7 +461,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.disappear(1000);
 	charles.disappear(1000);
@@ -484,7 +484,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Yusie',function() {
@@ -493,7 +493,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Well...',function() {
@@ -506,7 +506,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('That\'s so nice of you!',function() {
@@ -519,7 +519,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('C-can I?',function() {
@@ -536,14 +536,14 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('Besides, you look like you\'re bad with directions.',function() {
 		yusie.wait(200,function() {
 			yusie.contSpeaking('As a member of the prestigious Guards, I cannot leave all of you in the lurch');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Yayy!',function() {
@@ -552,7 +552,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Of course you should be glad!',function() {
@@ -561,7 +561,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Never mind...',function() {
@@ -570,5 +570,5 @@ let erithvenHouse =  new Scene("erithven_house",
 			});
 		});
 	});
-})
+}, function(){return null})
 ]);

@@ -70,10 +70,6 @@ frame
                     halley wait 500
                         halley speak At this rate, we will never reach boriolsis!
                             halley endSpeak
-macro search h
-    h move x=10 g=linear t=500
-        h wait 200
-
 frame
     halley,yusie setDefSkip false
     halley say Give me the map!
@@ -130,7 +126,7 @@ frame
 
 
 frame
-    halley,yusie setDefSkip false
+    halley,yusie setDefSkip true
     sophie,charles bringAboveOverlay
     boriolsis changeOverlay yanse=black a=0.55 t=200
         charles move x=20 t=300
@@ -169,10 +165,47 @@ frame
         charles wait 500
             charles flipHorizontally 200
             charles move x=10 t=200 g=swing
-            sophie move x=10 t=200 g=swing
+            sophie move x=5 t=200 g=swing
             chief wait 200
                 chief say Stop right there!
 frame
-    chief move x=30 t=800
-    charles move x=15 t=300
-    sophie move x=-5 t=150
+    chief move x=25 t=500
+    charles move x=10 t=300 g=swing
+    sophie wait 400
+        sophie move x=-20 t=500
+frame
+    chief preSpeak
+        chief say Hmm...
+            chief wait 400
+                chief say Aren't you Princess Sophie?!
+                    sophie wait 500
+                        sophie preSpeak
+                            sophie setTextSize 1.4vw
+                            sophie say N
+                                sophie wait 200
+                                    sophie cont msg=-No... t=500 append=false
+        yusie,halley setHorizontalFlip false
+        yusie,halley animate
+            yusie move x=-45 t=1500 g=easeBack
+            halley wait 100
+                halley move x=-40 t=1500 g=easeBack
+frame
+    halley preSpeak
+        sophie sendToBack
+        halley say Hey, hey,
+            halley wait 300
+                halley cont what's this?
+frame
+    chief preSpeak
+        chief say You look exactly like her..
+            sophie wait 500
+                sophie move x=-1 t=500 g=easeOut
+            chief move x=4 t=1000 g=easeOut
+                chief say You are Princess Sophie!
+                    chief wait 200
+                        chief say That's the royal pendant on your waist!
+frame
+    chief preSpeak
+        chief say Needless to say, you people are the ones who kidnapped her!!
+        chief move x=-10 t=100
+frame

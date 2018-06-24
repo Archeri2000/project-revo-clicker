@@ -41,7 +41,7 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 			},null,false);
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.setDefaultSkippable(false);
 	yusie.move(25,null,800,function() {
@@ -67,7 +67,7 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 			});
 		},200);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.setDefaultSkippable();
 	halley.preSpeak(function() {
@@ -81,7 +81,7 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Hey!',function() {
@@ -102,7 +102,7 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Yeah, yeah.',function() {
@@ -117,7 +117,7 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.setDefaultSkippable(false);
 	yusie.setDefaultSkippable(false);
@@ -214,10 +214,10 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
-	halley.setDefaultSkippable(false);
-	yusie.setDefaultSkippable(false);
+	halley.setDefaultSkippable(true);
+	yusie.setDefaultSkippable(true);
 	sophie.bringAboveOverlay();
 	charles.bringAboveOverlay();
 	boriolsis.changeOverlay(0.55,'black',200,function() {
@@ -241,15 +241,15 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 			sophie.flipHorizontally(null,100);
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Its more lively this way~');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('I may die of boredom if tooo quiet');
-})
+}, function(){return null})
 ,new Frame(function(){
 	chief.setXOffSet(-60);
 	chief.flipHorizontally();
@@ -257,7 +257,7 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 	charles.preSpeak(function() {
 		charles.speak('If you say so...');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.endSpeak();
 	boriolsis.changeOverlay(0);
@@ -268,16 +268,81 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 		charles.wait(500,function() {
 			charles.flipHorizontally(null,200);
 			charles.move(10,null,200,null,swing);
-			sophie.move(10,null,200,null,swing);
+			sophie.move(5,null,200,null,swing);
 			chief.wait(200,function() {
 				chief.speak('Stop right there!');
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
-	chief.move(30,null,800);
-	charles.move(15,null,300);
-	sophie.move(-5,null,150);
-})
+	chief.move(25,null,500);
+	charles.move(10,null,300,null,swing);
+	sophie.wait(400,function() {
+		sophie.move(-20,null,500);
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('Hmm...',function() {
+			chief.wait(400,function() {
+				chief.speak('Aren\'t you Princess Sophie?!',function() {
+					sophie.wait(500,function() {
+						sophie.preSpeak(function() {
+							sophie.setFontSize('1.4vw');
+							sophie.speak('N',function() {
+								sophie.wait(200,function() {
+									sophie.contSpeaking('-No...',null,500,null,null,false);
+								});
+							});
+						});
+					});
+				});
+			});
+		});
+		yusie.setHorizontalFlip(false);
+		halley.setHorizontalFlip(false);
+		yusie.animate();
+		halley.animate(null,function() {
+			yusie.move(-45,null,1500,null,easeBack);
+			halley.wait(100,function() {
+				halley.move(-40,null,1500,null,easeBack);
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	halley.preSpeak(function() {
+		sophie.sendToBack();
+		halley.speak('Hey, hey,',function() {
+			halley.wait(300,function() {
+				halley.contSpeaking('what\'s this?');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('You look exactly like her..',function() {
+			sophie.wait(500,function() {
+				sophie.move(-1,null,500,null,easeOut);
+			});
+			chief.move(4,null,1000,function() {
+				chief.speak('You are Princess Sophie!',function() {
+					chief.wait(200,function() {
+						chief.speak('That\'s the royal pendant on your waist!');
+					});
+				});
+			},easeOut);
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('Needless to say, you people are the ones who kidnapped her!!');
+		chief.move(-10,null,100);
+	});
+}, function(){return null})
+,new Frame(function(){
+}, function(){return null})
 ]);
