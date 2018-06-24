@@ -55,7 +55,7 @@ var debugGoSceneEvadeError = true;
 //background and character logging
 var backgroundLogging = false;
 var characterLogging = true;
-var displaySpriteName = false;
+var displaySpriteName = true;
 var enableSound = true;
 
 //embbed mode

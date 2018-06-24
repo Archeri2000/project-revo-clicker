@@ -21,7 +21,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			charles.appear();
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.appear();
 	charles.appear(null,function() {
@@ -32,7 +32,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Good Morning!',function() {
@@ -45,7 +45,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	comet.preSpeak(function() {
 		comet.speak('Give me a moment to check!',function() {
@@ -57,7 +57,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Alright,alright...',function() {
@@ -65,7 +65,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			comet.flipHorizontally(null,150);
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.endSpeak(function() {
 		halley.disappear(1000,function() {
@@ -82,10 +82,10 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.speak('Our suppliers just informed us that it might take months before the new batch arrives');
-})
+}, function(){return null})
 ,new Frame(function(){
 	comet.preSpeak(function() {
 		comet.speak('We\'re really sorry for inconveniencing you!',function() {
@@ -94,7 +94,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Indeed...',function() {
@@ -103,7 +103,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		},800,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('The rarity of these herbs is due to their tendency to thrive in the most trecherous of locations');
 })
@@ -115,7 +115,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.setFontSize('2vw');
 	sophie.changeBold(true);
@@ -126,7 +126,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.setNormalText();
 	sophie.setFontSize('1.7vw');
@@ -137,7 +137,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Actually',function() {
@@ -146,7 +146,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('Well erm...erm',function() {
 		sophie.wait(300,function() {
@@ -166,7 +166,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.bringAboveOverlay();
 	charles.bringAboveOverlay();
@@ -188,17 +188,22 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('We cannot afford to help!',function() {
 		charles.wait(300,function() {
 			charles.contSpeaking('To be honest, we can never be sure when the disease will break free from the Jakris\'s body');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
+<<<<<<< HEAD
 	charles.speak('That\'s why we need to stop sticking our nose into everything and leave straight away');
 })
+=======
+	charles.speak('That\'s why we need to stop sticking our nose into the problem and leave straight away');
+}, function(){return null})
+>>>>>>> 075fd9f13970c5af68865d18987f456081d571e4
 ,new Frame(function(){
 	sophie.changeItalic(true);
 	sophie.setFontSize('1.2vw');
@@ -209,7 +214,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('We only promised to check on the ingredients at the pharmacy',function() {
@@ -218,14 +223,14 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('Think about your parents and Novala.',function() {
 		charles.wait(200,function() {
 			charles.contSpeaking('There\'s no reason why we should take such risks when we\'ve so much more at stake');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('B-But what about Erithven?!',function() {
@@ -234,14 +239,14 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('If we don\'t help them, I\'ll definitely regret for the rest of my life!',function() {
 		sophie.wait(200,function() {
 			sophie.speak('How am I going to face the people of Novala in the future...');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Bu-',function() {
@@ -250,7 +255,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('No!',function() {
@@ -263,7 +268,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('......',function() {
@@ -277,7 +282,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		},1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	erithven.changeOverlay(0,'black',0);
 	charles.flipHorizontally(null,200);
@@ -290,7 +295,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	comet.preSpeak(function() {
 		comet.speak('No worries!',function() {
@@ -299,7 +304,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.flipHorizontally(null,200);
 	charles.flipHorizontally(function() {
@@ -316,7 +321,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		},null,false);
 	},200);
-})
+}, function(){return null})
 ,new Frame(function(){
 	comet.disappear(1000);
 	halley.disappear(1000,function() {
@@ -330,7 +335,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		},null,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('So where\'s the way that leads to Boriolsis?',function() {
@@ -339,7 +344,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.flipHorizontally(function() {
 		yusie.preSpeak(function() {
@@ -348,7 +353,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	},200);
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Well, we\'ve wasted enough time finding our way around Erithven.',function() {
@@ -357,7 +362,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Just give me a little more time...',function() {
@@ -370,7 +375,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Huh?',function() {
@@ -379,12 +384,12 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Did she got lost or something?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('...',function() {
@@ -393,7 +398,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		},500,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('A prasine shop...?',function() {
@@ -402,10 +407,10 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('She might have broken contact from us when we went by the bakery earlier');
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('I don\'t think she\'ll be at the bakery.',function() {
@@ -414,7 +419,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('Let\'s hurry!',function() {
 		charles.wait(200,function() {
@@ -432,7 +437,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			},null,false);
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.flipHorizontally();
 	yusie.flipHorizontally();
@@ -446,7 +451,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Wait',function() {
@@ -455,7 +460,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Yes.',function() {
@@ -468,7 +473,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Wait...',function() {
@@ -477,7 +482,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		},1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Wait, what\'s going on?',function() {
@@ -486,7 +491,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Yusie...not now',function() {
@@ -499,7 +504,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('I\'m just a harmless stranger who happened to recognize a royalty when I see one.',function() {
@@ -508,14 +513,14 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.speak('Though I might not bear the friendliest of intentions towards the Royal Family, I\'m not the biggest threat to her right now.',function() {
 		halley.wait(400,function() {
 			halley.speak('Comet, do you want to share with them where our dear Princess Sophie has headed to?');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	comet.preSpeak(function() {
 		comet.speak('We told her to try her luck at the Cliffs of Kusuri',function() {
@@ -524,7 +529,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	comet.speak('It\'s simply a short walk along the port and after a steep ascent, you should see the cliffs in no time!',function() {
 		comet.wait(400,function() {
@@ -535,7 +540,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('What?!',function() {
@@ -544,7 +549,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		},600,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Are you all crazy?!',function() {
@@ -553,7 +558,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Rubbish!',function() {
@@ -562,7 +567,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	comet.preSpeak(function() {
 		comet.speak('Sorry, just ignore Halley...',function() {
@@ -575,7 +580,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.speak('What\'s wrong with a member of the Royal Family dying?',function() {
 		halley.wait(200,function() {
@@ -592,21 +597,21 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('Who do you think you are?',function() {
 		yusie.wait(200,function() {
 			yusie.contSpeaking('Speaking as if you\'re the Master of Death!');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('Can you even scale the Cliffs of Kusuri?!',function() {
 		yusie.wait(200,function() {
 			yusie.speak('Who knows you might just be someone who talks really tough behind your stupid pharmacy counter?!');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.changeBold(true);
@@ -617,12 +622,12 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('You\'ve got a problem with that, Mr Pharmacy Assistant?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Fine!',function() {
@@ -640,10 +645,10 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Let\'s see about that!');
 	});
-})
+}, function(){return null})
 ]);
