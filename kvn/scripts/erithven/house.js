@@ -251,7 +251,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			mother.contSpeaking('You\'ll feel better');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.speak('Alright, close your eyes and rest...',function() {
 		mother.wait(200,function() {
@@ -265,7 +265,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			},null,false);
 		});
 	},1000,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Woahh',function() {
@@ -334,7 +334,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			sophie.wait(400);
 		},1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('But why is Jakris so against the plan?',function() {
@@ -415,7 +415,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			mother.speak('How I wish I can take his place instead...',null,1000,false);
 		});
 	},1000,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Don\'t worry!',function() {
@@ -550,7 +550,7 @@ let erithvenHouse =  new Scene("erithven_house",
 }, function(){return null})
 ,new Frame(function(){
 	sophie.speak('It would be good to have one more person aboard!');
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('C-can I?',function() {
@@ -599,7 +599,7 @@ let erithvenHouse =  new Scene("erithven_house",
 }, function(){return null})
 ,new Frame(function(){
 	yusie.speak('Hey Charles, what\'s with that unhappy look on your face?');
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Never mind...',function() {

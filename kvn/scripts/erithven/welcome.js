@@ -78,7 +78,7 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 			sophie.speak('Ahhh~~~',null,1000,false);
 		});
 	},1200,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Alright, alrigh-',function() {

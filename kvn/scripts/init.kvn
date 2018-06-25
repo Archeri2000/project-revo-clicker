@@ -18,7 +18,7 @@ create sound xperrorM soundgroup=VN source=error.mp3 loop=true
 create sound footsteps soundgroup=VN source=footstep.wav loop=true
 
 start
-    play chief_house_1 6
+    play brostika_winery2 0
 
 macro com char
     char setTextColor white

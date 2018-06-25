@@ -106,7 +106,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 }, function(){return null})
 ,new Frame(function(){
 	charles.speak('The rarity of these herbs is due to their tendency to thrive in the most trecherous of locations');
-})
+}, function(){return null})
 ,new Frame(function(){
 	comet.preSpeak(function() {
 		comet.speak('Oh',function() {
@@ -153,7 +153,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			sophie.contSpeaking('I-I have plenty of experience p-picking herbs in the wild!');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	comet.preSpeak(function() {
 		comet.speak('Yes! Of cour-',function() {
@@ -197,13 +197,8 @@ let erithvenPharma =  new Scene("erithven_pharma",
 	});
 }, function(){return null})
 ,new Frame(function(){
-<<<<<<< HEAD
 	charles.speak('That\'s why we need to stop sticking our nose into everything and leave straight away');
-})
-=======
-	charles.speak('That\'s why we need to stop sticking our nose into the problem and leave straight away');
 }, function(){return null})
->>>>>>> 075fd9f13970c5af68865d18987f456081d571e4
 ,new Frame(function(){
 	sophie.changeItalic(true);
 	sophie.setFontSize('1.2vw');

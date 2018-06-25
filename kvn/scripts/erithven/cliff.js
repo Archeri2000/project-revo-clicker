@@ -327,7 +327,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		},easeOut);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.setFontSize('1.7vw');
 	yusie.setFontSize('1.7vw');
@@ -343,7 +343,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		},1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('I\'m so glad that you\'re safe!',function() {
@@ -352,12 +352,12 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Sorry for causing all of you to get so worried...');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Hey...',function() {
@@ -366,7 +366,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		},1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('You better be!',function() {
@@ -375,10 +375,10 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.speak('I\'ve no idea what was going on in your head!');
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Hey!');
@@ -390,12 +390,12 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('I just don\'t understand what do you hold against the Royal Family...');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('They abandoned me back then in the Great War against Kapitolis',function() {
@@ -404,17 +404,17 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('What do you mean by that?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('You knew my parents personally?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Back then during the Great War, I served as the Royal Ranger who led an elite team of rangers to lay an ambush in the mountains that bordered Kapitolis',function() {
@@ -427,7 +427,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.speak('In the end, I was the only ranger who made it out alive',function() {
 		halley.wait(300,function() {
@@ -438,19 +438,19 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	},1000,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.speak('Tell me!',function() {
 		halley.wait(300,function() {
 			halley.contSpeaking('Is it wrong of me to hate them?');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('...',null,1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Halley, I\'m so sorry about that...',function() {
@@ -459,10 +459,10 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		},1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('But I hope that you can forgive my parents on my behalf!');
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('...',function() {
@@ -471,21 +471,21 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		},1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.speak('But I must say that I have been quite impressed with you',function() {
 		halley.wait(300,function() {
 			halley.speak('It\'s been a while since I\'ve seen anyone with this amount of moral courage');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.speak('The kind of selflessness and sense of responsibility which you\'ve shown is really commendable!',function() {
 		halley.wait(300,function() {
 			halley.speak('Not to mention the agility which you\'ve exhibited when you scaled this cliff');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('It\'s really nothing much...',function() {
@@ -494,10 +494,10 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('And I believe that as long as the tasks are within my means, I should always put in my best to make things right for others');
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Well said!',function() {
@@ -510,7 +510,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Minister Mistrassimo launched a coup and ordered a secret force which he had been developing for years to chase after the Royal Family',function() {
@@ -523,7 +523,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('I see...',function() {
@@ -532,7 +532,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		},1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Mistrassimo\'s network of underlings is so humongous that we\'ve no choice but to keep a low profile',function() {
@@ -541,7 +541,7 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Don\'t you worry, Princess Sophie!',function() {
@@ -550,12 +550,12 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('What about you Halley?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
 		halley.speak('Me?',function() {
@@ -564,15 +564,15 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Charles, why\'re you so quiet?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	erithven.displayText('...',1000,null,null,null,null,null,null,null,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Err...',function() {
@@ -581,10 +581,10 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		},1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('Can you stop being angry...?');
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('How do you expect me to be calm about this?',function() {
@@ -593,21 +593,21 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('I can\'t believe you can\'t see the big picture...',function() {
 		charles.wait(200,function() {
 			charles.speak('I understand that you want to save people and make them happy');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.speak('But we\'re talking about your parents and the fate of the entire Kingdom over here',function() {
 		charles.wait(300,function() {
 			charles.speak('Can you imagine what the other countries would do to us the moment they become aware of our political instability?');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('B-Bu...',function() {
@@ -616,17 +616,17 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('I was too reckless...',function() {
 		sophie.wait(300,function() {
 			sophie.contSpeaking('I should have listened to you and not ran off on my own...');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.speak('I p-promise you that I won\'t do this again...');
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Have you gotten the herbs?',function() {
@@ -639,26 +639,26 @@ let cliff =  new Scene("erithven_cliff",
 			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('Is Charles still angry...?');
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('I think so...',function() {
 			sophie.wait(500);
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.contSpeaking('Let\'s catch up with him!',function() {
 		sophie.wait(300,function() {
 			sophie.speak('I\'m done collecting all the herbs');
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.move(100,null,1050);
 	yusie.wait(200,function() {
