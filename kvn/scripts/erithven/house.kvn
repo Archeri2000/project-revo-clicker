@@ -129,8 +129,8 @@ frame 13
                         charles move x=40 t=1000 g=swing
                         mother move x=40 t=1000 g=swing
                         sickchild move x=40 t=1000 g=swing
-                        //sickchild changeName
-                        //mother changeName
+                        sickchild changeName
+                        mother changeName
 
 frame 14
     mother preSpeak
@@ -182,6 +182,10 @@ frame 21
     mother speak Drink this slowly...
         mother wait 300
             mother cont You'll feel better
+                sickchild wait 500
+                    sickchild setFontSize 1.4vw
+                    sickchild speak Mmmmm
+
 frame 22
     mother speak text=Alright, close your eyes and rest... t=1000 s=false
         mother wait t=200
@@ -203,7 +207,7 @@ frame 22
     charles preSpeak
         charles speak text=I took a look at the stabilizer earlier.
             charles wait t=200
-                charles speak The sage probably employed morphicology to freeze all activities of the harmful entities within the kid's body
+                charles speak The sage probably employed morphicology to freeze all activities of the harmful matter within the kid's body
                     charles wait t=200
                         charles speak text= Drowsiness is hence probably one of the side effects
 
@@ -251,11 +255,33 @@ frame 29
     mother speak text=Erithven might be a bustling and prosperous port but fishermen families like ours lead very difficult lives.
         mother wait t=200
             mother speak text=Because of the recent encroachment of our fishing areas by the Kapitolian fishermen, the size of our catch has been decreasingly steadily
-
 frame 30
     mother speak text=That's why it's important for us to stay behind to safeguard our fishing area and to maintain our source of income to sustain the heavy cost of living at Malidret should Jakris move there
-        mother wait t=200
-            mother speak text= Secondly, Jakris knows that it's very unlikely that he will ever get well.
+        sophie wait t=200
+            sophie preSpeak
+                sophie speak To protect the septras from being taken over by the Kapitolians?
+frame 31
+    mother preSpeak
+        mother speak Are you a local?
+            mother cont How did you know about the septras?
+frame 32
+    sophie preSpeak
+        sophie speak My friend here is very knowledgeable
+frame 33
+    mother preSpeak
+        mother speak Your friend is right
+            mother wait 300
+                mother speak Nowadays, the encroachment is so bad that the local merchants in Erithven have to step in to redraw and renegotiate the layout of the fishing area so as to ensure Erithven remains conducive enough for traidng and fishing
+frame 34
+    charles preSpeak
+        charles speak text=I see... t=1000 s=false
+            charles wait 300
+                charles speak Oh you mentioned that there was a second reason why Jakris is so upset
+frame 32
+    mother preSpeak
+        mother speak text= Yes, you see
+            mother wait 300
+                mother cont Jakris knows that it's very unlikely that he will ever get well.
 frame 31
     sophie preSpeak
         sophie speak text= Huh...?

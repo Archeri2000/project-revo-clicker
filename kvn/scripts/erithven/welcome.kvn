@@ -61,9 +61,25 @@ frame 11
     sophie preSpeak
         sophie speak It would be so great to stay here and experience the fishermen lifestyle
 frame 12
-    sophie speak text=Imagine waking up every morning to the sun rising up from the ocean... t=1200 s=false
-        sophie wait 500
-            sophie speak text=Ahhh~~~ t=1000 s=false
+    sophie speak Huh?
+        sophie wait 300
+            sophie cont What are those glowing colored rings in the sea?
+frame 13
+    sophie speak They look really pretty!
+        charles wait 300
+            charles preSpeak
+                charles speak Those rings are called Septras.
+frame 14
+    charles speak Septras are rings which the fishermen build from manacytes to demarcate their fishing zone.
+        charles wait 300
+            charles speak These rings will not only help to prevent conflict of interest between fishermen but also facilitate the entire fishing process.
+frame 12
+sophie preSpeak
+    sophie speak These rings and the sea look really good together!
+        sophie wait 300
+            sophie speak text=Imagine waking up every morning to the sun rising up from the ocean... t=1200 s=false
+                sophie wait 500
+                    sophie speak text=Ahhh~~~ t=1000 s=false
 frame 13
     charles preSpeak
         charles speak text = Alright, alrigh-

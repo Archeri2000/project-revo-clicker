@@ -39,7 +39,7 @@ frame 3
             comet wait t=200
                 comet flipHorizontally t=150
                 comet move x=2 t=200
-                    comet speak text=Halley, can you go to the back and check them for me?
+                    comet speak text=Halley, can you go to the back and check on our existing stock?
 frame 4
     halley preSpeak
         halley speak text=Alright,alright...
@@ -48,12 +48,54 @@ frame 4
 frame 5
     halley endSpeak
         halley disappear t=1000
-            halley wait t=800
-                halley appear t=1000
-                    halley preSpeak
-                        halley speak text=I'm sorry.
-                            halley wait t=200
-                                halley cont text= But we're currently short of these two ingredients.
+            sophie,charles bringAboveOverlay
+                erithven changeOverlay yanse=black opacity=0.55 t=0
+                    sophie preSpeak
+                        sophie changeItalic
+                        sophie setFontSize 1.2vw
+                        sophie speak Pss...
+                            sophie wait 600
+                                sophie cont Pss...
+frame 6
+    charles flipHorizontally 200
+    charles move x=10 t=200
+        charles preSpeak
+            charles changeItalic
+            charles setFontSize 1.2vw
+            charles speak Huh?
+frame 7
+    sophie preSpeak
+        sophie speak Charles,
+            sophie wait 300
+                sophie cont how do people usually bargain?
+frame 8
+    sophie speak I've heard that people usually bargain when they go shopping for things
+        sophie wait 300
+            sophie speak So I was wondering if I should keep my disguise up by bargaining
+frame 9
+    sophie speak What is a good price for these ingredients?
+frame 10
+    charles preSpeak
+        charles speak text=...... t=1000 s=false
+            charles wait 300
+                charles speak Normally, people don't bargain at the pharmacy...
+frame 11
+    charles speak And you should really stop worrying about your disguise
+        charles wait 300
+            charles speak No one will guess that you're the Princess
+frame 6
+    halley appear t=1000
+    erithven changeOverlay yanse=black opacity=0 t=0
+    charles endSpeak
+    sophie,charles setFontSize 1.7vw
+    sophie,charles setNormalText
+    charles bringBelowOverlay
+    charles move x=-10 t=200
+    charles flipHorizontally t=200
+        halley preSpeak
+            halley speak text=I'm sorry.
+                halley wait t=200
+                    halley cont text= But we're currently short of these two ingredients.
 frame 6
     halley speak text=Our suppliers just informed us that it might take months before the new batch arrives
 frame 7
@@ -195,8 +237,10 @@ frame 27
         erithven closeTextBox
         erithven changeBackground background=default t=1000 s=false
             yusie appear
-                yusie,charles flipHorizontally
+                sophie,yusie,charles flipHorizontally
                 yusie,charles move t=1000
+                    sophie wait 500
+                        sophie move x=40 t=1200
 frame 28
     charles preSpeak
         charles speak So where's the way that leads to Boriolsis?
@@ -214,170 +258,197 @@ frame 30
             charles wait 200
                 charles speak It's time we start heading in the right direction
 frame 31
-        yusie preSpeak
-            yusie speak Just give me a little more time...
-                yusie wait 700
-                    yusie speak Hey!
-                        yusie wait 200
-                            yusie cont Where's Sophie?
+    yusie preSpeak
+        yusie speak Just give me a little more time...
+            yusie wait 700
+                yusie speak I'm sure it's just somewhere up ahead...
+                    yusie wait 200
+                        yusie endSpeak
+                        yusie flipHorizontally t=200
+                            yusie wait 400
+                                yusie flipHorizontally t=200
+                                charles bringBelowOverlay
 frame 32
-    charles preSpeak
-        charles speak Huh?
-            charles wait 200
-                charles contSay Wasn't she behind us all this while?
+    erithven changeOverlay yanse=black opacity=0.55 t=0
+    sophie preSpeak
+        sophie changeItalic
+        sophie setFontSize 1.2vw
+        sophie speak Pss...
+            sophie wait 600
+                sophie cont Pss...
 frame 33
-    yusie preSpeak
-        yusie speak Did she got lost or something?
+    sophie speak #playName ...
 frame 34
-    charles preSpeak
-        charles speak text=... t=500 s=false
-            charles wait 300
-                charles speak I think I know where she might have gone to...
+    sophie speak Let's sneak back to the pharmacy and find out where we can collect those herbs...
+        sophie wait 300
+            sophie speak We can't possibly leave Erithven in such a state!
 frame 35
-    yusie preSpeak
-        yusie speak text=A prasine shop...?
-            yusie wait 200
-                yusie cont I mean she kept going on and on about prasines...
+    sophie speak And I'm sure you too can't bear to see that family suffer when a cure is so readily available
 frame 36
-    yusie speak She might have broken contact from us when we went by the bakery earlier
+    sophie speak Quickk! Let's move noww!
+        sophie wait 300
+            sophie flipHorizontally
+                sophie move x=-40 t=800
+                    sophie setNormalText
+                    sophie setFontSize 1.7vw
+                    erithven changeOverlay yanse=black a=0 t=0
 frame 37
-    charles preSpeak
-        charles speak I don't think she'll be at the bakery.
-            charles wait 300
-                charles cont It's more likely that she had gone back to the pharmacy to ask for the location of the missing herbs
+    charles,yusie disappear 1000
+        erithven closeTextBox
+        erithven changeBackground opacity=1 background=pharma t=1000
+            halley,comet appear 1000
 frame 38
-    charles speak Let's hurry!
-        charles wait 200
-            charles cont text=We need to catch her before she goes off hunting for the herbs s=false
-                charles flipHorizontally t=200
-                    charles move x=-80 t=800
-                    yusie move x=-100 t=850
-                        erithven closeTextBox
-                        erithven changeBackground background=pharma t=1000 s=false
-                            halley,comet appear 1000
-frame 39
-    charles,yusie flipHorizontally
-    charles move t=850
-    yusie move x=30 t=850
+    sophie flipHorizontally
+    sophie move x=60 t=1000
         comet preSpeak
-            comet speak Huh? You're back so soon?
+            comet speak You're back?
                 comet wait 200
-                    comet cont Didn't we just give you the location to find the ingredients?
+                    comet cont Didn't your friend say that you weren't interested in finding the ingredients?
 frame 40
-    charles preSpeak
-        charles speak Wait
-            charles wait 200
-                charles cont so Sophie has left?
+    sophie preSpeak
+        sophie speak text=Errr... t=1000 s=false
+            sophie wait 200
+                sophie cont text=Well... t=1000 s=false
+                    sophie wait 300
+                        sophie cont I thought it wouldn't hurt to try looking for the herbs myself
 frame 41
     halley preSpeak
-        halley speak Yes.
+        halley speak Well well well
             halley wait 200
-                halley cont Your beloved Princess Sophie has left without you.
-                    halley wait 400
-                        halley speak Aren't you worried now?
+                halley cont It seems like our beloved Princess Sophie is quite a rebellious kid, eh?
 
 frame 42
-    charles preSpeak
-        charles speak text=Wait... t=1000 s=false
-            charles wait 300
-                charles cont text=How...? t=1000 s=false
+    sophie preSpeak
+        sophie speak text=...... t=1000 s=false
+            sophie wait 300
+                sophie speak text=I knew you would find out eventually... t=1000 s=false
+                    sophie wait 300
+                        sophie speak text=I mean you were the Royal Ranger of Novala after all
 frame 43
-    yusie preSpeak
-        yusie speak text=Wait, what's going on?
-            yusie wait 200
-                yusie cont Sophie is the Princess...?
-frame 44
-    charles preSpeak
-        charles speak Yusie...not now
-            charles wait 300
-                charles speak Who are you, Halley?
-                    charles wait 300
-                        charles cont And how long have you known about this?
-
-frame 45
     halley preSpeak
-        halley speak I'm just a harmless stranger who happened to recognize a royalty when I see one.
-            halley wait 200
-                halley speak And don't worry about me!
-
+        halley speak It seems like the filthy royal blood does flow in you strongly, isn't it?
+            halley wait 400
+                halley speak I was wondering who you resembled and only figured out after you left
+frame 44
+    halley speak Your bespectacled friend who was with you earlier must be your retainer, right?
+frame 45
+    sophie preSpeak
+        sophie speak Yes
+            sophie wait 300
+                sophie speak But that's enough questions asked from you, where do I find the herbs?
 frame 46
-    halley speak Though I might not bear the friendliest of intentions towards the Royal Family, I'm not the biggest threat to her right now.
-        halley wait 400
-            halley speak Comet, do you want to share with them where our dear Princess Sophie has headed to?
+    halley preSpeak
+        halley speak Well you must have learnt from my carofle that after the way your parents have treated my life and the lives of my comrades, I would never help you in any way
+            halley wait 300
+                halley speak But there's always an exception, isn't it?
 frame 47
-    comet preSpeak
-        comet speak We told her to try her luck at the Cliffs of Kusuri
-            comet wait 200
-                comet speak Usually, a healthy amount of Quinnsetas tend to grow by the Cliffs of Kusuri - which isn't too far from here
-
+    halley speak You can find the herbs at the Cliffs of Kusuri
+        halley wait 300
+            halley speak It's simply a short walk along the port and after a steep ascent, you should see the cliffs in no time!
 frame 48
-    comet speak It's simply a short walk along the port and after a steep ascent, you should see the cliffs in no time!
-        comet wait t=400
-            comet speak text=But do watch where you tread once you reach the cliffs!
-                comet wait t=400
-                    comet cont text=Many have slipped and fallen to their deaths over there!
-
+    halley speak Rigortas are white in color while the Meisumptums are red.
+        halley wait 300
+            halley cont They will be the only herbs of these two colors over there so don't worry about not being able to distinguish them
 frame 49
-    charles preSpeak
-        charles speak text=What?! t=600 s=false
-            charles wait 200
-                charles cont text=How could you send her to such a dangerous place?!
+    comet preSpeak
+        comet speak D-Do tread carefully over there!
+            comet wait 300
+                comet cont The terrain there is extremely treacherous!
+                    comet wait 300
+                        comet speak Many have fallen to their deaths over there!
 frame 50
-    yusie preSpeak
-        yusie speak Are you all crazy?!
-            yusie wait 200
-                yusie cont Why would you all encourage her to do such a dangerous thing?!
-
+    comet speak text=A young lady like you really shouldn't be going there... t=1200 s=false
 frame 51
     halley preSpeak
-        halley speak text=Rubbish!
+        halley speak text=Oh come on!
             halley wait t=200
                 halley cont text=What's so hard about keeping balance on a cliff?
 
 frame 52
     comet preSpeak
-        comet speak Sorry, just ignore Halley...
-            comet wait 200
-                comet cont Well, we didn't know that she would be going alon-
+        comet speak Sorry, just ignore Halley-
                     halley interupt
-                        halley speak It doesn't matter.
+                        halley speak Wouldn't it be good if she just slips and falls to her death over there?
 frame 53
-    halley speak What's wrong with a member of the Royal Family dying?
-        halley wait 200
-            halley speak People die every single day
-                halley wait 200
-                    halley speak There's no reason why they should be exempted fro-
-                        yusie interupt
-                            yusie changeBold true
-                            yusie setFontSize 2vw
-                            yusie speak THAT'S TOO MUCH!
+    halley speak She can then join her parents whom I'm betting should be dead by now
 frame 54
-    yusie speak Who do you think you are?
-        yusie wait 200
-            yusie cont Speaking as if you're the Master of Death!
+    comet preSpeak
+        comet speak HALLE-
+            halley interupt
+                halley speak Well I hate the Royal Family and I'm not shy about that
 frame 55
-    yusie speak Can you even scale the Cliffs of Kusuri?!
-        yusie wait 200
-            yusie speak Who knows you might just be someone who talks really tough behind your stupid pharmacy counter?!
+    halley speak People like them go around putting on that facade and pretend to be all nice and good when deep inside them, they're nothing but heartless scumba-
+        sophie interupt
+            sophie changeBold true
+            sophie setFontSize 2vw
+            sophie speak THAT'S NOT TRUEE!
+frame 54
+    halley preSpeak
+        halley speak Well, shout as much as you wish
+            halley wait 200
+                sophie setNormalText
+                sophie setFontSize 1.7vw
+                halley speak But nothing's going to change what I feel about fake people like you!
+frame 55
+    sophie preSpeak
+        sophie speak I-I'm going to prove you wrongg!!
+            sophie wait 200
+                sophie speak I'm going to bring the herbs back and I'm going to save that child!
+                    sophie flipHorizontally
+                    halley preSpeak
+                        halley speak Well let's see if the cliffs will deter you from that, tsk!
+                        sophie move x=-50 t=800
+                            halley,comet disappear 1000
+                                erithven closeTextBox
+                                erithven changeBackground opacity=1 background=default t=1000
+                                sophie flipHorizontally
 frame 56
-    halley preSpeak
-        halley changeBold true
-        halley setFontSize 2vw
-        halley speak What did you say?!
-            halley wait 200
-                halley cont How dare you question my ability?!
+    sophie move x=65 t=1000
+        sophie preSpeak
+            sophie speak I'm so angry!
+                sophie wait 300
+                    sophie cont I mean how can he say that after all that my parents have done and sacrificed for Novala?
 frame 57
-    yusie preSpeak
-        yusie speak You've got a problem with that, Mr Pharmacy Assistant?
+    sophie speak I mean I do feel sorry for what has happened to him and his comrades...
+        sophie wait 300
+            sophie cont But how could he miss out on the bigger picture...?
 frame 58
-    halley preSpeak
-        halley speak Fine!
-            halley wait 200
-                halley cont Let me show you how it's done!
-                    halley wait 200
-                        halley speak I will go with you and get the herbs from the steepest cliff!
-                            halley,yusie setNormalText
-                            halley,yusie setFontSize 1.7vw
+    sophie speak The worst part of it was how he questioned our intentions when we help others!
+        sophie wait 500
+            erithven displayText msg=...... color=white t=1000 name=none skip=false
 frame 59
-    yusie preSpeak
-        yusie speak Let's see about that!
+    sophie speak text=Sighh... t=1000 s=false
+        sophie wait 300
+            sophie cont But have I told you about this before?
+frame 60
+    sophie speak Sometimes, I do ask myself why do we help others...
+        sophie wait 300
+            sophie speak I mean I do know that there are plenty of motivations and incentives -some even biological - underlying every assistance which we dispense
+frame 61
+    sophie speak But is there no way to achieve genuinity in helping others?
+frame 62
+    sophie speak Is there no value in helping others beyond those rewards?
+frame 63
+    sophie speak text=You know, s=false t=600
+        sophie wait 300
+            sophie cont when I fled away from the castle with my family and Charles, a part of me was a little happy about it
+frame 64
+    sophie speak I know it sounds very wrong but I was genuinely quite happy to be away from the political facade which everyone puts on in the castle
+        sophie wait 300
+            sophie speak A part of me knew that it was finally my chance to experience some authenticity in human interactions
+                sophie wait 300
+                    sophie cont and to most importantly, see for myself if altruism exists
+frame 65
+    sophie speak As of now, I can't conclude on anything for sure.
+        sophie wait 300
+            sophie cont But I'm determined to do my best to help as many people as possible
+frame 66
+    sophie speak Because that's the only way to bring myself closer to an answer
+frame 67
+    sophie speak You know what, I really need to thank you for believing in me
+        sophie wait 300
+            sophie speak It gives me confidence that I'm doing something right
+frame 68
+    sophie speak Alright!
+        sophie wait 200
+            sophie cont Shall we start heading to the Cliffs of Kusuri?

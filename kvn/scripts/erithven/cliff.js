@@ -9,65 +9,42 @@ let cliff =  new Scene("erithven_cliff",
 	sophie.setTextColor('white');
 	charles.setTextColor('white');
 	halley.setTextColor('white');
+	sophie.preMove(20);
 	erithven.display(0,null,0,function() {
-		erithven.changeBackground('cliff',1,1000);
-		yusie.flipHorizontally();
-		halley.flipHorizontally();
-		yusie.preMove(-25);
-		halley.preMove(-73);
-		sophie.preMove(-10,70);
-		sophie.preRotate(degree=10);
-		charles.appear(1000);
-		halley.appear(1000);
-		yusie.appear(1000);
-		charles.appear(1000);
-	});
-}, function(){return null})
-,new Frame(function(){
-	yusie.move(20,null,600,function() {
-		yusie.flipHorizontally(function() {
-			yusie.preSpeak(function() {
-				yusie.speak('I must say it wasn\'t an easy hike to get all the way up here...');
-			});
-		},200);
-	});
-}, function(){return null})
-,new Frame(function(){
-	yusie.speak('It would really be quite impressive for a Princess if Sophie were to achieve such a feat');
-}, function(){return null})
-,new Frame(function(){
-	halley.preSpeak(function() {
-		halley.speak('What\'s so difficult about ascending this cliff?',function() {
-			halley.wait(200,function() {
-				halley.speak('And I don\'t see why we should hold the Royal Family to a different set of standards');
-			});
+		erithven.changeBackground('cliff',1,1000,function() {
+			sophie.appear(1000);
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	yusie.preSpeak(function() {
-		yusie.speak('So much for talking tough...',function() {
-			yusie.wait(200,function() {
-				yusie.contSpeaking('We\'ve been standing at this vantage point for a while already and you\'ve yet to deliver your promise...');
+	sophie.preSpeak(function() {
+		sophie.speak('Pant... Pant... Pant...',function() {
+			sophie.wait(300,function() {
+				sophie.speak('I must say it wasn\'t easy at all to hike all the way up here...');
 			});
+		},2000,false);
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('I can now see why Comet was so scared of the cliffs here',function() {
+		sophie.wait(300,function() {
+			sophie.speak('The chance of surviving a fall from this height is close to zero...');
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	halley.preSpeak(function() {
-		halley.speak('Hey!',function() {
-			halley.wait(200,function() {
-				halley.contSpeaking('Are you picking a figh-',function() {
-					charles.interupt(function() {
-						charles.speak('I\'ve enough of both of you!',function() {
-							charles.wait(200,function() {
-								charles.contSpeaking('If you all want to bicker or fight, please do so elsewhere and don\'t disrupt me');
-							});
-						});
-					});
-				});
-			});
+	sophie.speak('But I must say that the view from up here is really good',function() {
+		sophie.wait(300,function() {
+			sophie.speak('How I wish that the others can get to enjoy it as well!');
 		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('I\'m sure Yusie would love the look of the ocean from all the way up here!');
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('Well anyways,',function() {
+		sophie.wait(300);
 	});
 }, function(){return null})
 ,new Frame(function(){

@@ -52,7 +52,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			comet.wait(200,function() {
 				comet.flipHorizontally(null,150);
 				comet.move(2,null,200,function() {
-					comet.speak('Halley, can you go to the back and check them for me?');
+					comet.speak('Halley, can you go to the back and check on our existing stock?');
 				});
 			});
 		});
@@ -69,12 +69,15 @@ let erithvenPharma =  new Scene("erithven_pharma",
 ,new Frame(function(){
 	halley.endSpeak(function() {
 		halley.disappear(1000,function() {
-			halley.wait(800,function() {
-				halley.appear(1000,function() {
-					halley.preSpeak(function() {
-						halley.speak('I\'m sorry.',function() {
-							halley.wait(200,function() {
-								halley.contSpeaking('But we\'re currently short of these two ingredients.');
+			sophie.bringAboveOverlay();
+			charles.bringAboveOverlay(function() {
+				erithven.changeOverlay(0.55,'black',0,function() {
+					sophie.preSpeak(function() {
+						sophie.changeItalic();
+						sophie.setFontSize('1.2vw');
+						sophie.speak('Pss...',function() {
+							sophie.wait(600,function() {
+								sophie.contSpeaking('Pss...');
 							});
 						});
 					});
@@ -82,6 +85,71 @@ let erithvenPharma =  new Scene("erithven_pharma",
 			});
 		});
 	});
+}, function(){return null})
+,new Frame(function(){
+	charles.flipHorizontally(null,200);
+	charles.move(10,null,200,function() {
+		charles.preSpeak(function() {
+			charles.changeItalic();
+			charles.setFontSize('1.2vw');
+			charles.speak('Huh?');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('Charles,',function() {
+			sophie.wait(300,function() {
+				sophie.contSpeaking('how do people usually bargain?');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('I\'ve heard that people usually bargain when they go shopping for things',function() {
+		sophie.wait(300,function() {
+			sophie.speak('So I was wondering if I should keep my disguise up by bargaining');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('What is a good price for these ingredients?');
+}, function(){return null})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('......',function() {
+			charles.wait(300,function() {
+				charles.speak('Normally, people don\'t bargain at the pharmacy...');
+			});
+		},1000,false);
+	});
+}, function(){return null})
+,new Frame(function(){
+	charles.speak('And you should really stop worrying about your disguise',function() {
+		charles.wait(300,function() {
+			charles.speak('No one will guess that you\'re the Princess');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	halley.appear(1000);
+	erithven.changeOverlay(0,'black',0);
+	charles.endSpeak();
+	sophie.setFontSize('1.7vw');
+	charles.setFontSize('1.7vw');
+	sophie.setNormalText();
+	charles.setNormalText();
+	charles.bringBelowOverlay();
+	charles.move(-10,null,200);
+	charles.flipHorizontally(function() {
+		halley.preSpeak(function() {
+			halley.speak('I\'m sorry.',function() {
+				halley.wait(200,function() {
+					halley.contSpeaking('But we\'re currently short of these two ingredients.');
+				});
+			});
+		});
+	},200);
 }, function(){return null})
 ,new Frame(function(){
 	halley.speak('Our suppliers just informed us that it might take months before the new batch arrives');
@@ -323,10 +391,15 @@ let erithvenPharma =  new Scene("erithven_pharma",
 		erithven.closeTextBox();
 		erithven.changeBackground('default',null,1000,function() {
 			yusie.appear(null,function() {
+				sophie.flipHorizontally();
 				yusie.flipHorizontally();
 				charles.flipHorizontally();
 				yusie.move(null,null,1000);
-				charles.move(null,null,1000);
+				charles.move(null,null,1000,function() {
+					sophie.wait(500,function() {
+						sophie.move(40,null,1200);
+					});
+				});
 			});
 		},null,false);
 	});
@@ -362,9 +435,15 @@ let erithvenPharma =  new Scene("erithven_pharma",
 	yusie.preSpeak(function() {
 		yusie.speak('Just give me a little more time...',function() {
 			yusie.wait(700,function() {
-				yusie.speak('Hey!',function() {
+				yusie.speak('I\'m sure it\'s just somewhere up ahead...',function() {
 					yusie.wait(200,function() {
-						yusie.contSpeaking('Where\'s Sophie?');
+						yusie.endSpeak();
+						yusie.flipHorizontally(function() {
+							yusie.wait(400,function() {
+								yusie.flipHorizontally(null,200);
+								charles.bringBelowOverlay();
+							});
+						},200);
 					});
 				});
 			});
@@ -372,128 +451,151 @@ let erithvenPharma =  new Scene("erithven_pharma",
 	});
 }, function(){return null})
 ,new Frame(function(){
-	charles.preSpeak(function() {
-		charles.speak('Huh?',function() {
-			charles.wait(200,function() {
-				charles.contSpeaking('Wasn\'t she behind us all this while?');
+	erithven.changeOverlay(0.55,'black',0);
+	sophie.preSpeak(function() {
+		sophie.changeItalic();
+		sophie.setFontSize('1.2vw');
+		sophie.speak('Pss...',function() {
+			sophie.wait(600,function() {
+				sophie.contSpeaking('Pss...');
 			});
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	yusie.preSpeak(function() {
-		yusie.speak('Did she got lost or something?');
-	});
+	sophie.speak('' + playName + '...');
 }, function(){return null})
 ,new Frame(function(){
-	charles.preSpeak(function() {
-		charles.speak('...',function() {
-			charles.wait(300,function() {
-				charles.speak('I think I know where she might have gone to...');
-			});
-		},500,false);
-	});
-}, function(){return null})
-,new Frame(function(){
-	yusie.preSpeak(function() {
-		yusie.speak('A prasine shop...?',function() {
-			yusie.wait(200,function() {
-				yusie.contSpeaking('I mean she kept going on and on about prasines...');
-			});
+	sophie.speak('Let\'s sneak back to the pharmacy and find out where we can collect those herbs...',function() {
+		sophie.wait(300,function() {
+			sophie.speak('We can\'t possibly leave Erithven in such a state!');
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	yusie.speak('She might have broken contact from us when we went by the bakery earlier');
+	sophie.speak('And I\'m sure you too can\'t bear to see that family suffer when a cure is so readily available');
 }, function(){return null})
 ,new Frame(function(){
-	charles.preSpeak(function() {
-		charles.speak('I don\'t think she\'ll be at the bakery.',function() {
-			charles.wait(300,function() {
-				charles.contSpeaking('It\'s more likely that she had gone back to the pharmacy to ask for the location of the missing herbs');
+	sophie.speak('Quickk! Let\'s move noww!',function() {
+		sophie.wait(300,function() {
+			sophie.flipHorizontally(function() {
+				sophie.move(-40,null,800,function() {
+					sophie.setNormalText();
+					sophie.setFontSize('1.7vw');
+					erithven.changeOverlay(0,'black',0);
+				});
 			});
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	charles.speak('Let\'s hurry!',function() {
-		charles.wait(200,function() {
-			charles.contSpeaking('We need to catch her before she goes off hunting for the herbs',function() {
-				charles.flipHorizontally(function() {
-					charles.move(-80,null,800);
-					yusie.move(-100,null,850,function() {
-						erithven.closeTextBox();
-						erithven.changeBackground('pharma',null,1000,function() {
-							halley.appear(1000);
-							comet.appear(1000);
-						},null,false);
-					});
-				},200);
-			},null,false);
+	charles.disappear(1000);
+	yusie.disappear(1000,function() {
+		erithven.closeTextBox();
+		erithven.changeBackground('pharma',1,1000,function() {
+			halley.appear(1000);
+			comet.appear(1000);
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	charles.flipHorizontally();
-	yusie.flipHorizontally();
-	charles.move(null,null,850);
-	yusie.move(30,null,850,function() {
+	sophie.flipHorizontally();
+	sophie.move(60,null,1000,function() {
 		comet.preSpeak(function() {
-			comet.speak('Huh? You\'re back so soon?',function() {
+			comet.speak('You\'re back?',function() {
 				comet.wait(200,function() {
-					comet.contSpeaking('Didn\'t we just give you the location to find the ingredients?');
+					comet.contSpeaking('Didn\'t your friend say that you weren\'t interested in finding the ingredients?');
 				});
 			});
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	charles.preSpeak(function() {
-		charles.speak('Wait',function() {
-			charles.wait(200,function() {
-				charles.contSpeaking('so Sophie has left?');
-			});
-		});
-	});
-}, function(){return null})
-,new Frame(function(){
-	halley.preSpeak(function() {
-		halley.speak('Yes.',function() {
-			halley.wait(200,function() {
-				halley.contSpeaking('Your beloved Princess Sophie has left without you.',function() {
-					halley.wait(400,function() {
-						halley.speak('Aren\'t you worried now?');
+	sophie.preSpeak(function() {
+		sophie.speak('Errr...',function() {
+			sophie.wait(200,function() {
+				sophie.contSpeaking('Well...',function() {
+					sophie.wait(300,function() {
+						sophie.contSpeaking('I thought it wouldn\'t hurt to try looking for the herbs myself');
 					});
-				});
-			});
-		});
-	});
-}, function(){return null})
-,new Frame(function(){
-	charles.preSpeak(function() {
-		charles.speak('Wait...',function() {
-			charles.wait(300,function() {
-				charles.contSpeaking('How...?',null,1000,false);
+				},1000,false);
 			});
 		},1000,false);
 	});
 }, function(){return null})
 ,new Frame(function(){
-	yusie.preSpeak(function() {
-		yusie.speak('Wait, what\'s going on?',function() {
-			yusie.wait(200,function() {
-				yusie.contSpeaking('Sophie is the Princess...?');
+	halley.preSpeak(function() {
+		halley.speak('Well well well',function() {
+			halley.wait(200,function() {
+				halley.contSpeaking('It seems like our beloved Princess Sophie is quite a rebellious kid, eh?');
 			});
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	charles.preSpeak(function() {
-		charles.speak('Yusie...not now',function() {
-			charles.wait(300,function() {
-				charles.speak('Who are you, Halley?',function() {
-					charles.wait(300,function() {
-						charles.contSpeaking('And how long have you known about this?');
+	sophie.preSpeak(function() {
+		sophie.speak('......',function() {
+			sophie.wait(300,function() {
+				sophie.speak('I knew you would find out eventually...',function() {
+					sophie.wait(300,function() {
+						sophie.speak('I mean you were the Royal Ranger of Novala after all');
+					});
+				},1000,false);
+			});
+		},1000,false);
+	});
+}, function(){return null})
+,new Frame(function(){
+	halley.preSpeak(function() {
+		halley.speak('It seems like the filthy royal blood does flow in you strongly, isn\'t it?',function() {
+			halley.wait(400,function() {
+				halley.speak('I was wondering who you resembled and only figured out after you left');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	halley.speak('Your bespectacled friend who was with you earlier must be your retainer, right?');
+}, function(){return null})
+,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('Yes',function() {
+			sophie.wait(300,function() {
+				sophie.speak('But that\'s enough questions asked from you, where do I find the herbs?');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	halley.preSpeak(function() {
+		halley.speak('Well you must have learnt from my carofle that after the way your parents have treated my life and the lives of my comrades, I would never help you in any way',function() {
+			halley.wait(300,function() {
+				halley.speak('But there\'s always an exception, isn\'t it?');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	halley.speak('You can find the herbs at the Cliffs of Kusuri',function() {
+		halley.wait(300,function() {
+			halley.speak('It\'s simply a short walk along the port and after a steep ascent, you should see the cliffs in no time!');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	halley.speak('Rigortas are white in color while the Meisumptums are red.',function() {
+		halley.wait(300,function() {
+			halley.contSpeaking('They will be the only herbs of these two colors over there so don\'t worry about not being able to distinguish them');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	comet.preSpeak(function() {
+		comet.speak('D-Do tread carefully over there!',function() {
+			comet.wait(300,function() {
+				comet.contSpeaking('The terrain there is extremely treacherous!',function() {
+					comet.wait(300,function() {
+						comet.speak('Many have fallen to their deaths over there!');
 					});
 				});
 			});
@@ -501,62 +603,11 @@ let erithvenPharma =  new Scene("erithven_pharma",
 	});
 }, function(){return null})
 ,new Frame(function(){
-	halley.preSpeak(function() {
-		halley.speak('I\'m just a harmless stranger who happened to recognize a royalty when I see one.',function() {
-			halley.wait(200,function() {
-				halley.speak('And don\'t worry about me!');
-			});
-		});
-	});
-}, function(){return null})
-,new Frame(function(){
-	halley.speak('Though I might not bear the friendliest of intentions towards the Royal Family, I\'m not the biggest threat to her right now.',function() {
-		halley.wait(400,function() {
-			halley.speak('Comet, do you want to share with them where our dear Princess Sophie has headed to?');
-		});
-	});
-}, function(){return null})
-,new Frame(function(){
-	comet.preSpeak(function() {
-		comet.speak('We told her to try her luck at the Cliffs of Kusuri',function() {
-			comet.wait(200,function() {
-				comet.speak('Usually, a healthy amount of Quinnsetas tend to grow by the Cliffs of Kusuri - which isn\'t too far from here');
-			});
-		});
-	});
-}, function(){return null})
-,new Frame(function(){
-	comet.speak('It\'s simply a short walk along the port and after a steep ascent, you should see the cliffs in no time!',function() {
-		comet.wait(400,function() {
-			comet.speak('But do watch where you tread once you reach the cliffs!',function() {
-				comet.wait(400,function() {
-					comet.contSpeaking('Many have slipped and fallen to their deaths over there!');
-				});
-			});
-		});
-	});
-}, function(){return null})
-,new Frame(function(){
-	charles.preSpeak(function() {
-		charles.speak('What?!',function() {
-			charles.wait(200,function() {
-				charles.contSpeaking('How could you send her to such a dangerous place?!');
-			});
-		},600,false);
-	});
-}, function(){return null})
-,new Frame(function(){
-	yusie.preSpeak(function() {
-		yusie.speak('Are you all crazy?!',function() {
-			yusie.wait(200,function() {
-				yusie.contSpeaking('Why would you all encourage her to do such a dangerous thing?!');
-			});
-		});
-	});
+	comet.speak('A young lady like you really shouldn\'t be going there...',null,1200,false);
 }, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
-		halley.speak('Rubbish!',function() {
+		halley.speak('Oh come on!',function() {
 			halley.wait(200,function() {
 				halley.contSpeaking('What\'s so hard about keeping balance on a cliff?');
 			});
@@ -565,27 +616,60 @@ let erithvenPharma =  new Scene("erithven_pharma",
 }, function(){return null})
 ,new Frame(function(){
 	comet.preSpeak(function() {
-		comet.speak('Sorry, just ignore Halley...',function() {
-			comet.wait(200,function() {
-				comet.contSpeaking('Well, we didn\'t know that she would be going alon-',function() {
-					halley.interupt(function() {
-						halley.speak('It doesn\'t matter.');
-					});
-				});
+		comet.speak('Sorry, just ignore Halley-',function() {
+			halley.interupt(function() {
+				halley.speak('Wouldn\'t it be good if she just slips and falls to her death over there?');
 			});
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	halley.speak('What\'s wrong with a member of the Royal Family dying?',function() {
-		halley.wait(200,function() {
-			halley.speak('People die every single day',function() {
-				halley.wait(200,function() {
-					halley.speak('There\'s no reason why they should be exempted fro-',function() {
-						yusie.interupt(function() {
-							yusie.changeBold(true);
-							yusie.setFontSize('2vw');
-							yusie.speak('THAT\'S TOO MUCH!');
+	halley.speak('She can then join her parents whom I\'m betting should be dead by now');
+}, function(){return null})
+,new Frame(function(){
+	comet.preSpeak(function() {
+		comet.speak('HALLE-',function() {
+			halley.interupt(function() {
+				halley.speak('Well I hate the Royal Family and I\'m not shy about that');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	halley.speak('People like them go around putting on that facade and pretend to be all nice and good when deep inside them, they\'re nothing but heartless scumba-',function() {
+		sophie.interupt(function() {
+			sophie.changeBold(true);
+			sophie.setFontSize('2vw');
+			sophie.speak('THAT\'S NOT TRUEE!');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	halley.preSpeak(function() {
+		halley.speak('Well, shout as much as you wish',function() {
+			halley.wait(200,function() {
+				sophie.setNormalText();
+				sophie.setFontSize('1.7vw');
+				halley.speak('But nothing\'s going to change what I feel about fake people like you!');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('I-I\'m going to prove you wrongg!!',function() {
+			sophie.wait(200,function() {
+				sophie.speak('I\'m going to bring the herbs back and I\'m going to save that child!',function() {
+					sophie.flipHorizontally();
+					halley.preSpeak(function() {
+						halley.speak('Well let\'s see if the cliffs will deter you from that, tsk!');
+						sophie.move(-50,null,800,function() {
+							halley.disappear(1000);
+							comet.disappear(1000,function() {
+								erithven.closeTextBox();
+								erithven.changeBackground('default',1,1000);
+								sophie.flipHorizontally();
+							});
 						});
 					});
 				});
@@ -594,56 +678,90 @@ let erithvenPharma =  new Scene("erithven_pharma",
 	});
 }, function(){return null})
 ,new Frame(function(){
-	yusie.speak('Who do you think you are?',function() {
-		yusie.wait(200,function() {
-			yusie.contSpeaking('Speaking as if you\'re the Master of Death!');
-		});
-	});
-}, function(){return null})
-,new Frame(function(){
-	yusie.speak('Can you even scale the Cliffs of Kusuri?!',function() {
-		yusie.wait(200,function() {
-			yusie.speak('Who knows you might just be someone who talks really tough behind your stupid pharmacy counter?!');
-		});
-	});
-}, function(){return null})
-,new Frame(function(){
-	halley.preSpeak(function() {
-		halley.changeBold(true);
-		halley.setFontSize('2vw');
-		halley.speak('What did you say?!',function() {
-			halley.wait(200,function() {
-				halley.contSpeaking('How dare you question my ability?!');
-			});
-		});
-	});
-}, function(){return null})
-,new Frame(function(){
-	yusie.preSpeak(function() {
-		yusie.speak('You\'ve got a problem with that, Mr Pharmacy Assistant?');
-	});
-}, function(){return null})
-,new Frame(function(){
-	halley.preSpeak(function() {
-		halley.speak('Fine!',function() {
-			halley.wait(200,function() {
-				halley.contSpeaking('Let me show you how it\'s done!',function() {
-					halley.wait(200,function() {
-						halley.speak('I will go with you and get the herbs from the steepest cliff!',function() {
-							halley.setNormalText();
-							yusie.setNormalText();
-							halley.setFontSize('1.7vw');
-							yusie.setFontSize('1.7vw');
-						});
-					});
+	sophie.move(65,null,1000,function() {
+		sophie.preSpeak(function() {
+			sophie.speak('I\'m so angry!',function() {
+				sophie.wait(300,function() {
+					sophie.contSpeaking('I mean how can he say that after all that my parents have done and sacrificed for Novala?');
 				});
 			});
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	yusie.preSpeak(function() {
-		yusie.speak('Let\'s see about that!');
+	sophie.speak('I mean I do feel sorry for what has happened to him and his comrades...',function() {
+		sophie.wait(300,function() {
+			sophie.contSpeaking('But how could he miss out on the bigger picture...?');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('The worst part of it was how he questioned our intentions when we help others!',function() {
+		sophie.wait(500,function() {
+			erithven.displayText('......',1000,null,'none',null,null,'white',null,null,false);
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('Sighh...',function() {
+		sophie.wait(300,function() {
+			sophie.contSpeaking('But have I told you about this before?');
+		});
+	},1000,false);
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('Sometimes, I do ask myself why do we help others...',function() {
+		sophie.wait(300,function() {
+			sophie.speak('I mean I do know that there are plenty of motivations and incentives -some even biological - underlying every assistance which we dispense');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('But is there no way to achieve genuinity in helping others?');
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('Is there no value in helping others beyond those rewards?');
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('You know,',function() {
+		sophie.wait(300,function() {
+			sophie.contSpeaking('when I fled away from the castle with my family and Charles, a part of me was a little happy about it');
+		});
+	},600,false);
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('I know it sounds very wrong but I was genuinely quite happy to be away from the political facade which everyone puts on in the castle',function() {
+		sophie.wait(300,function() {
+			sophie.speak('A part of me knew that it was finally my chance to experience some authenticity in human interactions',function() {
+				sophie.wait(300,function() {
+					sophie.contSpeaking('and to most importantly, see for myself if altruism exists');
+				});
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('As of now, I can\'t conclude on anything for sure.',function() {
+		sophie.wait(300,function() {
+			sophie.contSpeaking('But I\'m determined to do my best to help as many people as possible');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('Because that\'s the only way to bring myself closer to an answer');
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('You know what, I really need to thank you for believing in me',function() {
+		sophie.wait(300,function() {
+			sophie.speak('It gives me confidence that I\'m doing something right');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('Alright!',function() {
+		sophie.wait(200,function() {
+			sophie.contSpeaking('Shall we start heading to the Cliffs of Kusuri?');
+		});
 	});
 }, function(){return null})
 ]);
