@@ -68,18 +68,35 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 	yusie.speak('At this rate, I think I am really going to fall in love with this place!');
 }, function(){return null})
 ,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('It would be so great to stay here and experience the fishermen lifestyle');
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('Imagine waking up every morning to the sun rising up from the ocean...',function() {
+		sophie.wait(500,function() {
+			sophie.speak('Ahhh~~~',null,1000,false);
+		});
+	},1200,false);
+})
+,new Frame(function(){
 	charles.preSpeak(function() {
-		charles.speak('Alright, alright, whatever you say, manta ray....');
+		charles.speak('Alright, alrigh-',function() {
+			yusie.interupt(function() {
+				yusie.speak('Hey Charles!',function() {
+					yusie.wait(300,function() {
+						yusie.contSpeaking('Stop delaying our movement!');
+					});
+				});
+			});
+		});
 	});
 }, function(){return null})
 ,new Frame(function(){
-	yusie.preSpeak(function() {
-		yusie.speak('Uuuuuuu');
-	});
-}, function(){return null})
-,new Frame(function(){
-	yusie.speak('Well whatever! Let\'s move on!',function() {
-		yusie.endSpeak();
+	charles.preSpeak(function() {
+		charles.speak('......',function() {
+			charles.endSpeak();
+		},1000,false);
 	});
 }, function(){return null})
 ,new Frame(function(){

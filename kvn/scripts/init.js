@@ -1,5 +1,36 @@
 function soundLoadPhase() {
+<<<<<<< HEAD
 	window.brostikaM = new GameSound(VN,'Brostika.mp3',true);	window.darkAlleyM = new GameSound(VN,'Dark_Alley.mp3',true);	window.edgeOfBoriolsisM = new GameSound(VN,'Edge_of_Borolsis.mp3',true);	window.erithvenM = new GameSound(VN,'Erithven.mp3',true);	window.erithvenApothecaryM = new GameSound(VN,'Erithven_Apothecary.mp3',true);	window.malidretM = new GameSound(VN,'Malidret.mp3',true);	window.revelationRevolutionM = new GameSound(VN,'Revelation_Revolution.mp3',true);	window.deathM = new GameSound(VN,'Royal_Death.mp3',true);	window.solemnStrengthM = new GameSound(VN,'Solemn_Strength.mp3',true);	window.sophiesRoomM = new GameSound(VN,'Sophies_Room.mp3',true);	window.titleM = new GameSound(VN,'The_Princess_Saviour.mp3',true);	window.valleyOfKusuriM = new GameSound(VN,'Valley_of_Kusuri.mp3',true);	window.stabM = new GameSound(VN,'stab.mp3',true);	window.xperrorM = new GameSound(VN,'error.mp3',true);	window.footsteps = new GameSound(VN,'footstep.wav',true);}
+=======
+<<<<<<< HEAD
+  //load/create sounds here		window.boriolsis_townM = new GameSound(VN, "Boriolsis_Town.mp3, true");		window.boriolsis_forestM = new GameSound(VN, "Boriolsis_Forest.mp3, true");		window.boriolsis_valleyM = new GameSound(VN, "Boriolsis_Valley.mp3, true");		window.boys_roomM = new GameSound(VN, "Boys_Room.mp3, true");
+  window.brostikaM = new GameSound(VN, "Brostika.mp3", true);
+  window.dark_alleyM = new GameSound(VN, "Dark_Alley.mp3", true);
+  window.edge_of_boriolsisM = new GameSound(VN, "Edge_of__Boriolsis.mp3", true);
+  window.erithvenM = new GameSound(VN, "Erithven.mp3", true);
+  window.erithven_apothecaryM = new GameSound(VN, "Erithven_Apothecary.mp3", true);
+  window.malidretM = new GameSound(VN, "malidret.mp3", true);
+  window.revelation_revolutionM = new GameSound(VN, "Revelation_Revolution.mp3", true);
+  window.deathM = new GameSound(VN, "Royal_Death.mp3", true);
+  window.solemn_strengthM = new GameSound(VN, "erithven.mp3", true);
+  window.sophies_roomM = new GameSound(VN, "Sohpies_Room.mp3", true);
+  window.titleM = new GameSound(VN, "The_Princess__Saviour.mp3", true);
+  window.valley_of_kusuriM = new GameSound(VN, "Valley_of_Kusuri.mp3", true);
+  window.stabM = new GameSound(VN, "stab.mp3", false);
+  window.xperrorM = new GameSound(VN, "error.mp3", false);
+  window.footsteps = new GameSound(VN, "footstep.wav",true);
+}
+
+
+function publicStaticVoidMain(id) {
+
+    if (id === 0) {
+        playScene('erithven_house',0);
+    }
+=======
+	window.brostikaM = new GameSound(VN,'Brostika.mp3',true);	window.darkAlleyM = new GameSound(VN,'Dark_Ally.mp3',true);	window.edgeOfBoriolsisM = new GameSound(VN,'Edge_of_Boriolsis.mp3',true);	window.erithvenM = new GameSound(VN,'Erithven.mp3',true);	window.erithvenApothecaryM = new GameSound(VN,'Erithven_Apothecary.mp3',true);	window.malidretM = new GameSound(VN,'malidret.mp3',true);	window.revelationRevolutionM = new GameSound(VN,'Revelation_Revolution.mp3',true);	window.deathM = new GameSound(VN,'Royal_Death.mp3',true);	window.solemnStrengthM = new GameSound(VN,'erithven.mp3',true);	window.sophiesRoomM = new GameSound(VN,'Sophies_Room.mp3',true);	window.titleM = new GameSound(VN,'The_Princess_Saviour.mp3',true);	window.valleyOfKusuriM = new GameSound(VN,'Valley_of_Kusuri.mp3',true);	window.stabM = new GameSound(VN,'stab.mp3',true);	window.xperrorM = new GameSound(VN,'stab.mp3',true);	window.footsteps = new GameSound(VN,'footstep.wav',true);}
+>>>>>>> 075fd9f13970c5af68865d18987f456081d571e4
+>>>>>>> e93be32cd4ac288966c8db77ec7cafa8fef75626
 
 var playName = 'Marcus';
 function publicStaticVoidMain(id){

@@ -60,7 +60,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 }, function(){return null})
 ,new Frame(function(){
 	halley.preSpeak(function() {
-		halley.speak('Alright,aright...',function() {
+		halley.speak('Alright,alright...',function() {
 			comet.move(-2,null,200);
 			comet.flipHorizontally(null,150);
 		});
@@ -97,13 +97,16 @@ let erithvenPharma =  new Scene("erithven_pharma",
 }, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
-		charles.speak('Indeed!',function() {
+		charles.speak('Indeed...',function() {
 			charles.wait(200,function() {
 				charles.contSpeaking('They are part of the Quinnsetas family after all');
 			});
-		});
+		},800,false);
 	});
 }, function(){return null})
+,new Frame(function(){
+	charles.speak('The rarity of these herbs is due to their tendency to thrive in the most trecherous of locations');
+})
 ,new Frame(function(){
 	comet.preSpeak(function() {
 		comet.speak('Oh',function() {
@@ -130,7 +133,7 @@ let erithvenPharma =  new Scene("erithven_pharma",
 	charles.preSpeak(function() {
 		charles.speak('It\'s really nothing much...',function() {
 			charles.wait(200,function() {
-				charles.contSpeaking('Just read them from a book somewhere before');
+				charles.speak('Read them from a book somewhere before');
 			});
 		});
 	});
@@ -144,6 +147,13 @@ let erithvenPharma =  new Scene("erithven_pharma",
 		});
 	});
 }, function(){return null})
+,new Frame(function(){
+	sophie.speak('Well erm...erm',function() {
+		sophie.wait(300,function() {
+			sophie.contSpeaking('I-I have plenty of experience p-picking herbs in the wild!');
+		});
+	});
+})
 ,new Frame(function(){
 	comet.preSpeak(function() {
 		comet.speak('Yes! Of cour-',function() {
@@ -187,8 +197,13 @@ let erithvenPharma =  new Scene("erithven_pharma",
 	});
 }, function(){return null})
 ,new Frame(function(){
+<<<<<<< HEAD
+	charles.speak('That\'s why we need to stop sticking our nose into everything and leave straight away');
+})
+=======
 	charles.speak('That\'s why we need to stop sticking our nose into the problem and leave straight away');
 }, function(){return null})
+>>>>>>> 075fd9f13970c5af68865d18987f456081d571e4
 ,new Frame(function(){
 	sophie.changeItalic(true);
 	sophie.setFontSize('1.2vw');
@@ -210,13 +225,9 @@ let erithvenPharma =  new Scene("erithven_pharma",
 	});
 }, function(){return null})
 ,new Frame(function(){
-	charles.speak('From the look of the boy, the situation is an increasingly precarious one.',function() {
+	charles.speak('Think about your parents and Novala.',function() {
 		charles.wait(200,function() {
-			charles.speak('Think about your parents and Novala.',function() {
-				charles.wait(200,function() {
-					charles.contSpeaking('There\'s no reason why we should take such risks when we\'ve so much more at stake');
-				});
-			});
+			charles.contSpeaking('There\'s no reason why we should take such risks when we\'ve so much more at stake');
 		});
 	});
 }, function(){return null})
@@ -249,7 +260,11 @@ let erithvenPharma =  new Scene("erithven_pharma",
 	charles.preSpeak(function() {
 		charles.speak('No!',function() {
 			charles.wait(300,function() {
-				charles.contSpeaking('I\'m not going to allow you to participate in this!');
+				charles.contSpeaking('I\'m not going to allow you to participate in this',function() {
+					charles.wait(300,function() {
+						charles.speak('And what was that lie about having experience picking herbs all about?');
+					});
+				});
 			});
 		});
 	});

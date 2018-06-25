@@ -58,17 +58,24 @@ frame 9
 frame 10
     yusie speak text = At this rate, I think I am really going to fall in love with this place!
 frame 11
-    charles preSpeak
-        charles speak text = Alright, alright, whatever you say, manta ray....
-
+    sophie preSpeak
+        sophie speak It would be so great to stay here and experience the fishermen lifestyle
 frame 12
-    yusie preSpeak
-        yusie speak text = Uuuuuuu
+    sophie speak text=Imagine waking up every morning to the sun rising up from the ocean... t=1200 s=false
+        sophie wait 500
+            sophie speak text=Ahhh~~~ t=1000 s=false
 frame 13
-        yusie speak text = Well whatever! Let's move on!
-            yusie endSpeak
-
+    charles preSpeak
+        charles speak text = Alright, alrigh-
+            yusie interupt
+                yusie speak Hey Charles!
+                    yusie wait 300
+                        yusie cont Stop delaying our movement!
 frame 14
+    charles preSpeak
+        charles speak text =...... t=1000 s=false
+            charles endSpeak
+frame 15
     erithven closeTextBox
     sophie flipHorizontally
     charles flipHorizontally
@@ -78,14 +85,14 @@ frame 14
         yusie flipHorizontally
         yusie move x = 10 t=1000
         charles flipHorizontally
-frame 15
+frame 16
     yusie setFontSize 1.2vw
     yusie preSpeak
         yusie speak text = But before that, just one more look at the vast ocea-
         charles move x= 90 t=1500 g= swing
             charles preSpeak
                 charles speak text = Come on! Hurry!
-frame 16
+frame 17
     yusie preSpeak
         charles flipHorizontally
         charles move x = -80 t=2000 g= linear
