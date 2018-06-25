@@ -1,7 +1,7 @@
 declare yusie,charles,sophie,chief,halley,june as character
 declare boriolsis as stage
 
-scene chief_house_1
+scene chief_house_1 chief_house_1
 
 frame
     boriolsis bringCharacter yusie
@@ -46,6 +46,26 @@ frame
         boriolsis scale x=1.5
             boriolsis changeBackground bg=house a=0
                 boriolsis fadeIn 800
-                chief,sophie,charles appear 800
+                    sophie say Excuse us for intruding...
+                        chief,sophie,charles appear 800
 frame
-    
+    chief preSpeak
+        chief say It's a little messy, I hope you don't mind.
+frame
+    chief say Don't worry and just make yourself home!
+frame
+    sophie preSpeak
+        sophie say Anyway,
+            sophie wait 500
+                sophie cont what's so dangerous about the forest?
+frame
+    chief preSpeak
+        chief say Well...
+frame
+    charles preSpeak
+        charles say Is it because the Manticore is out of hibernation again?
+frame
+    chief preSpeak
+        chief say Yes, it is.
+frame
+    chief move x=5 t=Math.random()*1000

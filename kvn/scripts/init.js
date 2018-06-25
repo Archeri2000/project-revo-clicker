@@ -4,7 +4,7 @@ function soundLoadPhase() {
 var playName = 'Marcus';
 function publicStaticVoidMain(id){
 if(id===0){
-	playScene('brostika_alley',0);
+	playScene('chief_house_1',7);
 }
 }
 window.sophie = new Character('sophie','Sophie','sophie.png',61.2,61.2*1.4,-35,56,50,50);

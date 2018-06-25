@@ -63,14 +63,50 @@ let chief_house_1 =  new Scene("chief_house_1",
 		boriolsis.setAnchorY(0);
 		boriolsis.scaleBackground(1.5,null,null,function() {
 			boriolsis.changeBackground('house',0,null,function() {
-				boriolsis.fadeInBackground(800);
-				chief.appear(800);
-				sophie.appear(800);
-				charles.appear(800);
+				boriolsis.fadeInBackground(800,function() {
+					sophie.speak('Excuse us for intruding...',function() {
+						chief.appear(800);
+						sophie.appear(800);
+						charles.appear(800);
+					});
+				});
 			});
 		});
 	});
 }, function(){return null})
 ,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('It\'s a little messy, I hope you don\'t mind.');
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.speak('Don\'t worry and just make yourself home!');
+}, function(){return null})
+,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('Anyway,',function() {
+			sophie.wait(500,function() {
+				sophie.contSpeaking('what\'s so dangerous about the forest?');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('Well...');
+	});
+}, function(){return null})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('Is it because the Manticore is out of hibernation again?');
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.preSpeak(function() {
+		chief.speak('Yes, it is.');
+	});
+}, function(){return null})
+,new Frame(function(){
+	chief.move(5,null,Math.random()*1000);
 }, function(){return null})
 ]);
