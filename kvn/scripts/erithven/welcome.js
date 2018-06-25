@@ -73,12 +73,39 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 	});
 }, function(){return null})
 ,new Frame(function(){
-	sophie.speak('Imagine waking up every morning to the sun rising up from the ocean...',function() {
-		sophie.wait(500,function() {
-			sophie.speak('Ahhh~~~',null,1000,false);
+	sophie.speak('Huh?',function() {
+		sophie.wait(300,function() {
+			sophie.contSpeaking('What are those glowing colored rings in the sea?');
 		});
-	},1200,false);
-})
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('They look really pretty!',function() {
+		charles.wait(300,function() {
+			charles.preSpeak(function() {
+				charles.speak('Those rings are called Septras.');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	charles.speak('Septras are rings which the fishermen build from manacytes to demarcate their fishing zone.',function() {
+		charles.wait(300,function() {
+			charles.speak('These rings will not only help to prevent conflict of interest between fishermen but also facilitate the entire fishing process.');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.speak('These rings and the sea look really good together!',function() {
+		sophie.wait(300,function() {
+			sophie.speak('Imagine waking up every morning to the sun rising up from the ocean...',function() {
+				sophie.wait(500,function() {
+					sophie.speak('Ahhh~~~',null,1000,false);
+				});
+			},1200,false);
+		});
+	});
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Alright, alrigh-',function() {
@@ -131,4 +158,4 @@ let erithvenWelcome =  new Scene("erithven_welcome",
 		yusie.speak('Noooooooooo~');
 	});
 }, function(){return null})
-]);
+]);  sophie.preSpeak();

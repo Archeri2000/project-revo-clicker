@@ -10,41 +10,30 @@ frame 0
     erithven bringCharacter halley
     erithven bringCharacter sophieslippedCG
     yusie,sophie,charles,halley setTextColor white
+    sophie preMove x=20
     erithven display backgroundAlpha=0 t=0
         erithven changeBackground background=cliff a=1 t=1000
-        yusie,halley flipHorizontally
-        yusie preMove x=-25
-        halley preMove x=-73
-        sophie preMove x=-10 y=70
-        sophie preRotate degree=10
-        charles,halley,yusie,charles appear t=1000
+            sophie appear 1000
 frame 1
-    yusie move x=20 t=600
-        yusie flipHorizontally t=200
-            yusie preSpeak
-                yusie speak I must say it wasn't an easy hike to get all the way up here...
+    sophie preSpeak
+        sophie speak msg=Pant... Pant... Pant... t=2000 s=false
+            sophie wait 300
+                sophie speak I must say it wasn't easy at all to hike all the way up here...
 frame 2
-    yusie speak It would really be quite impressive for a Princess if Sophie were to achieve such a feat
-
+    sophie speak I can now see why Comet was so scared of the cliffs here
+        sophie wait 300
+            sophie speak The chance of surviving a fall from this height is close to zero...
 frame 3
-    halley preSpeak
-        halley speak What's so difficult about ascending this cliff?
-            halley wait 200
-                halley speak And I don't see why we should hold the Royal Family to a different set of standards
+    sophie speak But I must say that the view from up here is really good
+        sophie wait 300
+            sophie speak How I wish that the others can get to enjoy it as well!
 frame 4
-    yusie preSpeak
-        yusie speak So much for talking tough...
-            yusie wait 200
-                yusie cont We've been standing at this vantage point for a while already and you've yet to deliver your promise...
+    sophie speak I'm sure Yusie would love the look of the ocean from all the way up here!
 frame 5
-    halley preSpeak
-        halley speak Hey!
-            halley wait 200
-                halley cont Are you picking a figh-
-                    charles interupt
-                        charles speak I've enough of both of you!
-                            charles wait 200
-                                charles cont If you all want to bicker or fight, please do so elsewhere and don't disrupt me
+    sophie speak Well anyways,
+        sophie wait 300
+            
+
 frame 7
     erithven closeTextBox
     charles wait 1200

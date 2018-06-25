@@ -167,6 +167,8 @@ let erithvenHouse =  new Scene("erithven_house",
 						charles.move(40,null,1000,null,swing);
 						mother.move(40,null,1000,null,swing);
 						sickchild.move(40,null,1000,null,swing);
+						sickchild.changeName();
+						mother.changeName();
 					},null,false);
 				},null,false);
 			},null,false);
@@ -248,10 +250,15 @@ let erithvenHouse =  new Scene("erithven_house",
 ,new Frame(function(){
 	mother.speak('Drink this slowly...',function() {
 		mother.wait(300,function() {
-			mother.contSpeaking('You\'ll feel better');
+			mother.contSpeaking('You\'ll feel better',function() {
+				sickchild.wait(500,function() {
+					sickchild.setFontSize('1.4vw');
+					sickchild.speak('Mmmmm');
+				});
+			});
 		});
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	mother.speak('Alright, close your eyes and rest...',function() {
 		mother.wait(200,function() {
@@ -265,7 +272,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			},null,false);
 		});
 	},1000,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Woahh',function() {
@@ -279,7 +286,7 @@ let erithvenHouse =  new Scene("erithven_house",
 	charles.preSpeak(function() {
 		charles.speak('I took a look at the stabilizer earlier.',function() {
 			charles.wait(200,function() {
-				charles.speak('The sage probably employed morphicology to freeze all activities of the harmful entities within the kid\'s body',function() {
+				charles.speak('The sage probably employed morphicology to freeze all activities of the harmful matter within the kid\'s body',function() {
 					charles.wait(200,function() {
 						charles.speak('Drowsiness is hence probably one of the side effects');
 					});
@@ -334,7 +341,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			sophie.wait(400);
 		},1000,false);
 	});
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('But why is Jakris so against the plan?',function() {
@@ -366,8 +373,49 @@ let erithvenHouse =  new Scene("erithven_house",
 }, function(){return null})
 ,new Frame(function(){
 	mother.speak('That\'s why it\'s important for us to stay behind to safeguard our fishing area and to maintain our source of income to sustain the heavy cost of living at Malidret should Jakris move there',function() {
-		mother.wait(200,function() {
-			mother.speak('Secondly, Jakris knows that it\'s very unlikely that he will ever get well.');
+		sophie.wait(200,function() {
+			sophie.preSpeak(function() {
+				sophie.speak('To protect the septras from being taken over by the Kapitolians?');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	mother.preSpeak(function() {
+		mother.speak('Are you a local?',function() {
+			mother.contSpeaking('How did you know about the septras?');
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	sophie.preSpeak(function() {
+		sophie.speak('My friend here is very knowledgeable');
+	});
+}, function(){return null})
+,new Frame(function(){
+	mother.preSpeak(function() {
+		mother.speak('Your friend is right',function() {
+			mother.wait(300,function() {
+				mother.speak('Nowadays, the encroachment is so bad that the local merchants in Erithven have to step in to redraw and renegotiate the layout of the fishing area so as to ensure Erithven remains conducive enough for traidng and fishing');
+			});
+		});
+	});
+}, function(){return null})
+,new Frame(function(){
+	charles.preSpeak(function() {
+		charles.speak('I see...',function() {
+			charles.wait(300,function() {
+				charles.speak('Oh you mentioned that there was a second reason why Jakris is so upset');
+			});
+		},1000,false);
+	});
+}, function(){return null})
+,new Frame(function(){
+	mother.preSpeak(function() {
+		mother.speak('Yes, you see',function() {
+			mother.wait(300,function() {
+				mother.contSpeaking('Jakris knows that it\'s very unlikely that he will ever get well.');
+			});
 		});
 	});
 }, function(){return null})
@@ -415,7 +463,7 @@ let erithvenHouse =  new Scene("erithven_house",
 			mother.speak('How I wish I can take his place instead...',null,1000,false);
 		});
 	},1000,false);
-})
+}, function(){return null})
 ,new Frame(function(){
 	sophie.preSpeak(function() {
 		sophie.speak('Don\'t worry!',function() {
@@ -550,7 +598,7 @@ let erithvenHouse =  new Scene("erithven_house",
 }, function(){return null})
 ,new Frame(function(){
 	sophie.speak('It would be good to have one more person aboard!');
-})
+}, function(){return null})
 ,new Frame(function(){
 	yusie.preSpeak(function() {
 		yusie.speak('C-can I?',function() {
@@ -599,7 +647,7 @@ let erithvenHouse =  new Scene("erithven_house",
 }, function(){return null})
 ,new Frame(function(){
 	yusie.speak('Hey Charles, what\'s with that unhappy look on your face?');
-})
+}, function(){return null})
 ,new Frame(function(){
 	charles.preSpeak(function() {
 		charles.speak('Never mind...',function() {

@@ -18,7 +18,7 @@ create sound xperrorM soundgroup=VN source=stab.mp3 loop=true
 create sound footsteps soundgroup=VN source=footstep.wav loop=true
 
 start
-    play boriolsis_welcome 30
+    play erithven_pharma 50 
 
 macro com char
     char setDefSkip true
