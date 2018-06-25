@@ -1,26 +1,36 @@
 let playName be Marcus as string
 
 create sound brostikaM soundgroup=VN source=Brostika.mp3 loop=true
-create sound darkAlleyM soundgroup=VN source=Dark_Ally.mp3 loop=true
-create sound edgeOfBoriolsisM soundgroup=VN source=Edge_of_Boriolsis.mp3 loop=true
+create sound darkAlleyM soundgroup=VN source=Dark_Alley.mp3 loop=true
+create sound edgeOfBoriolsisM soundgroup=VN source=Edge_of_Borolsis.mp3 loop=true
 
 create sound erithvenM soundgroup=VN source=Erithven.mp3 loop=true
 create sound erithvenApothecaryM soundgroup=VN source=Erithven_Apothecary.mp3 loop=true
-create sound malidretM soundgroup=VN source=malidret.mp3 loop=true
+create sound malidretM soundgroup=VN source=Malidret.mp3 loop=true
 create sound revelationRevolutionM soundgroup=VN source=Revelation_Revolution.mp3 loop=true
 create sound deathM soundgroup=VN source=Royal_Death.mp3 loop=true
-create sound solemnStrengthM soundgroup=VN source=erithven.mp3 loop=true
+create sound solemnStrengthM soundgroup=VN source=Solemn_Strength.mp3 loop=true
 create sound sophiesRoomM soundgroup=VN source=Sophies_Room.mp3 loop=true
 create sound titleM soundgroup=VN source=The_Princess_Saviour.mp3 loop=true
 create sound valleyOfKusuriM soundgroup=VN source=Valley_of_Kusuri.mp3 loop=true
 create sound stabM soundgroup=VN source=stab.mp3 loop=true
-create sound xperrorM soundgroup=VN source=stab.mp3 loop=true
+create sound xperrorM soundgroup=VN source=error.mp3 loop=true
 create sound footsteps soundgroup=VN source=footstep.wav loop=true
 
 start
+<<<<<<< HEAD
     play erithven_pharma 50 
+=======
+    play brostika_winery2 0
+>>>>>>> 77d87e61919c60879f0ce3d31f159267f2d1cf1e
 
 macro com char
+    char setTextColor white
+    char setDefSkip true
+    char setDefGraph swing
+    char complete
+
+macro comBG char
     char setDefSkip true
     char setDefGraph swing
     char complete
@@ -151,19 +161,19 @@ create stage brostika image=brostika_outside.jpg
     brostika addBackground name=alley       path=alley.png
     brostika addBackground name=police      path=police.png
     brostika addBackground name=winery      path=winery.png
-    com brostika
+    comBG brostika
 
-create stage boriolsis image=town.jpg
+create stage boriolsis image=boriolsis/town.jpg
     addBG boriolsis house
     addBG boriolsis forest
-    com boriolsis
+    comBG boriolsis
 create stage erithven image=erithven.jpg
     boriolsis addBackground name=outsidehouse path=outsidehouse.png
     boriolsis addBackground name=house        path=sick_boy_s_room.png
     boriolsis addBackground name=pharma       path=pharma.png
     boriolsis addBackground name=cliff        path=cliff.png
     boriolsis addBackground name=finalcliff   path=finalcliff.png
-    com erithven
+    comBG erithven
 
 create stage malidret image=malidret.png
-    com malidret
+    comBG malidret

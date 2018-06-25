@@ -1,4 +1,4 @@
-declare yusie,charles,sophie,chief,june,halley as character
+declare yusie,charles,sophie,chief,halley as character
 declare boriolsis as stage
 
 let reply be I knew it! as string
@@ -17,11 +17,10 @@ frame
     boriolsis bringCharacter charles
     boriolsis bringCharacter sophie
     boriolsis bringCharacter chief
-    boriolsis bringCharacter june
     boriolsis bringCharacter yusie
     boriolsis bringCharacter halley
 
-    yusie,charles,sophie,june,chief,halley setTextColor white
+    yusie,charles,sophie,chief,halley setTextColor white
 
     boriolsis display t=0 bgO=0
         yusie setXOffSet 8

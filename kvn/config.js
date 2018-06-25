@@ -21,6 +21,7 @@ var scripts =
 ,"erithven/pharma.js"
 ,"erithven/cliff.js"
 ,"boriolsis/boriolsis.js"
+,"boriolsis/house_1.js"
 ];
 
 //allow for fullscreen
@@ -29,7 +30,7 @@ var hasFullScreenOption = true;
 var alertForFullScreen = false;
 
 //enforces lanscape mode
-var enforceLandscape = true;
+var enforceLandscape = false;
 //text speedhe higher, the fast, between 0 and 1 would be slower
 var textSpeed = 0.75;
 
