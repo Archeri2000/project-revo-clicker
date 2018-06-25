@@ -13,13 +13,11 @@ let boriolsisWelcome =  new Scene("boriolsis_welcome",
 	boriolsis.bringCharacter(charles);
 	boriolsis.bringCharacter(sophie);
 	boriolsis.bringCharacter(chief);
-	boriolsis.bringCharacter(june);
 	boriolsis.bringCharacter(yusie);
 	boriolsis.bringCharacter(halley);
 	yusie.setTextColor('white');
 	charles.setTextColor('white');
 	sophie.setTextColor('white');
-	june.setTextColor('white');
 	chief.setTextColor('white');
 	halley.setTextColor('white');
 	boriolsis.display(0,null,0,function() {

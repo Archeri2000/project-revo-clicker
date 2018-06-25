@@ -1,0 +1,50 @@
+declare yusie,charles,sophie,chief,halley,june as character
+declare boriolsis as stage
+
+scene chief_house_1
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis display t=1000
+        sophie,charles,chief appear 500
+            chief preSpeak
+                chief say This is the village of Boriolsis.
+
+frame
+    chief say I haven't properly introduced myself yet.
+frame
+    chief say My name is Helmuth, and I am a chief of this village.
+frame
+    chief say Our village is really poor, due to the lack of resource around.
+        chief wait 500
+            chief cont As the chief of our village,
+                chief wait 300
+                    chief cont I apologise that you have to stay in such a poor village.
+frame
+    chief say Its an honour to have you.
+frame
+    sophie preSpeak
+        sophie speak It's no problem Helmuth!
+            sophie wait 500
+                sophie cont Really!
+frame
+    chief preSpeak
+        chief say Alright then,
+            chief wait 500
+                chief cont my house is just up ahead.
+
+frame
+    boriolsis fadeOut 800
+    boriolsis closeTextBox
+    chief,sophie,charles disappear 800
+        boriolsis setAnchorX 0
+        boriolsis setAnchorY 0
+        boriolsis scale x=1.5
+            boriolsis changeBackground bg=house a=0
+                boriolsis fadeIn 800
+                chief,sophie,charles appear 800
+frame
